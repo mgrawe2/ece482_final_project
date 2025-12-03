@@ -1,0 +1,9 @@
+[General]
+cut-box-item=
+net=A
+topCell=full_adder
+
+[ecdb]
+date=Sat Nov 29 18:20:12 2025
+name=.full_adder.ecdb
+size=29372

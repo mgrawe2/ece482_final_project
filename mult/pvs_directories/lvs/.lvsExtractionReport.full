@@ -1,0 +1,82 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : mult.rep
+ERC Summary File         : mult.sum
+LVS Comparison Report    : mult.rep.cls
+LVS Softchk Report       : mult.softchk
+LVS Find Shorts Report   : mult.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult/pvs_directories/lvs/mult.gds ("mult")
+User Name                : mgrawe2
+Creation Time            : Sun Nov 30 19:17:02 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult/pvs_directories/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "mult.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+Warnings and errors of connectivity for cell "mult"
+---------------------------------------------------
+
+[WARN] Unattached port label:
+    Label "VSS" on layer 1062(ind10_text) at (27.085, 10.745)
+
+[WARN] Unattached port label:
+    Label "VSS" on layer 1062(ind10_text) at (27.093, 10.745)
+
+[WARN] Unattached port label:
+    Label "VDD" on layer 1063(ind11_text) at (-1.455, 10.325)
+
+[WARN] Unattached port label:
+    Label "VDD" on layer 1063(ind11_text) at (-1.452, 10.307)
+
+
+Clean cell list (added by extraction report parser )
+ for cell "M10_M9_CDNS_7645518169617"
+ for cell "M11_M10_CDNS_7645518169618"
+ for cell "M11_M10_CDNS_7645518169622"
+ for cell "M1_NWELL_CDNS_764551816963"
+ for cell "M1_PO_CDNS_764551816960"
+ for cell "M1_PSUB_CDNS_764551816964"
+ for cell "M2_M1_CDNS_764551816961"
+ for cell "M2_M1_CDNS_7645518169610"
+ for cell "M2_M1_CDNS_764551816965"
+ for cell "M2_M1_CDNS_764551816968"
+ for cell "M3_M2_CDNS_764551816962"
+ for cell "M3_M2_CDNS_764551816967"
+ for cell "M3_M2_CDNS_764551816969"
+ for cell "M4_M3_CDNS_7645518169611"
+ for cell "M5_M4_CDNS_7645518169612"
+ for cell "M6_M5_CDNS_7645518169613"
+ for cell "M7_M6_CDNS_7645518169614"
+ for cell "M8_M7_CDNS_7645518169615"
+ for cell "M9_M8_CDNS_7645518169616"
+ for cell "and2"
+ for cell "full_adder"
+ for cell "half_adder"
+ for cell "inv"
+ for cell "nmos1v_CDNS_764551816961"
+ for cell "nmos1v_CDNS_764551816962"
+ for cell "nmos1v_CDNS_764551816965"
+ for cell "nmos1v_CDNS_764551816967"
+ for cell "pmos1v_CDNS_764551816960"
+ for cell "pmos1v_CDNS_764551816963"
+ for cell "pmos1v_CDNS_764551816964"
+ for cell "pmos1v_CDNS_764551816966"
+ for cell "xor"

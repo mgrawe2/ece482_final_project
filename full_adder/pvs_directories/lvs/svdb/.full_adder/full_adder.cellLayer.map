@@ -1,0 +1,14 @@
+inv metal1_conn,cont_ndiff,psubstrate,ndiff_conn,cont_poly,poly_conn,cont_pdiff,ptap,pdiff_conn,nwell_conn,ntap NULL
+M2_M1_CDNS_764464189501 metal2_conn,metal1_conn,Via1 NULL
+M2_M1_CDNS_764464189505 metal2_conn,metal1_conn,Via1 NULL
+full_adder metal2_conn,metal1_conn,cont_ndiff,psubstrate,ndiff_conn,poly_conn,_nmos1v,cont_pdiff,ptap,Via2,pdiff_conn,_pmos1v,nwell_conn,metal3_conn,ntap cont_poly,Via1
+M3_M2_CDNS_764464189502 metal2_conn,Via2,metal3_conn NULL
+M2_M1_CDNS_7644641895011 metal2_conn,metal1_conn,Via1 NULL
+M1_PO_CDNS_764464189500 metal1_conn,cont_poly,poly_conn NULL
+pmos1v_CDNS_764464189500 metal1_conn,psubstrate,poly_conn,cont_pdiff,pdiff_conn,_pmos1v,nwell_conn NULL
+pmos1v_CDNS_764464189503 metal1_conn,psubstrate,poly_conn,cont_pdiff,pdiff_conn,nwell_conn NULL
+pmos1v_CDNS_764464189504 metal1_conn,psubstrate,poly_conn,cont_pdiff,pdiff_conn,_pmos1v,nwell_conn NULL
+nmos1v_CDNS_764464189501 metal1_conn,cont_ndiff,psubstrate,ndiff_conn,poly_conn,_nmos1v NULL
+nmos1v_CDNS_764464189502 metal1_conn,cont_ndiff,psubstrate,ndiff_conn,poly_conn NULL
+nmos1v_CDNS_764464189505 metal1_conn,cont_ndiff,psubstrate,ndiff_conn,poly_conn,_nmos1v NULL
+xor metal2_conn,metal1_conn,psubstrate,poly_conn,_nmos1v,nwell_conn cont_ndiff,ndiff_conn,cont_poly,cont_pdiff,ptap,_pmos1v,pdiff_conn,Via1,ntap

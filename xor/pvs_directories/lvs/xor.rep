@@ -1,0 +1,32 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : xor.rep
+ERC Summary File         : xor.sum
+LVS Comparison Report    : xor.rep.cls
+LVS Softchk Report       : xor.softchk
+LVS Find Shorts Report   : xor.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor/pvs_directories/lvs/xor.gds ("xor")
+User Name                : mgrawe2
+Creation Time            : Sat Nov 29 12:39:47 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor/pvs_directories/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "xor.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)

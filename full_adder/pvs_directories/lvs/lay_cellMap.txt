@@ -1,0 +1,3 @@
+ece482_final_project full_adder layout full_adder
+ece482_final_project inv layout inv
+ece482_final_project xor layout xor

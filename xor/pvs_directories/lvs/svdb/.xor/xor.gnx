@@ -1,0 +1,21 @@
+#4                               
+MN: MN
+= D D
+= G G
+= S S
+= B B
+#4                               
+MP: MP
+= D D
+= G G
+= S S
+= B B
+#7                               
+xor: xor
+= A A
+= B B
+= B_bar B_Bar
+= OUT OUT
+= VDD VDD
+= VDD X5/X1/B
+= VSS VSS

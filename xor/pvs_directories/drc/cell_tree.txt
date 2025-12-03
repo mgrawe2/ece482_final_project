@@ -1,0 +1,5 @@
+xor
+
+xor
+	inv
+

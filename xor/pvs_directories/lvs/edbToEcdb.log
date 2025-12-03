@@ -1,0 +1,17 @@
+
+/software/cadence-2024-08/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : xor_97150.db
+ECDB dir        : ./
+Top Cell        : xor
+CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor/pvs_directories/lvs/svdb/xor.net
+Layer map file  : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor/pvs_directories/lvs/svdb/xor.ecdbmap
+Text map file   : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor/pvs_directories/lvs/svdb/xor.ports
+Dependency map  : xor.lmap.perc
+Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor/pvs_directories/lvs/svdb/xor.lvsfile
+Float net file  : .xor.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : xor_97150

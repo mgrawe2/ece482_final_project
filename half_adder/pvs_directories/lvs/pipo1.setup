@@ -1,0 +1,17 @@
+case	"preserve"
+convertDot	"node"
+convertPin	"geometryAndText"
+hierDepth	32
+labelCase	"preserve"
+labelDepth	32
+library	"ece482_final_project"
+logFile	"/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder/pvs_directories/lvs/PIPO1.LOG"
+maxVertices	2048
+pinAttNum	0
+runDir	"/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder/pvs_directories/lvs"
+strmFile	"/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder/pvs_directories/lvs/half_adder.gds"
+strmVersion	5
+techLib	"gpdk045"
+topCell	"half_adder"
+view	"layout"
+enableColoring

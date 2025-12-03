@@ -1,0 +1,17 @@
+
+/software/cadence-2024-08/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : mult_2791796.db
+ECDB dir        : ./
+Top Cell        : mult
+CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult/pvs_directories/lvs/svdb/mult.net
+Layer map file  : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult/pvs_directories/lvs/svdb/mult.ecdbmap
+Text map file   : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult/pvs_directories/lvs/svdb/mult.ports
+Dependency map  : mult.lmap.perc
+Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult/pvs_directories/lvs/svdb/mult.lvsfile
+Float net file  : .mult.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : mult_2791796

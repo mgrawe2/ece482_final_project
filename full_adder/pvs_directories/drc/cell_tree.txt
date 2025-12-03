@@ -1,0 +1,9 @@
+full_adder
+
+xor
+	inv
+
+full_adder
+	inv
+	xor
+

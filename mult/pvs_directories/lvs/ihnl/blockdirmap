@@ -1,0 +1,9 @@
+CADENCE IHNL11147
+
+ece482_final_project nand2 schematic cds0
+ece482_final_project inv schematic cds1
+ece482_final_project and2 schematic cds2
+ece482_final_project xor schematic cds3
+ece482_final_project half_adder schematic cds4
+ece482_final_project full_adder schematic cds5
+ece482_final_project mult schematic cds6

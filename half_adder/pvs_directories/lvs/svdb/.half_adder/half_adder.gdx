@@ -1,0 +1,18 @@
+#0                               
+MN: MN
+#0                               
+MP: MP
+#12                              
+half_adder: half_adder
+S XI0/MPM2 X3/X6/M1
+S XI0/MPM0 X3/X6/M0
+S XI0/MNM1 X3/X7/M1
+S XI0/MNM0 X3/X7/M0
+D XI0/XI0/MPM0 X3/X5/X1/M0
+D XI0/XI0/MNM0 X3/X5/X0/M0
+D XI1/XI1/MPM0 X4/X3/M2
+D XI1/XI1/MNM0 X4/X4/M2
+D XI1/XI0/MNM1 X4/X4/M0
+D XI1/XI0/MNM0 X4/X4/M1
+D XI1/XI0/MPM1 X4/X3/M0
+S XI1/XI0/MPM0 X4/X3/M1

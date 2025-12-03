@@ -1,0 +1,25 @@
+#4                               
+MN: MN
+= D D
+= G G
+= S S
+= B B
+#4                               
+MP: MP
+= D D
+= G G
+= S S
+= B B
+#11                              
+half_adder: half_adder
+= net4 6
+= A A
+= B B
+= Co Co
+= S S
+= VDD VDD
+= VDD X13/X33/B
+= VDD X13/X33/S_source_0
+= VSS VSS
+= XI1/net3 8
+= XI1/XI0/net1 9

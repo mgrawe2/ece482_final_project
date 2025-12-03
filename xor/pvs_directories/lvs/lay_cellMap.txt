@@ -1,0 +1,2 @@
+ece482_final_project xor layout xor
+ece482_final_project inv layout inv

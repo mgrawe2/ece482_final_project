@@ -1,0 +1,24 @@
+# Placement Hierarchy File (sph)
+# 
+# 
+# 
+% nand2 5
+MNM1 MN 4
+MNM0 MN 4
+MPM1 MP 4
+MPM0 MP 4
+% inv 4
+MPM0 MP 4
+MNM0 MN 4
+% and2 5
+XI0 nand2 5
+XI1 inv 4
+% xor 6
+MNM1 MN 4
+MNM0 MN 4
+MPM2 MP 4
+MPM0 MP 4
+XI0 inv 4
+% half_adder 6
+XI0 xor 6
+XI1 and2 5

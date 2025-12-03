@@ -1,0 +1,18 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "full_adder"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/"
+ )
+( model
+( "ece482_final_project/xor/schematic" "xor" )
+( "ece482_final_project/inv/schematic" "inv" )
+( "ece482_final_project/full_adder/schematic" "full_adder" )
+ )
+( "inv" "ihnl/cds0/map" )
+( "xor" "ihnl/cds1/map" )
+( "full_adder" "ihnl/cds2/map" )
+ )

@@ -1,0 +1,72 @@
+*
+*
+*
+*                       LINUX           Sat Nov 29 12:56:42 2025
+*
+*
+*
+*  PROGRAM  advgen
+*
+*  Name           : advgen - Quantus - (64-bit)
+*  Version        : 23.1.1-p051
+*  Build Date     : Thu Feb 15 21:11:17 PST 2024
+*
+*  HSPICE LIBRARY
+*
+* GLOBAL_TEMPERATURE 25
+*  OPERATING_TEMPERATURE 25
+*  QRC_TECH_DIR /class/ece482/gpdk045_v_6_0/qrc/typical 
+*
+*!LENGTH_UNITS METERS
+*
+*
+*
+
+*
+.SUBCKT xor A B B_bar OUT VDD VSS
+*
+*
+*  caps2d version: 10
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MMNM0	A	B_bar	OUT	VSS	g45n1svt	L=4.5e-08
++ W=1.2e-07
++ AD=1.68e-14	AS=1.92e-14	PD=5.2e-07	PS=5.6e-07
++ fw=1.2e-07 sa=1.4e-07 sb=3.45e-07 sca=5.12155 scb=0.00103813 scc=1.48881e-06
+MMNM1	OUT	A	B_bar	VSS	g45n1svt	L=4.5e-08
++ W=1.2e-07
++ AD=1.92e-14	AS=1.68e-14	PD=5.6e-07	PS=5.2e-07
++ fw=1.2e-07 sa=3.45e-07 sb=1.4e-07 sca=5.12155 scb=0.00103813 scc=1.48881e-06
+MXI0/MNM0	B_bar	B	VSS	VSS	g45n1svt	L=4.5e-08
++ W=1.2e-07
++ AD=1.68e-14	AS=1.68e-14	PD=5.2e-07	PS=5.2e-07
++ fw=1.2e-07 sa=1.4e-07 sb=1.4e-07 sca=12.3034 scb=0.0125586 scc=0.000527096
+MMPM0	A	B	OUT	VDD	g45p1svt	L=4.5e-08
++ W=2.4e-07
++ AD=3.36e-14	AS=3.84e-14	PD=7.6e-07	PS=8e-07
++ fw=2.4e-07 sa=1.4e-07 sb=3.45e-07 sca=48.7608 scb=0.0470044 scc=0.00589085
+MMPM2	OUT	A	B	VDD	g45p1svt	L=4.5e-08
++ W=2.4e-07
++ AD=3.84e-14	AS=3.36e-14	PD=8e-07	PS=7.6e-07
++ fw=2.4e-07 sa=3.45e-07 sb=1.4e-07 sca=56.1562 scb=0.0589139 scc=0.00666125
+MXI0/MPM0	B_bar	B	VDD	VDD	g45p1svt	L=4.5e-08
++ W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=39.9325 scb=0.0377946 scc=0.00385132
+*
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	VSS	4.67789e-16	$X=0.261 $Y=0.246
+C2	B	VSS	5.79037e-16	$X=0.0125 $Y=0.5785
+C3	B_bar	VSS	3.90145e-16	$X=0.009 $Y=-0.164
+C4	OUT	VSS	2.42755e-16	$X=0.399 $Y=0.3045
+C5	VDD	VSS	1.79855e-16	$X=-0.396 $Y=-0.369
+*
+*
+.ENDS xor
+*

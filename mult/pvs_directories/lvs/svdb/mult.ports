@@ -1,0 +1,37 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary mult
+B1 39 B1 -20330 -16535 metal3_conn
+B1 39 B1 -20330 -16470 metal3_conn
+P5 26 P5 33760 30170 metal3_conn
+P5 26 P5 33770 30160 metal3_conn
+A2 41 A2 -14010 -25480 metal3_conn
+A2 41 A2 -14010 -25470 metal3_conn
+B2 42 B2 -13715 -1050 metal3_conn
+B2 42 B2 -13710 -990 metal3_conn
+VDD 3 VDD -2910 20650 metal11_conn
+VDD 3 VDD -2905 20615 metal11_conn
+VSS 4 VSS 54170 21490 metal10_conn
+VSS 4 VSS 54185 21490 metal10_conn
+A3 44 A3 -450 -25730 metal3_conn
+A3 44 A3 -445 -25755 metal3_conn
+B3 45 B3 -615 15640 metal3_conn
+B3 45 B3 -610 15700 metal3_conn
+P6 32 P6 47550 30230 metal3_conn
+P6 32 P6 47560 30215 metal3_conn
+P4 19 P4 20100 30230 metal3_conn
+P4 19 P4 20115 30205 metal3_conn
+P7 33 P7 52795 27805 metal3_conn
+P7 33 P7 52800 27810 metal3_conn
+B0 34 B0 -28180 -25520 metal3_conn
+B0 34 B0 -28165 -25525 metal3_conn
+P1 48 P1 -17450 -2500 metal3_conn
+P1 48 P1 -17440 -2550 metal3_conn
+A0 35 A0 -27660 -25510 metal3_conn
+A0 35 A0 -27650 -25520 metal3_conn
+P2 49 P2 -8500 13065 metal3_conn
+P2 49 P2 -8500 13070 metal3_conn
+P0 36 P0 -25680 -18550 metal3_conn
+P3 50 P3 4600 29755 metal3_conn
+P3 50 P3 4600 29760 metal3_conn
+A1 37 A1 -23270 -25400 metal3_conn
+A1 37 A1 -23265 -25470 metal3_conn

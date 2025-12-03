@@ -1,0 +1,16 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "xor"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor/pvs_directories/lvs/"
+ )
+( model
+( "ece482_final_project/xor/schematic" "xor" )
+( "ece482_final_project/inv/schematic" "inv" )
+ )
+( "inv" "ihnl/cds0/map" )
+( "xor" "ihnl/cds1/map" )
+ )

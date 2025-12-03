@@ -1,0 +1,10 @@
+CADENCE IHNL11140
+$model
+ece482_final_project/inv/schematic inv
+ece482_final_project/xor/schematic xor
+ece482_final_project/full_adder/schematic full_adder
+$endmodel
+$net
+$endnet
+$param
+$endparam

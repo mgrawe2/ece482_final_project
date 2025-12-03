@@ -1,0 +1,12 @@
+#0                               
+MN: MN
+#0                               
+MP: MP
+#6                               
+xor: xor
+S MPM2 X6/M1
+S MPM0 X6/M0
+S MNM1 X7/M1
+S MNM0 X7/M0
+D XI0/MPM0 X5/X1/M0
+D XI0/MNM0 X5/X0/M0
