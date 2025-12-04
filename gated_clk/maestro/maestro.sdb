@@ -8,14 +8,14 @@
 		<sharedvarinfo></sharedvarinfo>
 		<overwritehistory>0</overwritehistory>
 		<tests>
-			<test>ece482_final_project_gated_clk_1
+			<test>ECE_482_Final_Project_gated_clk_1
 				<tool>ADE</tool>
 				<tooloptions>
 					<option>cell
 						<value>gated_clk</value>
 					</option>
 					<option>lib
-						<value>ece482_final_project</value>
+						<value>ECE_482_Final_Project</value>
 					</option>
 					<option>path
 						<value>$AXL_SETUPDB_DIR</value>
@@ -37,16 +37,16 @@
 					<var>Wn_inv
 						<value></value>
 					</var>
-					<var>Wn_nand2
-						<value></value>
-					</var>
-					<var>Wp_nand2
-						<value></value>
-					</var>
 					<var>Wn_xor
 						<value></value>
 					</var>
 					<var>Wp_xor
+						<value></value>
+					</var>
+					<var>Wn_nand2
+						<value></value>
+					</var>
+					<var>Wp_nand2
 						<value></value>
 					</var>
 				</vars>
@@ -61,7 +61,7 @@
 		</extensions>
 		<currentmode>Single Run, Sweeps and Corners</currentmode>
 		<checksasserts netlist="0">
-			<test netlist="0" netlistscope="all">ece482_final_project_gated_clk_1</test>
+			<test netlist="0" netlistscope="all">ECE_482_Final_Project_gated_clk_1</test>
 		</checksasserts>
 		<plottingoptions>
 			<plottingoption>waveformtemplate
