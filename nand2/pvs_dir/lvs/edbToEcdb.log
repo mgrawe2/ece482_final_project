@@ -1,0 +1,17 @@
+
+/software/cadence-2024-08/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : nand2_2424173.db
+ECDB dir        : ./
+Top Cell        : nand2
+CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/nand2/pvs_dir/lvs/svdb/nand2.net
+Layer map file  : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/nand2/pvs_dir/lvs/svdb/nand2.ecdbmap
+Text map file   : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/nand2/pvs_dir/lvs/svdb/nand2.ports
+Dependency map  : nand2.lmap.perc
+Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/nand2/pvs_dir/lvs/svdb/nand2.lvsfile
+Float net file  : .nand2.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : nand2_2424173

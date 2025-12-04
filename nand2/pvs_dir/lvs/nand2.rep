@@ -1,0 +1,32 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : nand2.rep
+ERC Summary File         : nand2.sum
+LVS Comparison Report    : nand2.rep.cls
+LVS Softchk Report       : nand2.softchk
+LVS Find Shorts Report   : nand2.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/nand2/pvs_dir/lvs/nand2.gds ("nand2")
+User Name                : mgrawe2
+Creation Time            : Wed Dec  3 20:57:03 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/nand2/pvs_dir/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "nand2.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)

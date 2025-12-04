@@ -1,0 +1,5 @@
+xor_auto
+
+xor_auto
+	inv
+

@@ -1,0 +1,8 @@
+CADENCE IHNL11140
+$model
+ece482_final_project/nand2/schematic nand2
+$endmodel
+$net
+$endnet
+$param
+$endparam
