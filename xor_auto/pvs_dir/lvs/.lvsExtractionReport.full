@@ -1,0 +1,42 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : xor_auto.rep
+ERC Summary File         : xor_auto.sum
+LVS Comparison Report    : xor_auto.rep.cls
+LVS Softchk Report       : xor_auto.softchk
+LVS Find Shorts Report   : xor_auto.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor_auto/pvs_dir/lvs/xor_auto.gds ("xor_auto")
+User Name                : mgrawe2
+Creation Time            : Thu Dec  4 09:31:51 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor_auto/pvs_dir/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "xor_auto.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+Clean cell list (added by extraction report parser )
+ for cell "M1_PO_CDNS_764862305972"
+ for cell "M2_M1_CDNS_764862305973"
+ for cell "M2_M1_CDNS_764862305974"
+ for cell "M2_M1_CDNS_764862305975"
+ for cell "inv"
+ for cell "nmos1v_CDNS_764862305970"
+ for cell "pmos1v_CDNS_764862305971"
+ for cell "xor_auto"

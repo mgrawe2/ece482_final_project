@@ -1,0 +1,37 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : inv_auto                                     *
+* Netlisted  : Wed Dec  3 18:51:41 2025                     *
+* PVS Version: 23.11-s036 Wed Jan 17 18:11:41 PST 2024      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 MN(g45n1svt) _nmos1v ndiff_conn(D) poly_conn(G) ndiff_conn(S) psubstrate(B)
+*.DEVTMPLT 1 MP(g45p1svt) _pmos1v pdiff_conn(D) poly_conn(G) pdiff_conn(S) nwell_conn(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: pmos1v_CDNS_764809496360                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt pmos1v_CDNS_764809496360 S_source_2 D_drain_1 S_source_0 4 B
+** N=6 EP=5 FDC=2
+M0 D_drain_1 4 S_source_0 B g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=49.8347 scb=0.0439273 scc=0.00505378 $X=0 $Y=0 $dt=1
+M1 S_source_2 4 D_drain_1 B g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=49.8347 scb=0.0439273 scc=0.00505378 $X=410 $Y=0 $dt=1
+.ends pmos1v_CDNS_764809496360
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_764809496361                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_764809496361 S_source_2 D_drain_1 S_source_0 4 5
+** N=5 EP=5 FDC=2
+M0 D_drain_1 4 S_source_0 5 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.76e-14 AS=5.04e-14 PD=1.04e-06 PS=1e-06 fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=0 $Y=0 $dt=0
+M1 S_source_2 4 D_drain_1 5 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.04e-14 AS=5.76e-14 PD=1e-06 PS=1.04e-06 fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=410 $Y=0 $dt=0
+.ends nmos1v_CDNS_764809496361
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: inv_auto                                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt inv_auto IN OUT VDD VSS
+** N=4 EP=4 FDC=4
+X0 VDD OUT VDD IN VDD pmos1v_CDNS_764809496360 $T=1750 2500 0 0 $X=1330 $Y=2300
+X1 VSS OUT VSS IN VSS nmos1v_CDNS_764809496361 $T=1750 350 0 0 $X=1330 $Y=150
+.ends inv_auto

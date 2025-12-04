@@ -1,0 +1,36 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  ece482_final_project
+* Top Cell Name: nand2
+* View Name:     schematic
+* Netlisted on:  Dec  3 20:56:59 2025
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 A B OUT VDD VSS
+*.PININFO A:I B:I OUT:O VDD:B VSS:B
+MNM1 net1 B VSS VSS g45n1svt m=1 l=45n w=1.44u
+MNM0 OUT A net1 VSS g45n1svt m=1 l=45n w=1.44u
+MPM1 OUT A VDD VDD g45p1svt m=1 l=45n w=1.44u
+MPM0 OUT B VDD VDD g45p1svt m=1 l=45n w=1.44u
+.ENDS
+

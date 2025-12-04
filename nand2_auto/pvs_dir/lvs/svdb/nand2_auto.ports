@@ -1,0 +1,7 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary nand2_auto
+VSS 6 VSS 3900 900 metal1_conn
+A 1 A 2240 3810 metal1_conn
+OUT 4 OUT 3890 3710 metal1_conn
+B 2 B 3540 3190 metal1_conn
+VDD 5 VDD 3220 6240 metal1_conn

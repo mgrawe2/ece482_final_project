@@ -1,0 +1,18 @@
+# XXXX: Instance Cross Reference (ixf) (File format 1)
+# XXXX: Layout Primary xor_auto
+# XXXX: End of header.
+% MN 4 MN 4
+% MP 4 MP 4
+% xor_auto 6 xor 6
+0 M2 0 MPM2  
+0 M3 0 MPM2 X
+0 M0 0 MPM0  
+0 M1 0 MPM0 X
+0 X16/M0 0 MNM1  
+0 X16/M1 0 MNM1 X
+0 X15/M0 0 MNM0  
+0 X15/M1 0 MNM0 X
+0 X19/M0 0 XI0/MPM0  
+0 X19/M1 0 XI0/MPM0 X
+0 X19/X0/M0 0 XI0/MNM0  
+0 X19/X0/M1 0 XI0/MNM0 X

@@ -1,0 +1,16 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary inv_auto
+% pmos1v_CDNS_764809496360 6
+1 S_source_2
+2 D_drain_1
+3 S_source_0
+6 B
+% nmos1v_CDNS_764809496361 5
+1 S_source_2
+2 D_drain_1
+3 S_source_0
+% inv_auto 4
+1 VDD
+2 OUT
+3 IN
+4 VSS

@@ -1,0 +1,34 @@
+##############################################################################################################
+#####  
+#####                                         PVS LVS COMPARISON
+#####  
+#####  Version                       :   23.11-s036
+#####  NVN Run Start                 :   Thu Dec  4 09:31:53 2025
+#####  ERC Summary File              :   xor_auto.sum
+#####  Extraction Report File        :   xor_auto.rep
+#####  Comparison Report File        :   xor_auto.rep.cls
+#####  Top Cell                      :   xor_auto  <vs>  xor
+#####  
+#####  Run Result                    :   MATCH
+#####  
+#####  Run Summary                   :   [INFO]  ERC Results: Empty
+#####                                :   [INFO]  Extraction Clean
+#####  
+#####  Layout Design                 :   ece482_final_project xor_auto layout
+#####  Schematic File                :   /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor_auto/pvs_dir/lvs/xor.cdl (cdl)
+#####  Rules File                    :   /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor_auto/pvs_dir/lvs/.technology.rul
+#####  Pin Swap File                 :   xor_auto.rep.cps
+#####  
+#####  Extraction CPU Time           :   0h 0m 1s - (1s)
+#####  Extraction Exec Time          :   0h 0m 2s - (2s)
+#####  Extraction Peak Memory Usage  :   31.00MB
+#####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
+#####  NVN Exec Time                 :   0h 0m 2s - (2s)                 
+#####  NVN Peak Memory Usage         :   245.41MB
+#####  LVS Total CPU Time            :   0h 0m 1s - (1s)                 
+#####  LVS Total Exec Time           :   0h 0m 4s - (4s)                 
+#####  LVS Total Peak Memory Usage   :   245.41MB
+#####  
+##############################################################################################################
+
+

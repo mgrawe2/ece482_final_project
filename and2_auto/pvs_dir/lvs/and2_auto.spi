@@ -1,0 +1,52 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : and2_auto                                    *
+* Netlisted  : Wed Dec  3 21:39:32 2025                     *
+* PVS Version: 23.11-s036 Wed Jan 17 18:11:41 PST 2024      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 MN(g45n1svt) _nmos1v ndiff_conn(D) poly_conn(G) ndiff_conn(S) psubstrate(B)
+*.DEVTMPLT 1 MP(g45p1svt) _pmos1v pdiff_conn(D) poly_conn(G) pdiff_conn(S) nwell_conn(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_764819567080                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_764819567080 S_source_0 S_source_2 D_drain_1 4 5
+** N=5 EP=5 FDC=2
+M0 D_drain_1 4 S_source_0 5 g45n1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07 $X=0 $Y=0 $dt=0
+M1 S_source_2 4 D_drain_1 5 g45n1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07 $X=410 $Y=0 $dt=0
+.ends nmos1v_CDNS_764819567080
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_764819567082                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_764819567082 S_source_0 D_drain_1 S_source_2 4 5
+** N=5 EP=5 FDC=2
+M0 D_drain_1 4 S_source_0 5 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.76e-14 AS=5.04e-14 PD=1.04e-06 PS=1e-06 fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=0 $Y=0 $dt=0
+M1 S_source_2 4 D_drain_1 5 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.04e-14 AS=5.76e-14 PD=1e-06 PS=1.04e-06 fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=410 $Y=0 $dt=0
+.ends nmos1v_CDNS_764819567082
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: inv                                             *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt inv VDD VSS IN OUT
+** N=4 EP=4 FDC=4
+X4 VSS OUT VSS IN VSS nmos1v_CDNS_764819567082 $T=-60 -1520 0 0 $X=-480 $Y=-1720
+M0 OUT IN VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=-60 $Y=630 $dt=1
+M1 VDD IN OUT VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=350 $Y=630 $dt=1
+.ends inv
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: and2_auto                                       *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt and2_auto A B OUT VDD VSS
+** N=7 EP=5 FDC=12
+X10 2 2 3 A VSS nmos1v_CDNS_764819567080 $T=2600 3970 0 0 $X=2180 $Y=3770
+X11 2 2 VSS B VSS nmos1v_CDNS_764819567080 $T=3900 3970 0 0 $X=3480 $Y=3770
+X14 VDD VSS 3 OUT inv $T=5260 6210 0 0 $X=4780 $Y=4050
+M0 3 A VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=2600 $Y=6840 $dt=1
+M1 VDD A 3 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=3010 $Y=6840 $dt=1
+M2 3 B VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=3900 $Y=6840 $dt=1
+M3 VDD B 3 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=4310 $Y=6840 $dt=1
+.ends and2_auto
