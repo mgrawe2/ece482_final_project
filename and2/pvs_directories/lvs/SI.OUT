@@ -1,4 +1,4 @@
-Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.04s.
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.06s.
 
 Running simulation in directory: "/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/and2/pvs_directories/lvs/".
 
@@ -26,7 +26,7 @@ done!
 Loaded gpdk045/libInit.il successfully!
 Loading hnlInit.cxt 
 Running Artist Hierarchical Netlisting ...
-End netlisting Nov 30 13:51:55 2025
+End netlisting Dec  4 17:31:09 2025
 
 Running simin
 
@@ -34,8 +34,8 @@ Running runSim()...
 
 
 Running runsim with simulator: "auCdl"
-Begin simulation:    Nov 30 13:51:55 2025
+Begin simulation:    Dec  4 17:31:09 2025
 
 auCdl netlisting completed
-End simulation:      Nov 30 13:51:55 2025
+End simulation:      Dec  4 17:31:09 2025
 INFO (AUCDL-21): (Analog) CDL netlisting completed successfully.

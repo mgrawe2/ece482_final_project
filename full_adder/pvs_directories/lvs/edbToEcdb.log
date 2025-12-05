@@ -3,7 +3,7 @@
 ========================================================================
 
 Delete EDB      : N
-EDB Library dir : full_adder_1299629.db
+EDB Library dir : full_adder_3123712.db
 ECDB dir        : ./
 Top Cell        : full_adder
 CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder.net
@@ -14,4 +14,4 @@ Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/ful
 Float net file  : .full_adder.info.softchk
 threads         : 32
 debug           : 0
-Source Library  : full_adder_1299629
+Source Library  : full_adder_3123712

@@ -3,7 +3,7 @@
 ========================================================================
 
 Delete EDB      : N
-EDB Library dir : half_adder_1655001.db
+EDB Library dir : half_adder_3407866.db
 ECDB dir        : ./
 Top Cell        : half_adder
 CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder/pvs_directories/lvs/svdb/half_adder.net
@@ -14,4 +14,4 @@ Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/hal
 Float net file  : .half_adder.info.softchk
 threads         : 32
 debug           : 0
-Source Library  : half_adder_1655001
+Source Library  : half_adder_3407866

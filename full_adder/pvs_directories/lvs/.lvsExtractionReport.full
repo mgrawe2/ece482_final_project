@@ -12,7 +12,7 @@ LVS Softchk Report       : full_adder.softchk
 LVS Find Shorts Report   : full_adder.rep.shorts
 Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/full_adder.gds ("full_adder")
 User Name                : mgrawe2
-Creation Time            : Sun Nov 30 12:11:44 2025
+Creation Time            : Thu Dec  4 16:56:35 2025
 Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs
 PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
 
@@ -32,28 +32,22 @@ PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
     LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
 
 Clean cell list (added by extraction report parser )
- for cell "M10_M9_CDNS_7645262989017"
- for cell "M11_M10_CDNS_7645262989018"
- for cell "M1_PO_CDNS_764526298900"
- for cell "M2_M1_CDNS_764526298901"
- for cell "M2_M1_CDNS_7645262989010"
- for cell "M2_M1_CDNS_764526298905"
- for cell "M2_M1_CDNS_764526298908"
- for cell "M3_M2_CDNS_764526298902"
- for cell "M3_M2_CDNS_764526298907"
- for cell "M3_M2_CDNS_764526298909"
- for cell "M4_M3_CDNS_7645262989011"
- for cell "M5_M4_CDNS_7645262989012"
- for cell "M6_M5_CDNS_7645262989013"
- for cell "M7_M6_CDNS_7645262989014"
- for cell "M8_M7_CDNS_7645262989015"
- for cell "M9_M8_CDNS_7645262989016"
+ for cell "M1_NWELL_CDNS_7648889899512"
+ for cell "M1_PO_CDNS_7648889899513"
+ for cell "M1_PO_CDNS_764888989959"
+ for cell "M1_PSUB_CDNS_7648889899514"
+ for cell "M2_M1_CDNS_764888989953"
+ for cell "M2_M1_CDNS_764888989954"
+ for cell "M2_M1_CDNS_764888989955"
+ for cell "M2_M1_CDNS_764888989957"
+ for cell "M3_M2_CDNS_764888989951"
+ for cell "M3_M2_CDNS_764888989952"
+ for cell "M4_M3_CDNS_764888989950"
+ for cell "fa_co_network"
  for cell "full_adder"
  for cell "inv"
- for cell "nmos1v_CDNS_764526298901"
- for cell "nmos1v_CDNS_764526298902"
- for cell "nmos1v_CDNS_764526298905"
- for cell "pmos1v_CDNS_764526298900"
- for cell "pmos1v_CDNS_764526298903"
- for cell "pmos1v_CDNS_764526298904"
+ for cell "nmos1v_CDNS_764888989951"
+ for cell "nmos1v_CDNS_764888989952"
+ for cell "pmos1v_CDNS_764888989950"
+ for cell "pmos1v_CDNS_764888989953"
  for cell "xor"

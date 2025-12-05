@@ -1,0 +1,39 @@
+# XXXX: Net Cross Reference (nxf) (File format 1)
+# XXXX: Layout Primary full_adder_auto
+# XXXX: End of header.
+% MN 4 MN 4 
+0 D 0 D
+0 G 0 G
+0 S 0 S
+0 B 0 B
+% MP 4 MP 4 
+0 D 0 D
+0 G 0 G
+0 S 0 S
+0 B 0 B
+% full_adder_auto 7 full_adder 7 
+0 5 0 net1
+0 X21/X17/S_source_0 0 net1
+0 4 0 P_bar
+0 X22/X18/S_source_0 0 P_bar
+0 11 0 net4
+0 X21/X18/S_source_0 0 net4
+0 9 0 net9
+0 X23/X12/S_source_0 0 net9
+0 X23/X13/S_source_0 0 net9
+0 A 0 A
+0 B 0 B
+0 Ci 0 Ci
+0 Co 0 Co
+0 S 0 S
+0 X22/X17/S_source_0 0 S
+0 VDD 0 VDD
+0 X23/X13/B 0 VDD
+0 VSS 0 VSS
+0 X20/X4/S_source_0 0 VSS
+0 X22/X19/X4/S_source_0 0 VSS
+0 X21/X19/X4/S_source_0 0 VSS
+0 12 0 XI3/net25
+0 13 0 XI3/net23
+0 14 0 XI3/net26
+0 15 0 XI3/net24

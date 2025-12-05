@@ -1,0 +1,201 @@
+*
+*
+*
+*                       LINUX           Thu Dec  4 16:52:29 2025
+*
+*
+*
+*  PROGRAM  advgen
+*
+*  Name           : advgen - Quantus - (64-bit)
+*  Version        : 23.1.1-p051
+*  Build Date     : Thu Feb 15 21:11:17 PST 2024
+*
+*  HSPICE LIBRARY
+*
+* GLOBAL_TEMPERATURE 25
+*  OPERATING_TEMPERATURE 25
+*  QRC_TECH_DIR /class/ece482/gpdk045_v_6_0/qrc/typical 
+*
+*!LENGTH_UNITS METERS
+*
+*
+*
+
+*
+.SUBCKT full_adder_auto A B Ci Co S VDD VSS
+*
+*
+*  caps2d version: 10
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MXI3/MNM0	net9	Ci	XI3/net25	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.04e-14	AS=5.76e-14	PD=1e-06	PS=1.04e-06
++ fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/MNM1	XI3/net25	net1	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/MNM3	XI3/net23	P_bar	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/MNM2	net9	A	XI3/net23	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.04e-14	AS=5.76e-14	PD=1e-06	PS=1.04e-06
++ fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI1/XI0/MNM0	P_bar	net1	VSS	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI1/XI0/MNM0@1	P_bar	net1	VSS	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI1/MNM1@1	S	Ci	P_bar	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI1/MNM1	S	Ci	P_bar	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI1/MNM0	Ci	P_bar	S	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI1/MNM0@1	Ci	P_bar	S	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI0/XI0/MNM0@1	net4	B	VSS	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI0/XI0/MNM0	net4	B	VSS	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI0/MNM1	net1	A	net4	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI0/MNM1@1	net1	A	net4	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI0/MNM0	A	net4	net1	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI0/MNM0@1	A	net4	net1	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/MNM0	Co	net9	VSS	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/MNM0@1	Co	net9	VSS	VSS	g45n1svt	L=4.5e-08
++ W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/MPM1	net9	Ci	XI3/net26	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/MPM0	XI3/net26	P_bar	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/MPM2	XI3/net24	net1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/MPM3	net9	A	XI3/net24	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI1/MPM0@1	Ci	net1	S	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI1/MPM2@1	S	Ci	net1	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI1/MPM2	S	Ci	net1	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI0/MPM0	A	B	net1	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI0/MPM2@1	net1	A	B	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI0/MPM2	net1	A	B	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI0/XI0/MPM0	net4	B	VDD	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI0/XI0/MPM0@1	net4	B	VDD	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI0/MPM0@1	A	B	net1	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI1/XI0/MPM0	P_bar	net1	VDD	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI1/XI0/MPM0@1	P_bar	net1	VDD	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI1/MPM0	Ci	net1	S	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI2/MPM0@1	Co	net9	VDD	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI2/MPM0	Co	net9	VDD	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+*
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A	VSS	1.76138e-15	$X=3.8895 $Y=5.5035
+C2	B	VSS	1.09786e-15	$X=2.286 $Y=6.002
+C3	Ci	VSS	1.74549e-15	$X=4.8085 $Y=5.5725
+C4	Co	VSS	3.69091e-16	$X=6.8715 $Y=5.6345
+C5	S	VSS	1.25047e-15	$X=4.713 $Y=5.7035
+C6	VDD	VSS	1.4977e-15	$X=4.3825 $Y=6.559
+C7	P_bar	VSS	1.58258e-15	$X=4.97 $Y=5.3145
+C8	net1	VSS	2.88507e-15	$X=3.8225 $Y=5.752
+C9	net9	VSS	1.15107e-15	$X=6.0105 $Y=5.5385
+C10	net4	VSS	9.30441e-16	$X=2.504 $Y=5.2435
+C11	XI3/net25	VSS	9.63636e-17	$X=5.719 $Y=5.0045
+C12	XI3/net23	VSS	8.93532e-17	$X=6.129 $Y=5.0045
+C13	XI3/net26	VSS	1.47034e-16	$X=5.719 $Y=6.259
+C14	XI3/net24	VSS	1.5381e-16	$X=6.129 $Y=6.259
+*
+*
+.ENDS full_adder_auto
+*

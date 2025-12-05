@@ -4,7 +4,7 @@
 * Library Name:  ece482_final_project
 * Top Cell Name: full_adder
 * View Name:     schematic
-* Netlisted on:  Nov 30 12:11:39 2025
+* Netlisted on:  Dec  4 16:56:31 2025
 ************************************************************************
 
 *.BIPOLAR
@@ -28,8 +28,8 @@
 
 .SUBCKT inv IN OUT VDD VSS
 *.PININFO IN:I OUT:O VDD:B VSS:B
-MPM0 OUT IN VDD VDD g45p1svt m=1 l=45n w=240n
-MNM0 OUT IN VSS VSS g45n1svt m=1 l=45n w=120n
+MPM0 OUT IN VDD VDD g45p1svt m=1 l=45n w=1.44u
+MNM0 OUT IN VSS VSS g45n1svt m=1 l=45n w=720n
 .ENDS
 
 ************************************************************************
@@ -40,11 +40,29 @@ MNM0 OUT IN VSS VSS g45n1svt m=1 l=45n w=120n
 
 .SUBCKT xor A B B_bar OUT VDD VSS
 *.PININFO A:I B:I B_bar:O OUT:O VDD:B VSS:B
-MNM1 OUT A B_bar VSS g45n1svt m=1 l=45n w=120n
-MNM0 A B_bar OUT VSS g45n1svt m=1 l=45n w=120n
-MPM2 OUT A B VDD g45p1svt m=1 l=45n w=240n
-MPM0 A B OUT VDD g45p1svt m=1 l=45n w=240n
+MNM1 OUT A B_bar VSS g45n1svt m=1 l=45n w=720n
+MNM0 A B_bar OUT VSS g45n1svt m=1 l=45n w=720n
+MPM2 OUT A B VDD g45p1svt m=1 l=45n w=1.44u
+MPM0 A B OUT VDD g45p1svt m=1 l=45n w=1.44u
 XI0 B B_bar VDD VSS / inv
+.ENDS
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    fa_co_network
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT fa_co_network A Ci OUT P P_bar VDD VSS
+*.PININFO A:I Ci:I P:I P_bar:I OUT:O VDD:B VSS:B
+MNM0 OUT Ci net25 VSS g45n1svt m=1 l=45n w=360n
+MNM1 net25 P VSS VSS g45n1svt m=1 l=45n w=360n
+MNM2 OUT A net23 VSS g45n1svt m=1 l=45n w=360n
+MNM3 net23 P_bar VSS VSS g45n1svt m=1 l=45n w=360n
+MPM0 net26 P_bar VDD VDD g45p1svt m=1 l=45n w=720n
+MPM1 OUT Ci net26 VDD g45p1svt m=1 l=45n w=720n
+MPM2 net24 P VDD VDD g45p1svt m=1 l=45n w=720n
+MPM3 OUT A net24 VDD g45p1svt m=1 l=45n w=720n
 .ENDS
 
 ************************************************************************
@@ -55,16 +73,9 @@ XI0 B B_bar VDD VSS / inv
 
 .SUBCKT full_adder A B Ci Co S VDD VSS
 *.PININFO A:I B:I Ci:I Co:O S:O VDD:B VSS:B
-XI1 Ci P P_bar S VDD VSS / xor
-XI0 A B net4 P VDD VSS / xor
-MPM3 net9 A net23 VDD g45p1svt m=1 l=45n w=240n
-MPM2 net23 P VDD VDD g45p1svt m=1 l=45n w=240n
-MPM1 net9 Ci net5 VDD g45p1svt m=1 l=45n w=240n
-MPM0 net5 P_bar VDD VDD g45p1svt m=1 l=45n w=240n
-MNM3 net25 P_bar VSS VSS g45n1svt m=1 l=45n w=120n
-MNM2 net9 A net25 VSS g45n1svt m=1 l=45n w=120n
-MNM1 net10 P VSS VSS g45n1svt m=1 l=45n w=120n
-MNM0 net9 Ci net10 VSS g45n1svt m=1 l=45n w=120n
+XI1 Ci net1 P_bar S VDD VSS / xor
+XI0 A B net4 net1 VDD VSS / xor
+XI3 A Ci net9 net1 P_bar VDD VSS / fa_co_network
 XI2 net9 Co VDD VSS / inv
 .ENDS
 

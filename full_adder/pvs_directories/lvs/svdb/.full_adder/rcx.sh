@@ -1,5 +1,5 @@
 #!/software/cadence-2024-08/QUANTUS231/tools.lnx86/extraction/bin/64bit/assura_rcx -V
-# This script was generated Sat Nov 29 19:01:57 2025 by:
+# This script was generated Sat Nov 29 19:08:24 2025 by:
 #
 # Program: /software/cadence-2024-08/QUANTUS231/tools.lnx86/extraction/bin/64bit/RCXspice
 # Version: 23.1.1-p051

@@ -1,0 +1,17 @@
+
+/software/cadence-2024-08/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : half_adder_auto_903001.db
+ECDB dir        : ./
+Top Cell        : half_adder_auto
+CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder_auto/pvs_dir/lvs/svdb/half_adder_auto.net
+Layer map file  : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder_auto/pvs_dir/lvs/svdb/half_adder_auto.ecdbmap
+Text map file   : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder_auto/pvs_dir/lvs/svdb/half_adder_auto.ports
+Dependency map  : half_adder_auto.lmap.perc
+Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder_auto/pvs_dir/lvs/svdb/half_adder_auto.lvsfile
+Float net file  : .half_adder_auto.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : half_adder_auto_903001

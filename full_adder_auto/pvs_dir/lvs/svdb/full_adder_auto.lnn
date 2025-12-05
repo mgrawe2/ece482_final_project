@@ -1,0 +1,63 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary full_adder_auto
+% M2_M1_CDNS_764888589640 1
+% M2_M1_CDNS_764888589641 1
+% M3_M2_CDNS_764888589642 1
+% M2_M1_CDNS_764888589643 1
+% M3_M2_CDNS_764888589644 1
+% M4_M3_CDNS_764888589645 1
+% M1_NWELL_CDNS_7648885896412 1
+% M1_PO_CDNS_7648885896413 1
+% M1_PSUB_CDNS_7648885896414 1
+% pmos1v_CDNS_764888589640 6
+1 S_source_0
+2 D_drain_1
+4 S_source_2
+6 B
+% nmos1v_CDNS_764888589641 5
+1 S_source_0
+2 D_drain_1
+4 S_source_2
+% inv 4
+1 IN
+2 VDD
+3 OUT
+4 VSS
+% M2_M1_CDNS_764888589647 1
+% M1_PO_CDNS_764888589649 1
+% xor 6
+1 B
+2 VDD
+3 B_bar
+4 VSS
+5 OUT
+6 A
+% nmos1v_CDNS_764888589642 9
+1 S_source_0
+2 D_drain_1
+4 S_source_2
+5 D_drain_3
+8 S_source_4
+% pmos1v_CDNS_764888589643 11
+1 S_source_0
+2 D_drain_1
+3 S_source_2
+6 D_drain_3
+7 S_source_4
+11 B
+% fa_co_network 11
+1 OUT
+2 P
+3 Ci
+4 VDD
+5 P_bar
+6 VSS
+7 A
+% full_adder_auto 7
+1 VDD
+2 Ci
+3 A
+6 Co
+7 B
+8 S
+10 VSS

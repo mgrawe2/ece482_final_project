@@ -1,0 +1,34 @@
+##############################################################################################################
+#####  
+#####                                         PVS LVS COMPARISON
+#####  
+#####  Version                       :   23.11-s036
+#####  NVN Run Start                 :   Thu Dec  4 13:03:26 2025
+#####  ERC Summary File              :   fa_co_network.sum
+#####  Extraction Report File        :   fa_co_network.rep
+#####  Comparison Report File        :   fa_co_network.rep.cls
+#####  Top Cell                      :   fa_co_network  <vs>  fa_co_network
+#####  
+#####  Run Result                    :   MATCH
+#####  
+#####  Run Summary                   :   [INFO]  ERC Results: Empty
+#####                                :   [INFO]  Extraction Clean
+#####  
+#####  Layout Design                 :   ece482_final_project fa_co_network layout
+#####  Schematic File                :   /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/fa_co_network/pvs_dir/lvs/fa_co_network.cdl (cdl)
+#####  Rules File                    :   /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/fa_co_network/pvs_dir/lvs/.technology.rul
+#####  Pin Swap File                 :   fa_co_network.rep.cps
+#####  
+#####  Extraction CPU Time           :   0h 0m 0s - (0s)
+#####  Extraction Exec Time          :   0h 0m 1s - (1s)
+#####  Extraction Peak Memory Usage  :   31.00MB
+#####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
+#####  NVN Exec Time                 :   0h 0m 1s - (1s)                 
+#####  NVN Peak Memory Usage         :   249.84MB
+#####  LVS Total CPU Time            :   0h 0m 0s - (0s)                 
+#####  LVS Total Exec Time           :   0h 0m 2s - (2s)                 
+#####  LVS Total Peak Memory Usage   :   249.84MB
+#####  
+##############################################################################################################
+
+

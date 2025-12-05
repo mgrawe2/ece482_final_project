@@ -3,7 +3,7 @@
 ========================================================================
 
 Delete EDB      : N
-EDB Library dir : and2_1601670.db
+EDB Library dir : and2_3517790.db
 ECDB dir        : ./
 Top Cell        : and2
 CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/and2/pvs_directories/lvs/svdb/and2.net
@@ -14,4 +14,4 @@ Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/and
 Float net file  : .and2.info.softchk
 threads         : 32
 debug           : 0
-Source Library  : and2_1601670
+Source Library  : and2_3517790

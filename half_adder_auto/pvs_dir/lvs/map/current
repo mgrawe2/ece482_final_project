@@ -1,0 +1,22 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "half_adder"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder_auto/pvs_dir/lvs/"
+ )
+( model
+( "ece482_final_project/xor/schematic" "xor" )
+( "ece482_final_project/inv/schematic" "inv" )
+( "ece482_final_project/and2/schematic" "and2" )
+( "ece482_final_project/half_adder/schematic" "half_adder" )
+( "ece482_final_project/nand2/schematic" "nand2" )
+ )
+( "half_adder" "ihnl/cds4/map" )
+( "inv" "ihnl/cds0/map" )
+( "nand2" "ihnl/cds2/map" )
+( "xor" "ihnl/cds1/map" )
+( "and2" "ihnl/cds3/map" )
+ )

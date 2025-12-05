@@ -1,0 +1,39 @@
+#4                               
+MN: MN
+= D D
+= G G
+= S S
+= B B
+#4                               
+MP: MP
+= D D
+= G G
+= S S
+= B B
+#25                              
+full_adder: full_adder_auto
+= net1 5
+= net1 X21/X17/S_source_0
+= P_bar 4
+= P_bar X22/X18/S_source_0
+= net4 11
+= net4 X21/X18/S_source_0
+= net9 9
+= net9 X23/X12/S_source_0
+= net9 X23/X13/S_source_0
+= A A
+= B B
+= Ci Ci
+= Co Co
+= S S
+= S X22/X17/S_source_0
+= VDD VDD
+= VDD X23/X13/B
+= VSS VSS
+= VSS X20/X4/S_source_0
+= VSS X22/X19/X4/S_source_0
+= VSS X21/X19/X4/S_source_0
+= XI3/net25 12
+= XI3/net23 13
+= XI3/net26 14
+= XI3/net24 15

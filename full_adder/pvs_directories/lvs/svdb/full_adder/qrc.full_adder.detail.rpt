@@ -91,7 +91,7 @@ INFO (LBRCXM-642): Constructing the RCX run script
 
 Forking: agdsPrep -V -rundir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb -agf /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder.agf -outdir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder// -sch -df2 -e /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder.gds.map:full_adder.alm,full_adder.ilf -pl full_adder.ports -mcell /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder/full_adder.hcl -d full_adder.devtab -l /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder.lvsfile -i full_adder.ixf,full_adder.lph,full_adder.sph:full_adder.gdx -n full_adder.nxf,full_adder.stl:full_adder.gnx -s full_adder_pin_xy.spi:full_adder.xcn,hccidtmfile
 
-agdsPrep took  0.01 user, 0.05 sys, 0.00 elapsed, 16352.0 kbytes
+agdsPrep took  0.01 user, 0.05 sys, 0.00 elapsed, 16432.0 kbytes
 Forking:  capgen -techdir /class/ece482/gpdk045_v_6_0/qrc/typical -inc /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder/full_adder.ilf -lvs /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder/full_adder.xcn -lvsvia -p2lvs /class/ece482/gpdk045_v_6_0/qrc/typical/qrcTechFile -reseqn -sw3d -p poly_conn,allGate,Oxide -canonical_res_caps -length_units meters -exclude_gate_res -cap_ground_layer psubstrate /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder
 
 INFO (LBMISC-215205): 
@@ -111,7 +111,7 @@ INFO (RCXSPIC-28057): RCXspice: unrecognized variable 'LVSNAMES' in file '/home/
 
 INFO (RCXSPIC-28057): RCXspice: unrecognized variable 'QRCNAMES' in file '/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder/RCXspiceINIT'
 
-rcxspice took  0.90 user, 0.22 sys, 1.00 elapsed, 100048.0 kbytes
+rcxspice took  0.92 user, 0.25 sys, 1.00 elapsed, 99972.0 kbytes
 The supplied design data will be treated as a HIERARCHICAL design
 
 Successfully created RCX script '/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder/rcx.sh'
@@ -158,15 +158,10 @@ WARNING (AGDSEXT-30124): The <design>.props file is not available. The CCL optio
 INFO (AGDSEXT-30016): 
 setting dbunit 5e-10 1 5e-10
 
-agds2rcx took 0.03 user, 0.35 sys, 0.00 elapsed, 19608.0 kbytes
-Input stage took  0.04 user, 0.37 sys, 1.00 elapsed, 7036.0 kbytes
-INFO (ASSREXT-35329): Resistance data preparation stage started at Sat Nov 29 19:08:26 2025
+agds2rcx took 0.03 user, 0.38 sys, 1.00 elapsed, 19724.0 kbytes
+Input stage took  0.05 user, 0.39 sys, 1.00 elapsed, 7020.0 kbytes
+INFO (ASSREXT-35329): Resistance data preparation stage started at Thu Dec  4 16:58:42 2025
 
-sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal2_conn,metal3_conn -er \
-	metal4_conn.den -n 1.75 -i 0,1.751 -b \
-	metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
-	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
-	-j 0.08 -Maxw 1.8 -p metal4_conn,key 0,1.75 - metal4_conn.sip
 sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal3_conn,metal4_conn -er \
 	metal5_conn.den -n 1.75 -i 0,1.751 -b \
 	metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
@@ -220,6 +215,11 @@ sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal1_conn,metal2_conn -er \
 	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
 	metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
 	-j 0.08 -Maxw 1.8 -p metal3_conn,key 0,1.75 - metal3_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal2_conn,metal3_conn -er \
+	metal4_conn.den -n 1.75 -i 0,1.751 -b \
+	metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-j 0.08 -Maxw 1.8 -p metal4_conn,key 0,1.75 - metal4_conn.sip
 sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -b \
 	metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
 	-Maxw 4.95 -p metal10_conn,key,metal11_conn,key 0,5,0 - \
@@ -284,8 +284,8 @@ sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
 sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal5_conn -b \
 	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
 	metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
-	-Maxw 1.8 -p metal3_conn,key,metal5_conn,key 0,1.75,0 - \
-	metal3_conn_metal5_conn.sip
+	-k metal4_conn:0.15 -Maxw 1.8 -p metal3_conn,key,metal5_conn,key \
+	0,1.75,0 - metal3_conn_metal5_conn.sip
 sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
 	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
 	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
@@ -360,7 +360,6 @@ sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b Oxide,FOX -t \
 	-p poly_conn,metal1_conn - poly_conn_metal1_conn.sw3d
 ENDCAT
 FOX psubstrate nwell_0conn
-metal4_conn metal4_conn
 metal5_conn metal5_conn
 metal6_conn metal6_conn
 metal7_conn metal7_conn
@@ -369,6 +368,7 @@ metal9_conn metal9_conn
 metal10_conn metal10_conn
 metal11_conn metal11_conn
 Oxide pdiff_0conn ndiff_0conn
+metal4_0conn metal4_0conn
 metal3_0conn metal3_0conn
 metal2_0conn metal2_0conn
 metal1_0conn metal1_0conn
@@ -377,6 +377,7 @@ ndiff_0conn ndiff_0conn
 pdiff_0conn pdiff_0conn
 nwell_0conn nwell_0conn
 psubstrate psubstrate
+Via3 Via3
 Via2 Via2
 Via1 Via1
 cont_0poly cont_0poly
@@ -390,636 +391,723 @@ INFO (ASSREXT-35026): stamp INPUT: iname[1]=FOX
 INFO (ASSREXT-35028): stamp OUTPUT: oname[0]=g_pick_FOX
 
 INFO (ASSREXT-35304): 
-Number of tasks to begin with are 79 
+Number of tasks to begin with are 83 
 
-INFO (ASSREXT-35329): Resistance data preparation stage started at Sat Nov 29 19:08:26 2025
+INFO (ASSREXT-35329): Resistance data preparation stage started at Thu Dec  4 16:58:42 2025
+
+geom -V Via3 metal3_0conn metal4_0conn - Via3,111,i,1 
+INFO (ASSREXT-35316): ****** For command L207 on processor #1:
+
+  geom took  0.00 user, 0.01 sys, 0.00 elapsed, 7224.0 kbytes
+ INFO (ASSREXT-35321): *** Command L207 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 82 
 
 geom -V Via2 metal2_0conn metal3_0conn - Via2,111,i,1 
-INFO (ASSREXT-35316): ****** For command L206 on processor #1:
+INFO (ASSREXT-35316): ****** For command L208 on processor #1:
 
-  geom took  0.00 user, 0.01 sys, 0.00 elapsed, 7280.0 kbytes
- INFO (ASSREXT-35321): *** Command L206 'geom' finished on processor #1
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7352.0 kbytes
+ INFO (ASSREXT-35321): *** Command L208 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 81 
+
+geom -V Via1 metal1_0conn metal2_0conn - Via1,111,i,1 
+INFO (ASSREXT-35316): ****** For command L209 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7404.0 kbytes
+ INFO (ASSREXT-35321): *** Command L209 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 80 
+
+geom -V cont_0poly poly_0conn metal1_0conn - cont_0poly,111,i,1 
+INFO (ASSREXT-35316): ****** For command L210 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7328.0 kbytes
+ INFO (ASSREXT-35321): *** Command L210 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 79 
+
+geom -V cont_0pdiff metal1_0conn pdiff_0conn - cont_0pdiff_metal1_0conn_pdiff_0conn,111,i,1 
+INFO (ASSREXT-35316): ****** For command L211 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7436.0 kbytes
+ INFO (ASSREXT-35321): *** Command L211 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 78 
 
-geom -V Via1 metal1_0conn metal2_0conn - Via1,111,i,1 
-INFO (ASSREXT-35316): ****** For command L207 on processor #1:
+geom -V cont_0ndiff metal1_0conn ndiff_0conn - cont_0ndiff_metal1_0conn_ndiff_0conn,111,i,1 
+INFO (ASSREXT-35316): ****** For command L212 on processor #1:
 
-  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7384.0 kbytes
- INFO (ASSREXT-35321): *** Command L207 'geom' finished on processor #1
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7400.0 kbytes
+ INFO (ASSREXT-35321): *** Command L212 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 77 
 
-geom -V cont_0poly poly_0conn metal1_0conn - cont_0poly,111,i,1 
-INFO (ASSREXT-35316): ****** For command L208 on processor #1:
-
-  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7308.0 kbytes
- INFO (ASSREXT-35321): *** Command L208 'geom' finished on processor #1
-
-INFO (ASSREXT-35323): tasks left are 76 
-
-geom -V cont_0pdiff metal1_0conn pdiff_0conn - cont_0pdiff_metal1_0conn_pdiff_0conn,111,i,1 
-INFO (ASSREXT-35316): ****** For command L209 on processor #1:
-
-  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7348.0 kbytes
- INFO (ASSREXT-35321): *** Command L209 'geom' finished on processor #1
-
-INFO (ASSREXT-35323): tasks left are 75 
-
-geom -V cont_0ndiff metal1_0conn ndiff_0conn - cont_0ndiff_metal1_0conn_ndiff_0conn,111,i,1 
-INFO (ASSREXT-35316): ****** For command L210 on processor #1:
-
-  geom took  0.00 user, 0.01 sys, 0.00 elapsed, 7280.0 kbytes
- INFO (ASSREXT-35321): *** Command L210 'geom' finished on processor #1
-
-INFO (ASSREXT-35323): tasks left are 74 
-
 INFO (ASSREXT-35299): *** L162 'mv' executed directly
 
-INFO (ASSREXT-35307): tasks left are 73
+INFO (ASSREXT-35307): tasks left are 76
 
 INFO (ASSREXT-35299): *** L165 'mv' executed directly
 
-INFO (ASSREXT-35307): tasks left are 72
+INFO (ASSREXT-35307): tasks left are 75
 
-INFO (ASSREXT-35299): *** L216 'beginFlattenInputs' executed directly
+INFO (ASSREXT-35299): *** L218 'beginFlattenInputs' executed directly
 
-INFO (ASSREXT-35307): tasks left are 71
+INFO (ASSREXT-35307): tasks left are 74
 
 flattenLayers -m nwell_0conn psubstrate 
-INFO (ASSREXT-35316): ****** For command L231 on processor #1:
+INFO (ASSREXT-35316): ****** For command L235 on processor #1:
 
-  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 9228.0 kbytes
- INFO (ASSREXT-35321): *** Command L231 'flattenLayers' finished on processor #1
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7252.0 kbytes
+ INFO (ASSREXT-35321): *** Command L235 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 73 
+
+flattenLayers -m Via3 cont_0ndiff_metal1_0conn_ndiff_0conn 
+INFO (ASSREXT-35316): ****** For command L224 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7268.0 kbytes
+ INFO (ASSREXT-35321): *** Command L224 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 72 
+
+flattenLayers -m Via2 cont_0pdiff 
+INFO (ASSREXT-35316): ****** For command L225 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7364.0 kbytes
+ INFO (ASSREXT-35321): *** Command L225 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 71 
+
+flattenLayers -m Via1 cont_0ndiff 
+INFO (ASSREXT-35316): ****** For command L226 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7284.0 kbytes
+ INFO (ASSREXT-35321): *** Command L226 'flattenLayers' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 70 
 
-flattenLayers -m Via1 cont_0pdiff 
-INFO (ASSREXT-35316): ****** For command L223 on processor #1:
+flattenLayers -m poly_0conn 
+INFO (ASSREXT-35316): ****** For command L233 on processor #1:
 
-  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7292.0 kbytes
- INFO (ASSREXT-35321): *** Command L223 'flattenLayers' finished on processor #1
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7264.0 kbytes
+ INFO (ASSREXT-35321): *** Command L233 'flattenLayers' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 69 
 
-flattenLayers -m cont_0poly cont_0ndiff 
-INFO (ASSREXT-35316): ****** For command L224 on processor #1:
+INFO (ASSREXT-35299): *** L219 '/bin/mv' executed directly
 
-  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7240.0 kbytes
- INFO (ASSREXT-35321): *** Command L224 'flattenLayers' finished on processor #1
+INFO (ASSREXT-35307): tasks left are 68
 
-INFO (ASSREXT-35323): tasks left are 68 
+flatnet -V -li -h / h_NET NET 
+INFO (ASSREXT-35316): ****** For command L220 on processor #1:
 
-flattenLayers -m poly_0conn 
-INFO (ASSREXT-35316): ****** For command L229 on processor #1:
-
-  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7300.0 kbytes
- INFO (ASSREXT-35321): *** Command L229 'flattenLayers' finished on processor #1
+  flatnet took 0.00 user, 0.01 sys, 0.00 elapsed, 14868.0 kbytes
+   id: 8, mnet: 12
+   id: 8, mnet: 10
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 19, mnet: 12
+   id: 11, mnet: 6
+   id: 11, mnet: 7
+   id: 11, mnet: 2
+   id: 11, mnet: 2
+   id: 11, mnet: 2
+   id: 15, mnet: 5
+   id: 15, mnet: 6
+   id: 15, mnet: 6
+   id: 15, mnet: 7
+   id: 15, mnet: 7
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 19, mnet: 7
+   id: 11, mnet: 6
+   id: 11, mnet: 7
+   id: 11, mnet: 2
+   id: 11, mnet: 2
+   id: 11, mnet: 2
+   id: 15, mnet: 5
+   id: 15, mnet: 6
+   id: 15, mnet: 6
+   id: 15, mnet: 7
+   id: 15, mnet: 7
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 15, mnet: 2
+   id: 19, mnet: 7
+   id: 11, mnet: 6
+   id: 11, mnet: 7
+   id: 11, mnet: 2
+   id: 11, mnet: 2
+   id: 11, mnet: 2
+   id: 19, mnet: 5
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+   id: 19, mnet: 2
+ INFO (ASSREXT-35321): *** Command L220 'flatnet' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 67 
 
-INFO (ASSREXT-35299): *** L217 '/bin/mv' executed directly
+INFO (ASSREXT-35299): *** L242 'findCapGround' executed directly
 
 INFO (ASSREXT-35307): tasks left are 66
 
-flatnet -V -li -h / h_NET NET 
-INFO (ASSREXT-35316): ****** For command L218 on processor #1:
+INFO (ASSREXT-35299): *** L245 'echo' executed directly
 
-  flatnet took 0.00 user, 0.01 sys, 0.00 elapsed, 14668.0 kbytes
-   id: 8, mnet: 5
-   id: 8, mnet: 6
-   id: 8, mnet: 2
-   id: 8, mnet: 2
-   id: 6, mnet: 6
-   id: 6, mnet: 4
-   id: 8, mnet: 5
-   id: 8, mnet: 2
-   id: 8, mnet: 2
-   id: 8, mnet: 2
-   id: 14, mnet: 7
-   id: 8, mnet: 5
-   id: 8, mnet: 6
-   id: 8, mnet: 2
-   id: 8, mnet: 2
-   id: 6, mnet: 6
-   id: 6, mnet: 4
-   id: 8, mnet: 5
-   id: 8, mnet: 2
-   id: 8, mnet: 2
-   id: 8, mnet: 2
-   id: 14, mnet: 7
-   id: 6, mnet: 6
-   id: 6, mnet: 4
-   id: 14, mnet: 5
-   id: 14, mnet: 10
-   id: 14, mnet: 12
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
-   id: 14, mnet: 2
- INFO (ASSREXT-35321): *** Command L218 'flatnet' finished on processor #1
+INFO (ASSREXT-35307): tasks left are 65
 
-INFO (ASSREXT-35323): tasks left are 65 
+netprint -n cgnetfile:gn_summary.log NET 
+INFO (ASSREXT-35316): ****** For command L246 on processor #1:
 
-INFO (ASSREXT-35299): *** L238 'findCapGround' executed directly
+INFO (ASSREXT-35321): *** Command L246 'netprint' finished on processor #1
 
-INFO (ASSREXT-35307): tasks left are 64
+INFO (ASSREXT-35323): tasks left are 64 
 
-INFO (ASSREXT-35299): *** L241 'echo' executed directly
+INFO (ASSREXT-35299): *** L192 '/bin/cp' executed directly
 
 INFO (ASSREXT-35307): tasks left are 63
 
-netprint -n cgnetfile:gn_summary.log NET 
-INFO (ASSREXT-35316): ****** For command L242 on processor #1:
+flattenLayers -m cont_0poly _0nmos1v_orig 
+INFO (ASSREXT-35316): ****** For command L227 on processor #1:
 
-INFO (ASSREXT-35321): *** Command L242 'netprint' finished on processor #1
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7280.0 kbytes
+ INFO (ASSREXT-35321): *** Command L227 'flattenLayers' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 62 
 
-INFO (ASSREXT-35299): *** L191 '/bin/cp' executed directly
+geom _0nmos1v ndiff_0conn - _0nmos1v,10,i,1 
+INFO (ASSREXT-35316): ****** For command L193 on processor #1:
 
-INFO (ASSREXT-35307): tasks left are 61
+INFO (ASSREXT-35321): *** Command L193 'geom' finished on processor #1
 
-flattenLayers -m cont_0pdiff_metal1_0conn_pdiff_0conn _0nmos1v_orig 
-INFO (ASSREXT-35316): ****** For command L225 on processor #1:
+INFO (ASSREXT-35323): tasks left are 61 
 
-  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7216.0 kbytes
- INFO (ASSREXT-35321): *** Command L225 'flattenLayers' finished on processor #1
+flattenTransistorData _0nmos1v meters 
+INFO (ASSREXT-35316): ****** For command L222 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7212.0 kbytes
+   flatnet took 0.00 user, 0.02 sys, 0.00 elapsed, 14260.0 kbytes
+   id: 8, mnet: 5
+   id: 11, mnet: 3
+   id: 15, mnet: 3
+   id: 15, mnet: 3
+   id: 11, mnet: 3
+   id: 15, mnet: 3
+   id: 15, mnet: 3
+   id: 11, mnet: 3
+   flattrans took 0.00 user, 0.04 sys, 0.00 elapsed, 6252.0 kbytes
+ INFO (ASSREXT-35321): *** Command L222 'flattenTransistorData' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 60 
 
-geom _0nmos1v ndiff_0conn - _0nmos1v,10,i,1 
-INFO (ASSREXT-35316): ****** For command L192 on processor #1:
+INFO (ASSREXT-35299): *** L194 '/bin/cp' executed directly
 
-INFO (ASSREXT-35321): *** Command L192 'geom' finished on processor #1
+INFO (ASSREXT-35307): tasks left are 59
 
-INFO (ASSREXT-35323): tasks left are 59 
+flattenLayers -m cont_0pdiff_metal1_0conn_pdiff_0conn _0pmos1v_orig 
+INFO (ASSREXT-35316): ****** For command L228 on processor #1:
 
-flattenTransistorData _0nmos1v meters 
-INFO (ASSREXT-35316): ****** For command L220 on processor #1:
-
-  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 9264.0 kbytes
-   flatnet took 0.00 user, 0.02 sys, 0.00 elapsed, 14276.0 kbytes
-   id: 8, mnet: 3
-   id: 14, mnet: 2
-   id: 8, mnet: 3
-   id: 14, mnet: 2
-   id: 14, mnet: 5
-   flattrans took 0.00 user, 0.04 sys, 0.00 elapsed, 6292.0 kbytes
- INFO (ASSREXT-35321): *** Command L220 'flattenTransistorData' finished on processor #1
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7252.0 kbytes
+ INFO (ASSREXT-35321): *** Command L228 'flattenLayers' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 58 
 
-INFO (ASSREXT-35299): *** L193 '/bin/cp' executed directly
+geom _0pmos1v pdiff_0conn - _0pmos1v,10,i,1 
+INFO (ASSREXT-35316): ****** For command L195 on processor #1:
 
-INFO (ASSREXT-35307): tasks left are 57
+INFO (ASSREXT-35321): *** Command L195 'geom' finished on processor #1
 
-flattenLayers -m Via2 cont_0ndiff_metal1_0conn_ndiff_0conn _0pmos1v_orig 
-INFO (ASSREXT-35316): ****** For command L222 on processor #1:
+INFO (ASSREXT-35323): tasks left are 57 
 
-  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7272.0 kbytes
- INFO (ASSREXT-35321): *** Command L222 'flattenLayers' finished on processor #1
+flattenTransistorData _0pmos1v meters 
+INFO (ASSREXT-35316): ****** For command L223 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7264.0 kbytes
+   flatnet took 0.00 user, 0.02 sys, 0.00 elapsed, 14376.0 kbytes
+   id: 8, mnet: 5
+   id: 19, mnet: 4
+   id: 19, mnet: 4
+   flattrans took 0.00 user, 0.05 sys, 0.00 elapsed, 6204.0 kbytes
+ INFO (ASSREXT-35321): *** Command L223 'flattenTransistorData' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 56 
 
-geom _0pmos1v pdiff_0conn - _0pmos1v,10,i,1 
-INFO (ASSREXT-35316): ****** For command L194 on processor #1:
+flattenLayers -m ndiff_0conn pdiff_0conn 
+INFO (ASSREXT-35316): ****** For command L234 on processor #1:
 
-INFO (ASSREXT-35321): *** Command L194 'geom' finished on processor #1
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7264.0 kbytes
+ INFO (ASSREXT-35321): *** Command L234 'flattenLayers' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 55 
 
-flattenTransistorData _0pmos1v meters 
+INFO (ASSREXT-35299): *** L201 'cat' executed directly
+
+INFO (ASSREXT-35307): tasks left are 54
+
+netprint -V -N1 power_list:power_list_nums NET 
 INFO (ASSREXT-35316): ****** For command L221 on processor #1:
 
-  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7340.0 kbytes
-   flatnet took 0.00 user, 0.02 sys, 0.00 elapsed, 14252.0 kbytes
-   id: 8, mnet: 3
-   id: 8, mnet: 3
-   id: 14, mnet: 5
-   flattrans took 0.00 user, 0.05 sys, 0.00 elapsed, 6280.0 kbytes
- INFO (ASSREXT-35321): *** Command L221 'flattenTransistorData' finished on processor #1
-
-INFO (ASSREXT-35323): tasks left are 54 
-
-flattenLayers -m ndiff_0conn pdiff_0conn 
-INFO (ASSREXT-35316): ****** For command L230 on processor #1:
-
-  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7184.0 kbytes
- INFO (ASSREXT-35321): *** Command L230 'flattenLayers' finished on processor #1
+INFO (ASSREXT-35321): *** Command L221 'netprint' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 53 
 
-INFO (ASSREXT-35299): *** L200 'cat' executed directly
+densitymap -V -TC -O metal4_conn.den metal4_conn_tile_spec metal4_0conn 
+INFO (ASSREXT-35316): ****** For command L188 on processor #1:
 
-INFO (ASSREXT-35307): tasks left are 52
+  densitymap took 0.00 user, 0.02 sys, 0.00 elapsed, 6340.0 kbytes
+ INFO (ASSREXT-35321): *** Command L188 'densitymap' finished on processor #1
 
-netprint -V -N1 power_list:power_list_nums NET 
-INFO (ASSREXT-35316): ****** For command L219 on processor #1:
+INFO (ASSREXT-35323): tasks left are 52 
 
-INFO (ASSREXT-35321): *** Command L219 'netprint' finished on processor #1
+flattenLayers -m metal4_0conn 
+INFO (ASSREXT-35316): ****** For command L229 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7176.0 kbytes
+ INFO (ASSREXT-35321): *** Command L229 'flattenLayers' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 51 
 
 densitymap -V -TC -O metal3_conn.den metal3_conn_tile_spec metal3_0conn 
-INFO (ASSREXT-35316): ****** For command L188 on processor #1:
+INFO (ASSREXT-35316): ****** For command L189 on processor #1:
 
-  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6276.0 kbytes
- INFO (ASSREXT-35321): *** Command L188 'densitymap' finished on processor #1
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6256.0 kbytes
+ INFO (ASSREXT-35321): *** Command L189 'densitymap' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 50 
 
 flattenLayers -m metal3_0conn 
-INFO (ASSREXT-35316): ****** For command L226 on processor #1:
+INFO (ASSREXT-35316): ****** For command L230 on processor #1:
 
-  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7180.0 kbytes
- INFO (ASSREXT-35321): *** Command L226 'flattenLayers' finished on processor #1
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7256.0 kbytes
+ INFO (ASSREXT-35321): *** Command L230 'flattenLayers' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 49 
 
 densitymap -V -TC -O metal2_conn.den metal2_conn_tile_spec metal2_0conn 
-INFO (ASSREXT-35316): ****** For command L189 on processor #1:
+INFO (ASSREXT-35316): ****** For command L190 on processor #1:
 
-  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6260.0 kbytes
- INFO (ASSREXT-35321): *** Command L189 'densitymap' finished on processor #1
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6308.0 kbytes
+ INFO (ASSREXT-35321): *** Command L190 'densitymap' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 48 
 
 flattenLayers -m metal2_0conn 
-INFO (ASSREXT-35316): ****** For command L227 on processor #1:
+INFO (ASSREXT-35316): ****** For command L231 on processor #1:
 
-  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7224.0 kbytes
- INFO (ASSREXT-35321): *** Command L227 'flattenLayers' finished on processor #1
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7296.0 kbytes
+ INFO (ASSREXT-35321): *** Command L231 'flattenLayers' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 47 
 
 densitymap -V -TC -O metal1_conn.den metal1_conn_tile_spec metal1_0conn 
-INFO (ASSREXT-35316): ****** For command L190 on processor #1:
+INFO (ASSREXT-35316): ****** For command L191 on processor #1:
 
-  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6164.0 kbytes
- INFO (ASSREXT-35321): *** Command L190 'densitymap' finished on processor #1
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6332.0 kbytes
+ INFO (ASSREXT-35321): *** Command L191 'densitymap' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 46 
 
 flattenLayers -m metal1_0conn 
-INFO (ASSREXT-35316): ****** For command L228 on processor #1:
+INFO (ASSREXT-35316): ****** For command L232 on processor #1:
 
-  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7276.0 kbytes
- INFO (ASSREXT-35321): *** Command L228 'flattenLayers' finished on processor #1
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7256.0 kbytes
+ INFO (ASSREXT-35321): *** Command L232 'flattenLayers' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 45 
 
-INFO (ASSREXT-35299): *** L232 'endFlattenInputs' executed directly
+INFO (ASSREXT-35299): *** L236 'endFlattenInputs' executed directly
 
 INFO (ASSREXT-35307): tasks left are 44
 
-reconnect -cgnd 7 -float floatlvsnetsfile -tf _0nmos1v,_0pmos1v -probe text_metal1_0conn:metal1_0conn:text_metal1_0conn_fvia,text_nwell_0conn:nwell_0conn:text_nwell_0conn_fvia 
-INFO (ASSREXT-35315): ****** For command L243:
+reconnect -cgnd 7 -float floatlvsnetsfile -tf _0nmos1v,_0pmos1v -probe text_metal1_0conn:metal1_0conn:text_metal1_0conn_fvia 
+INFO (ASSREXT-35315): ****** For command L247:
 
-INFO (ASSREXT-35320): *** Command L243 'reconnect' finished
+INFO (ASSREXT-35320): *** Command L247 'reconnect' finished
 
 INFO (ASSREXT-35323): tasks left are 43 
 
 geom _0nmos1v,_0pmos1v - qrcgate,1,i,1 
-INFO (ASSREXT-35316): ****** For command L247 on processor #1:
+INFO (ASSREXT-35316): ****** For command L250 on processor #1:
 
-INFO (ASSREXT-35321): *** Command L247 'geom' finished on processor #1
+INFO (ASSREXT-35321): *** Command L250 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 42 
 
 iprint -count floatlvsnetsfile 
-INFO (ASSREXT-35316): ****** For command L246 on processor #1:
+INFO (ASSREXT-35316): ****** For command L249 on processor #1:
 
-INFO (ASSREXT-35321): *** Command L246 'iprint' finished on processor #1
+INFO (ASSREXT-35321): *** Command L249 'iprint' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 41 
 
 iprint -count floatlvsnetsfile 
-INFO (ASSREXT-35315): ****** For command L248:
+INFO (ASSREXT-35315): ****** For command L251:
 
-INFO (ASSREXT-35320): *** Command L248 'iprint' finished
+INFO (ASSREXT-35320): *** Command L251 'iprint' finished
 
 INFO (ASSREXT-35323): tasks left are 40 
 
 grow -V .001 ndiff_0conn mask 
-INFO (ASSREXT-35316): ****** For command L270 on processor #1:
+INFO (ASSREXT-35316): ****** For command L274 on processor #1:
 
-  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6204.0 kbytes
- INFO (ASSREXT-35321): *** Command L270 'grow' finished on processor #1
+  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6344.0 kbytes
+ INFO (ASSREXT-35321): *** Command L274 'grow' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 39 
 
 geom -V pdiff_0conn mask - pdiff_0conn,10,i,1 
-INFO (ASSREXT-35316): ****** For command L271 on processor #1:
+INFO (ASSREXT-35316): ****** For command L275 on processor #1:
 
-  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6928.0 kbytes
- INFO (ASSREXT-35321): *** Command L271 'geom' finished on processor #1
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6976.0 kbytes
+ INFO (ASSREXT-35321): *** Command L275 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 38 
 
 grow -V 0.001 nwell_0conn g_nwell_0conn 
-INFO (ASSREXT-35316): ****** For command L287 on processor #1:
+INFO (ASSREXT-35316): ****** For command L290 on processor #1:
 
-  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6284.0 kbytes
- INFO (ASSREXT-35321): *** Command L287 'grow' finished on processor #1
+  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6308.0 kbytes
+ INFO (ASSREXT-35321): *** Command L290 'grow' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 37 
 
 geom -V ndiff_0conn,pdiff_0conn - Oxide,1,i,1 
-INFO (ASSREXT-35316): ****** For command L272 on processor #1:
+INFO (ASSREXT-35316): ****** For command L276 on processor #1:
 
-  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6888.0 kbytes
- INFO (ASSREXT-35321): *** Command L272 'geom' finished on processor #1
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6784.0 kbytes
+ INFO (ASSREXT-35321): *** Command L276 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 36 
 
 createEmptyLayer metal11_conn 
-INFO (ASSREXT-35316): ****** For command L273 on processor #1:
-
-INFO (ASSREXT-35321): *** Command L273 'createEmptyLayer' finished on processor #1
-
-INFO (ASSREXT-35323): tasks left are 35 
-
-createEmptyLayer metal10_conn 
-INFO (ASSREXT-35316): ****** For command L274 on processor #1:
-
-INFO (ASSREXT-35321): *** Command L274 'createEmptyLayer' finished on processor #1
-
-INFO (ASSREXT-35323): tasks left are 34 
-
-createEmptyLayer metal9_conn 
-INFO (ASSREXT-35316): ****** For command L275 on processor #1:
-
-INFO (ASSREXT-35321): *** Command L275 'createEmptyLayer' finished on processor #1
-
-INFO (ASSREXT-35323): tasks left are 33 
-
-createEmptyLayer metal8_conn 
-INFO (ASSREXT-35316): ****** For command L276 on processor #1:
-
-INFO (ASSREXT-35321): *** Command L276 'createEmptyLayer' finished on processor #1
-
-INFO (ASSREXT-35323): tasks left are 32 
-
-createEmptyLayer metal7_conn 
 INFO (ASSREXT-35316): ****** For command L277 on processor #1:
 
 INFO (ASSREXT-35321): *** Command L277 'createEmptyLayer' finished on processor #1
 
-INFO (ASSREXT-35323): tasks left are 31 
+INFO (ASSREXT-35323): tasks left are 35 
 
-createEmptyLayer metal6_conn 
+createEmptyLayer metal10_conn 
 INFO (ASSREXT-35316): ****** For command L278 on processor #1:
 
 INFO (ASSREXT-35321): *** Command L278 'createEmptyLayer' finished on processor #1
 
-INFO (ASSREXT-35323): tasks left are 30 
+INFO (ASSREXT-35323): tasks left are 34 
 
-createEmptyLayer metal5_conn 
+createEmptyLayer metal9_conn 
 INFO (ASSREXT-35316): ****** For command L279 on processor #1:
 
 INFO (ASSREXT-35321): *** Command L279 'createEmptyLayer' finished on processor #1
 
-INFO (ASSREXT-35323): tasks left are 29 
+INFO (ASSREXT-35323): tasks left are 33 
 
-createEmptyLayer metal4_conn 
+createEmptyLayer metal8_conn 
 INFO (ASSREXT-35316): ****** For command L280 on processor #1:
 
 INFO (ASSREXT-35321): *** Command L280 'createEmptyLayer' finished on processor #1
 
-INFO (ASSREXT-35323): tasks left are 28 
+INFO (ASSREXT-35323): tasks left are 32 
 
-INFO (ASSREXT-35299): *** L261 '/bin/cp' executed directly
+createEmptyLayer metal7_conn 
+INFO (ASSREXT-35316): ****** For command L281 on processor #1:
 
-INFO (ASSREXT-35307): tasks left are 27
+INFO (ASSREXT-35321): *** Command L281 'createEmptyLayer' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 31 
+
+createEmptyLayer metal6_conn 
+INFO (ASSREXT-35316): ****** For command L282 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L282 'createEmptyLayer' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 30 
+
+createEmptyLayer metal5_conn 
+INFO (ASSREXT-35316): ****** For command L283 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L283 'createEmptyLayer' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 29 
 
 INFO (ASSREXT-35299): *** L264 '/bin/cp' executed directly
 
+INFO (ASSREXT-35307): tasks left are 28
+
+INFO (ASSREXT-35299): *** L268 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 27
+
+INFO (ASSREXT-35299): *** L267 '/bin/cp' executed directly
+
 INFO (ASSREXT-35307): tasks left are 26
 
-INFO (ASSREXT-35299): *** L263 '/bin/cp' executed directly
+INFO (ASSREXT-35299): *** L266 '/bin/cp' executed directly
 
 INFO (ASSREXT-35307): tasks left are 25
 
-INFO (ASSREXT-35299): *** L262 '/bin/cp' executed directly
+INFO (ASSREXT-35299): *** L265 '/bin/cp' executed directly
 
 INFO (ASSREXT-35307): tasks left are 24
 
 geom _0nmos1v,_0pmos1v - qrcgate,1,i,1 
-INFO (ASSREXT-35316): ****** For command L301 on processor #1:
+INFO (ASSREXT-35316): ****** For command L304 on processor #1:
 
-INFO (ASSREXT-35321): *** Command L301 'geom' finished on processor #1
+INFO (ASSREXT-35321): *** Command L304 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 23 
 
 flatlabel -V -tc -F -l flatlabel.info text_metal1_0conn L1T0 
-INFO (ASSREXT-35316): ****** For command L255 on processor #1:
+INFO (ASSREXT-35316): ****** For command L258 on processor #1:
 
   INFO (FLTLBL-89003): exec labsort -V L1T0
    
- INFO (ASSREXT-35321): *** Command L255 'flatlabel' finished on processor #1
+ INFO (ASSREXT-35321): *** Command L258 'flatlabel' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 22 
 
 netprint -max NET 
-INFO (ASSREXT-35316): ****** For command L249 on processor #1:
+INFO (ASSREXT-35316): ****** For command L252 on processor #1:
 
-INFO (ASSREXT-35321): *** Command L249 'netprint' finished on processor #1
+INFO (ASSREXT-35321): *** Command L252 'netprint' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 21 
 
 emerge -V _0nmos1v _0pmos1v allGate 
-INFO (ASSREXT-35316): ****** For command L510 on processor #1:
+INFO (ASSREXT-35316): ****** For command L513 on processor #1:
 
-  emerge took 0.00 user, 0.00 sys, 0.00 elapsed, 5832.0 kbytes
- INFO (ASSREXT-35321): *** Command L510 'emerge' finished on processor #1
+  emerge took 0.00 user, 0.00 sys, 0.00 elapsed, 5868.0 kbytes
+ INFO (ASSREXT-35321): *** Command L513 'emerge' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 20 
 
-INFO (ASSREXT-35299): *** L286 '/bin/cp' executed directly
+INFO (ASSREXT-35299): *** L289 '/bin/cp' executed directly
 
 INFO (ASSREXT-35307): tasks left are 19
 
 geom -V psubstrate g_nwell_0conn - psubstrate,10,i,1 
-INFO (ASSREXT-35316): ****** For command L288 on processor #1:
+INFO (ASSREXT-35316): ****** For command L291 on processor #1:
 
-  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6848.0 kbytes
- INFO (ASSREXT-35321): *** Command L288 'geom' finished on processor #1
+  geom took  0.00 user, 0.00 sys, 1.00 elapsed, 6888.0 kbytes
+ INFO (ASSREXT-35321): *** Command L291 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 18 
 
 xytoebbox -V -g 10.002 -e metal11_conn,metal10_conn,metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,nwell_0conn,psubstrate xg_FOX 
-INFO (ASSREXT-35316): ****** For command L290 on processor #1:
+INFO (ASSREXT-35316): ****** For command L293 on processor #1:
 
-INFO (ASSREXT-35321): *** Command L290 'xytoebbox' finished on processor #1
+INFO (ASSREXT-35321): *** Command L293 'xytoebbox' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 17 
 
 geom -V nwell_0conn,psubstrate - FOX,1,i,1 
-INFO (ASSREXT-35316): ****** For command L289 on processor #1:
+INFO (ASSREXT-35316): ****** For command L292 on processor #1:
 
-  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6784.0 kbytes
- INFO (ASSREXT-35321): *** Command L289 'geom' finished on processor #1
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6844.0 kbytes
+ INFO (ASSREXT-35321): *** Command L292 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 16 
 
 grow -V 0.001 FOX g_FOX 
-INFO (ASSREXT-35316): ****** For command L291 on processor #1:
+INFO (ASSREXT-35316): ****** For command L294 on processor #1:
 
-  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6212.0 kbytes
- INFO (ASSREXT-35321): *** Command L291 'grow' finished on processor #1
+  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6296.0 kbytes
+ INFO (ASSREXT-35321): *** Command L294 'grow' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 15 
 
 geom -V xg_FOX g_FOX - tmp_FOX,10 
-INFO (ASSREXT-35316): ****** For command L292 on processor #1:
+INFO (ASSREXT-35316): ****** For command L295 on processor #1:
 
-  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6744.0 kbytes
- INFO (ASSREXT-35321): *** Command L292 'geom' finished on processor #1
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6824.0 kbytes
+ INFO (ASSREXT-35321): *** Command L295 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 14 
 
 epick -V -reo -D 7 tmp_FOX pick_FOX 
-INFO (ASSREXT-35316): ****** For command L293 on processor #1:
+INFO (ASSREXT-35316): ****** For command L296 on processor #1:
 
-  epick took  0.00 user, 0.00 sys, 0.00 elapsed, 6164.0 kbytes
- INFO (ASSREXT-35321): *** Command L293 'epick' finished on processor #1
+  epick took  0.00 user, 0.00 sys, 0.00 elapsed, 6276.0 kbytes
+ INFO (ASSREXT-35321): *** Command L296 'epick' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 13 
 
 grow -V -m 0.002 pick_FOX g_pick_FOX 
-INFO (ASSREXT-35316): ****** For command L294 on processor #1:
+INFO (ASSREXT-35316): ****** For command L297 on processor #1:
 
-  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6324.0 kbytes
-   geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6832.0 kbytes
- INFO (ASSREXT-35321): *** Command L294 'grow' finished on processor #1
+  grow took  0.00 user, 0.01 sys, 0.00 elapsed, 6336.0 kbytes
+   geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6980.0 kbytes
+ INFO (ASSREXT-35321): *** Command L297 'grow' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 12 
 
 stamp -i FOX g_pick_FOX 
-INFO (ASSREXT-35316): ****** For command L295 on processor #1:
+INFO (ASSREXT-35316): ****** For command L298 on processor #1:
 
-INFO (ASSREXT-35321): *** Command L295 'stamp' finished on processor #1
+INFO (ASSREXT-35321): *** Command L298 'stamp' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 11 
 
 grow -V -m -0.002 g_pick_FOX pick_FOX 
-INFO (ASSREXT-35316): ****** For command L296 on processor #1:
+INFO (ASSREXT-35316): ****** For command L299 on processor #1:
 
-  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6240.0 kbytes
-   sort edges took  0.00 user, 0.00 sys, 0.00 elapsed, 6332.0 kbytes
-   geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6888.0 kbytes
- INFO (ASSREXT-35321): *** Command L296 'grow' finished on processor #1
+  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6368.0 kbytes
+   sort edges took  0.00 user, 0.00 sys, 0.00 elapsed, 8392.0 kbytes
+   geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6896.0 kbytes
+ INFO (ASSREXT-35321): *** Command L299 'grow' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 10 
 
 emerge -V pick_FOX FOX tmp1_FOX 
-INFO (ASSREXT-35316): ****** For command L297 on processor #1:
+INFO (ASSREXT-35316): ****** For command L300 on processor #1:
 
-  emerge took 0.00 user, 0.00 sys, 0.00 elapsed, 5756.0 kbytes
- INFO (ASSREXT-35321): *** Command L297 'emerge' finished on processor #1
+  emerge took 0.00 user, 0.00 sys, 0.00 elapsed, 5872.0 kbytes
+ INFO (ASSREXT-35321): *** Command L300 'emerge' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 9 
 
 geom -V tmp1_FOX - FOX,1,i,1 
-INFO (ASSREXT-35316): ****** For command L298 on processor #1:
+INFO (ASSREXT-35316): ****** For command L301 on processor #1:
 
-  geom took  0.00 user, 0.01 sys, 0.00 elapsed, 6792.0 kbytes
- INFO (ASSREXT-35321): *** Command L298 'geom' finished on processor #1
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6920.0 kbytes
+ INFO (ASSREXT-35321): *** Command L301 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 8 
 
 geom -V FOX Oxide - FOX,10,i,1 
-INFO (ASSREXT-35316): ****** For command L300 on processor #1:
+INFO (ASSREXT-35316): ****** For command L303 on processor #1:
 
-  geom took  0.00 user, 0.01 sys, 0.00 elapsed, 6860.0 kbytes
- INFO (ASSREXT-35321): *** Command L300 'geom' finished on processor #1
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6892.0 kbytes
+ INFO (ASSREXT-35321): *** Command L303 'geom' finished on processor #1
 
 INFO (ASSREXT-35323): tasks left are 7 
 
-INFO (ASSREXT-35299): *** L307 'mv' executed directly
+INFO (ASSREXT-35299): *** L310 'mv' executed directly
 
 INFO (ASSREXT-35307): tasks left are 6
 
-INFO (ASSREXT-35299): *** L299 '/bin/rm' executed directly
+INFO (ASSREXT-35299): *** L302 '/bin/rm' executed directly
 
 INFO (ASSREXT-35307): tasks left are 5
 
-Capacitance data preparation stage took  0.66 user, 1.79 sys, 4.00 elapsed, 8016.0 kbytes
-INFO (ASSREXT-35334): Capacitance data preparation stage completed successfully at Sat Nov 29 19:08:30 2025
+Capacitance data preparation stage took  0.58 user, 1.94 sys, 5.00 elapsed, 8016.0 kbytes
+INFO (ASSREXT-35334): Capacitance data preparation stage completed successfully at Thu Dec  4 16:58:47 2025
 
-INFO (ASSREXT-35335): pax16 started at Sat Nov 29 19:08:30 2025
+INFO (ASSREXT-35335): pax16 started at Thu Dec  4 16:58:47 2025
 
 pax16 -V -lee_off -delete_unused_files rm_files_in_pax16 -gnd 7 -ignore_cf_table -scf sip.cmd -cgnd 7,1.0 -M_perim_off -c /class/ece482/gpdk045_v_6_0/qrc/typical/qrcTechFile -f FOX Oxide poly_conn metal1_conn metal2_conn metal3_conn metal4_conn metal5_conn metal6_conn metal7_conn metal8_conn metal9_conn metal10_conn metal11_conn allGate - /class/ece482/gpdk045_v_6_0/qrc/typical/qrcTechFile - - NET - capfile 
-INFO (ASSREXT-35315): ****** For command L516:
+INFO (ASSREXT-35315): ****** For command L519:
 
-  pax16 took  0.52 user, 0.57 sys, 3.00 elapsed, 136424.0 kbytes
- INFO (ASSREXT-35320): *** Command L516 'pax16' finished
+  pax16 took  0.60 user, 0.72 sys, 6.00 elapsed, 145288.0 kbytes
+ INFO (ASSREXT-35320): *** Command L519 'pax16' finished
 
-C stage took 0.54 user, 0.60 sys, 4.00 elapsed, 8016.0 kbytes
-INFO (ASSREXT-35336): pax16 completed successfully at Sat Nov 29 19:08:34 2025
+C stage took 0.62 user, 0.75 sys, 6.00 elapsed, 8016.0 kbytes
+INFO (ASSREXT-35336): pax16 completed successfully at Thu Dec  4 16:58:53 2025
 
-INFO (ASSREXT-35337): Output stage started at Sat Nov 29 19:08:34 2025
+INFO (ASSREXT-35337): Output stage started at Thu Dec  4 16:58:53 2025
 
 INFO (ASSREXT-35323): tasks left are 4 
 
 xreduce -V -mergecap -n NET -tech /class/ece482/gpdk045_v_6_0/qrc/typical -d1 -e metal11_conn,metal10_conn,metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -decoupled -sr -danglingR -minR 0.001 -cap capfile L1T0 _0nmos1v.trans _0pmos1v.trans 
-INFO (ASSREXT-35315): ****** For command L533:
+INFO (ASSREXT-35315): ****** For command L536:
 
   INFO (XREDUCE-199109): minR option removed 0 resistors (0%)
    
    INFO (XREDUCE-199108): d1 option renamed 0 nets
    
-   xreduce took 0.19 user, 0.02 sys, 0.00 elapsed, 37684.0 kbytes
- INFO (ASSREXT-35320): *** Command L533 'xreduce' finished
+   xreduce took 0.18 user, 0.03 sys, 0.00 elapsed, 36744.0 kbytes
+ INFO (ASSREXT-35320): *** Command L536 'xreduce' finished
 
 INFO (ASSREXT-35323): tasks left are 3 
 
 advgen -V -g0 -li -f -n -o HSPICE -cgnd 7,1.0 -dxref /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder/full_adder.gdx -nxref /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder/full_adder.gnx -addprefix -sc caps2dversion -mx capfile metal11_conn,metal10_conn,metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -ta lvsmos.mod,_0nmos1v.net _0nmos1v.trans -ta lvsmos.mod,_0pmos1v.net _0pmos1v.trans - NET - /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder/extview.tmp 
-INFO (ASSREXT-35315): ****** For command L543:
+INFO (ASSREXT-35315): ****** For command L546:
 
-  INFO (ADVGN-5346): spice2db warning: Duplicate net "net9" in cell "full_adder" renamed "net9@1"
+  INFO (ADVGN-5346): spice2db warning: Duplicate net "net1" in cell "full_adder" renamed "net1@1"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "P_bar" in cell "full_adder" renamed "P_bar@1"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "net4" in cell "full_adder" renamed "net4@1"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "net9" in cell "full_adder" renamed "net9@1"
    
    INFO (ADVGN-5346): spice2db warning: Duplicate net "net9" in cell "full_adder" renamed "net9@2"
    
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "S" in cell "full_adder" renamed "S@1"
+   
    INFO (ADVGN-5346): spice2db warning: Duplicate net "VDD" in cell "full_adder" renamed "VDD@1"
    
-   advgen took:  0.78 user, 0.81 sys, 2.00 elapsed, 40756.0 kbytes
- INFO (ASSREXT-35320): *** Command L543 'advgen' finished
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "full_adder" renamed "VSS@1"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "full_adder" renamed "VSS@2"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "full_adder" renamed "VSS@3"
+   
+   advgen took:  0.91 user, 0.89 sys, 3.00 elapsed, 42904.0 kbytes
+ INFO (ASSREXT-35320): *** Command L546 'advgen' finished
 
 INFO (ASSREXT-35323): tasks left are 2 
 
-INFO (ASSREXT-35299): *** L557 'mv' executed directly
+INFO (ASSREXT-35299): *** L560 'mv' executed directly
 
 INFO (ASSREXT-35307): tasks left are 1
 
-INFO (ASSREXT-35299): *** L582 'cat' executed directly
+INFO (ASSREXT-35299): *** L586 'cat' executed directly
 
 INFO (ASSREXT-35307): tasks left are 0
 
-Output stage took  1.01 user, 0.90 sys, 2.00 elapsed, 8020.0 kbytes
-INFO (ASSREXT-35338): Output stage completed successfully at Sat Nov 29 19:08:36 2025
+Output stage took  1.12 user, 0.98 sys, 3.00 elapsed, 8020.0 kbytes
+INFO (ASSREXT-35338): Output stage completed successfully at Thu Dec  4 16:58:56 2025
 
 assura_rcx took:  0.00 user, 0.00 sys, 0.00 elapsed, 8020.0 kbytes
 INFO (LBRCXM-610): Extraction finished.
@@ -1028,11 +1116,25 @@ INFO (LBRCXU-108): Starting
 
  runUserCmd /software/cadence-2024-08/IC231/bin/qrcToDfII -extract cap -run_name full_adder -cdlout_run_dir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs -check_cell_view TRUE -device_finger_delimiter @ -extracted_view av_extracted -lvs_source agds -cap_models no -capacitor pcapacitor -res_models no -cap_prop_name c -transfer_net_expression TRUE -extview_tmp /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder/extview.tmp -run_dir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/svdb/full_adder -cdslib /home/mgrawe2/ece482.work/gpdk045_new/cds.lib -lib_name ece482_final_project -cell_name full_adder -view_name layout -extview_rul /class/ece482/gpdk045_v_6_0/pvs/extview.rul -server /software/cadence-2024-08/QUANTUS231/tools.lnx86/extraction/bin/64bit/../shapeServer
 Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.04s.
+INFO (LBCLV-5346): spice2db warning: Duplicate net "net1" in cell "full_adder" renamed "net1@1"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "P_bar" in cell "full_adder" renamed "P_bar@1"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "net4" in cell "full_adder" renamed "net4@1"
+
 INFO (LBCLV-5346): spice2db warning: Duplicate net "net9" in cell "full_adder" renamed "net9@1"
 
 INFO (LBCLV-5346): spice2db warning: Duplicate net "net9" in cell "full_adder" renamed "net9@2"
 
+INFO (LBCLV-5346): spice2db warning: Duplicate net "S" in cell "full_adder" renamed "S@1"
+
 INFO (LBCLV-5346): spice2db warning: Duplicate net "VDD" in cell "full_adder" renamed "VDD@1"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "full_adder" renamed "VSS@1"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "full_adder" renamed "VSS@2"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "full_adder" renamed "VSS@3"
 
 device        g45n1svt  M          _nmos1v          nmos1v  ivpcell     gpdk045  D G S B
 Loading gpdk045/libInit.il ...
@@ -1119,7 +1221,7 @@ Loading CDLOUT map files for /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_
 Creating extracted view for full_adder
 
 Save recognition layer _nmos1v
-Layer _nmos1v has 11 shapes.
+Layer _nmos1v has 18 shapes.
 Save recognition layer _nmos1v_hvt
 Layer _nmos1v_hvt has 0 shapes.
 Save recognition layer _nmos1v_lvt
@@ -1135,7 +1237,7 @@ Layer _nmoscap1v has 0 shapes.
 Save recognition layer _nmoscap2v
 Layer _nmoscap2v has 0 shapes.
 Save recognition layer _pmos1v
-Layer _pmos1v has 11 shapes.
+Layer _pmos1v has 18 shapes.
 Save recognition layer _pmos1v_hvt
 Layer _pmos1v_hvt has 0 shapes.
 Save recognition layer _pmos1v_lvt
@@ -1275,39 +1377,39 @@ Layer metal5_conn has 0 shapes.
 Copying layer Via5
 Layer Via5 has 0 shapes.
 Copying layer metal4_conn
-Layer metal4_conn has 0 shapes.
+Layer metal4_conn has 1 shapes.
 Copying layer Via4
 Layer Via4 has 0 shapes.
 Copying layer metal3_conn
-Layer metal3_conn has 4 shapes.
+Layer metal3_conn has 6 shapes.
 Copying layer Via3
-Layer Via3 has 0 shapes.
+Layer Via3 has 2 shapes.
 Copying layer metal2_conn
-Layer metal2_conn has 10 shapes.
+Layer metal2_conn has 15 shapes.
 Copying layer Via2
-Layer Via2 has 17 shapes.
+Layer Via2 has 7 shapes.
 Copying layer metal1_conn
-Layer metal1_conn has 26 shapes.
+Layer metal1_conn has 45 shapes.
 Copying layer Via1
-Layer Via1 has 38 shapes.
+Layer Via1 has 39 shapes.
 Copying layer poly_conn
 Layer poly_conn has 15 shapes.
 Copying layer cont_poly
-Layer cont_poly has 42 shapes.
+Layer cont_poly has 37 shapes.
 Copying layer pdiff_conn
-Layer pdiff_conn has 21 shapes.
+Layer pdiff_conn has 30 shapes.
 Copying layer pdiff_conn
-Layer pdiff_conn has 21 shapes.
+Layer pdiff_conn has 30 shapes.
 Copying layer cont_pdiff
-Layer cont_pdiff has 46 shapes.
+Layer cont_pdiff has 168 shapes.
 Copying layer npn_emit
 Layer npn_emit has 0 shapes.
 Copying layer cont_ndiff
-Layer cont_ndiff has 29 shapes.
+Layer cont_ndiff has 90 shapes.
 Copying layer ndiff_conn
-Layer ndiff_conn has 21 shapes.
+Layer ndiff_conn has 30 shapes.
 Copying layer ndiff_conn
-Layer ndiff_conn has 21 shapes.
+Layer ndiff_conn has 30 shapes.
 Copying layer pnp_emit
 Layer pnp_emit has 0 shapes.
 Copying layer psubstrate
@@ -1326,8 +1428,8 @@ instance count totals:
 
     lib              cell             view                    total
     analogLib        pcapacitor       symbol                     14
-    gpdk045          nmos1v           ivpcell                    11
-    gpdk045          pmos1v           ivpcell                    11
+    gpdk045          nmos1v           ivpcell                    18
+    gpdk045          pmos1v           ivpcell                    18
 
 Extracted view creation has completed.
 INFO (LBRCXM-612): Done Executing :runUserCmd
@@ -1359,8 +1461,8 @@ INFO (LBRCXM-985): Summary:
 
 
 INFO (LBRCXM-920): Host name and peak memory report
- Host Name:                    fastx3-21.ews.illinois.edu
- Peak memory used:             97 MB (sampled at 15s intervals)
+ Host Name:                    fastx3-01.ews.illinois.edu
+ Peak memory used:             128 MB (sampled at 15s intervals)
 
 INFO (LBRCXM-982): Floating net statistics in the design:
 
@@ -1368,10 +1470,10 @@ INFO (LBRCXM-982): Floating net statistics in the design:
      Total signal nets =  15
          Total LVS net = 15
 
-INFO (LBRCXM-702): Run ended: Sat Nov 29 19:08:38 2025
+INFO (LBRCXM-702): Run ended: Thu Dec  4 16:58:58 2025
 
 
-INFO (LBRCXM-805): Quantus run took:  3s user, 4s sys, 15s elapsed
+INFO (LBRCXM-805): Quantus run took:  4s user, 5s sys, 20s elapsed
 
 
 INFO (LBRCXM-708): *****  Quantus terminated normally  *****

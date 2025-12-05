@@ -4,7 +4,7 @@
 * Library Name:  ece482_final_project
 * Top Cell Name: half_adder
 * View Name:     schematic
-* Netlisted on:  Nov 30 14:03:55 2025
+* Netlisted on:  Dec  4 17:22:13 2025
 ************************************************************************
 
 *.BIPOLAR
@@ -28,8 +28,8 @@
 
 .SUBCKT inv IN OUT VDD VSS
 *.PININFO IN:I OUT:O VDD:B VSS:B
-MPM0 OUT IN VDD VDD g45p1svt m=1 l=45n w=240n
-MNM0 OUT IN VSS VSS g45n1svt m=1 l=45n w=120n
+MPM0 OUT IN VDD VDD g45p1svt m=1 l=45n w=1.44u
+MNM0 OUT IN VSS VSS g45n1svt m=1 l=45n w=720n
 .ENDS
 
 ************************************************************************
@@ -40,10 +40,10 @@ MNM0 OUT IN VSS VSS g45n1svt m=1 l=45n w=120n
 
 .SUBCKT xor A B B_bar OUT VDD VSS
 *.PININFO A:I B:I B_bar:O OUT:O VDD:B VSS:B
-MNM1 OUT A B_bar VSS g45n1svt m=1 l=45n w=120n
-MNM0 A B_bar OUT VSS g45n1svt m=1 l=45n w=120n
-MPM2 OUT A B VDD g45p1svt m=1 l=45n w=240n
-MPM0 A B OUT VDD g45p1svt m=1 l=45n w=240n
+MNM1 OUT A B_bar VSS g45n1svt m=1 l=45n w=720n
+MNM0 A B_bar OUT VSS g45n1svt m=1 l=45n w=720n
+MPM2 OUT A B VDD g45p1svt m=1 l=45n w=1.44u
+MPM0 A B OUT VDD g45p1svt m=1 l=45n w=1.44u
 XI0 B B_bar VDD VSS / inv
 .ENDS
 
@@ -55,10 +55,10 @@ XI0 B B_bar VDD VSS / inv
 
 .SUBCKT nand2 A B OUT VDD VSS
 *.PININFO A:I B:I OUT:O VDD:B VSS:B
-MNM1 net1 B VSS VSS g45n1svt m=1 l=45n w=120n
-MNM0 OUT A net1 VSS g45n1svt m=1 l=45n w=120n
-MPM1 OUT A VDD VDD g45p1svt m=1 l=45n w=240n
-MPM0 OUT B VDD VDD g45p1svt m=1 l=45n w=240n
+MNM1 net1 B VSS VSS g45n1svt m=1 l=45n w=1.44u
+MNM0 OUT A net1 VSS g45n1svt m=1 l=45n w=1.44u
+MPM1 OUT A VDD VDD g45p1svt m=1 l=45n w=1.44u
+MPM0 OUT B VDD VDD g45p1svt m=1 l=45n w=1.44u
 .ENDS
 
 ************************************************************************

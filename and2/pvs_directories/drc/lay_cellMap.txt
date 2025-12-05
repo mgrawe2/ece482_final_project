@@ -1,1 +1,3 @@
 ece482_final_project and2 layout and2
+ece482_final_project nand2 layout nand2
+ece482_final_project inv layout inv

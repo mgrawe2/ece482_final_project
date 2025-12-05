@@ -1,5 +1,9 @@
 half_adder
 
+and2
+	inv
+
 half_adder
-	xor
+	inv
+	and2
 

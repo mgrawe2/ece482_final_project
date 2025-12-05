@@ -1,9 +1,23 @@
 Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.04s.
+INFO (LBCLV-5346): spice2db warning: Duplicate net "net1" in cell "full_adder" renamed "net1@1"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "P_bar" in cell "full_adder" renamed "P_bar@1"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "net4" in cell "full_adder" renamed "net4@1"
+
 INFO (LBCLV-5346): spice2db warning: Duplicate net "net9" in cell "full_adder" renamed "net9@1"
 
 INFO (LBCLV-5346): spice2db warning: Duplicate net "net9" in cell "full_adder" renamed "net9@2"
 
+INFO (LBCLV-5346): spice2db warning: Duplicate net "S" in cell "full_adder" renamed "S@1"
+
 INFO (LBCLV-5346): spice2db warning: Duplicate net "VDD" in cell "full_adder" renamed "VDD@1"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "full_adder" renamed "VSS@1"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "full_adder" renamed "VSS@2"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "full_adder" renamed "VSS@3"
 
 device        g45n1svt  M          _nmos1v          nmos1v  ivpcell     gpdk045  D G S B
 Loading gpdk045/libInit.il ...
@@ -90,7 +104,7 @@ Loading CDLOUT map files for /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_
 Creating extracted view for full_adder
 
 Save recognition layer _nmos1v
-Layer _nmos1v has 11 shapes.
+Layer _nmos1v has 18 shapes.
 Save recognition layer _nmos1v_hvt
 Layer _nmos1v_hvt has 0 shapes.
 Save recognition layer _nmos1v_lvt
@@ -106,7 +120,7 @@ Layer _nmoscap1v has 0 shapes.
 Save recognition layer _nmoscap2v
 Layer _nmoscap2v has 0 shapes.
 Save recognition layer _pmos1v
-Layer _pmos1v has 11 shapes.
+Layer _pmos1v has 18 shapes.
 Save recognition layer _pmos1v_hvt
 Layer _pmos1v_hvt has 0 shapes.
 Save recognition layer _pmos1v_lvt
@@ -246,39 +260,39 @@ Layer metal5_conn has 0 shapes.
 Copying layer Via5
 Layer Via5 has 0 shapes.
 Copying layer metal4_conn
-Layer metal4_conn has 0 shapes.
+Layer metal4_conn has 1 shapes.
 Copying layer Via4
 Layer Via4 has 0 shapes.
 Copying layer metal3_conn
-Layer metal3_conn has 4 shapes.
+Layer metal3_conn has 6 shapes.
 Copying layer Via3
-Layer Via3 has 0 shapes.
+Layer Via3 has 2 shapes.
 Copying layer metal2_conn
-Layer metal2_conn has 10 shapes.
+Layer metal2_conn has 15 shapes.
 Copying layer Via2
-Layer Via2 has 17 shapes.
+Layer Via2 has 7 shapes.
 Copying layer metal1_conn
-Layer metal1_conn has 26 shapes.
+Layer metal1_conn has 45 shapes.
 Copying layer Via1
-Layer Via1 has 38 shapes.
+Layer Via1 has 39 shapes.
 Copying layer poly_conn
 Layer poly_conn has 15 shapes.
 Copying layer cont_poly
-Layer cont_poly has 42 shapes.
+Layer cont_poly has 37 shapes.
 Copying layer pdiff_conn
-Layer pdiff_conn has 21 shapes.
+Layer pdiff_conn has 30 shapes.
 Copying layer pdiff_conn
-Layer pdiff_conn has 21 shapes.
+Layer pdiff_conn has 30 shapes.
 Copying layer cont_pdiff
-Layer cont_pdiff has 46 shapes.
+Layer cont_pdiff has 168 shapes.
 Copying layer npn_emit
 Layer npn_emit has 0 shapes.
 Copying layer cont_ndiff
-Layer cont_ndiff has 29 shapes.
+Layer cont_ndiff has 90 shapes.
 Copying layer ndiff_conn
-Layer ndiff_conn has 21 shapes.
+Layer ndiff_conn has 30 shapes.
 Copying layer ndiff_conn
-Layer ndiff_conn has 21 shapes.
+Layer ndiff_conn has 30 shapes.
 Copying layer pnp_emit
 Layer pnp_emit has 0 shapes.
 Copying layer psubstrate
@@ -297,7 +311,7 @@ instance count totals:
 
     lib              cell             view                    total
     analogLib        pcapacitor       symbol                     14
-    gpdk045          nmos1v           ivpcell                    11
-    gpdk045          pmos1v           ivpcell                    11
+    gpdk045          nmos1v           ivpcell                    18
+    gpdk045          pmos1v           ivpcell                    18
 
 Extracted view creation has completed.
