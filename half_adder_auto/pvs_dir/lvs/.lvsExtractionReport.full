@@ -1,0 +1,48 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : half_adder_auto.rep
+ERC Summary File         : half_adder_auto.sum
+LVS Comparison Report    : half_adder_auto.rep.cls
+LVS Softchk Report       : half_adder_auto.softchk
+LVS Find Shorts Report   : half_adder_auto.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder_auto/pvs_dir/lvs/half_adder_auto.gds ("half_adder_auto")
+User Name                : mgrawe2
+Creation Time            : Thu Dec  4 11:10:26 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder_auto/pvs_dir/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "half_adder_auto.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+Clean cell list (added by extraction report parser )
+ for cell "M1_NWELL_CDNS_764868220899"
+ for cell "M1_PO_CDNS_7648682208910"
+ for cell "M1_PO_CDNS_764868220896"
+ for cell "M1_PSUB_CDNS_7648682208911"
+ for cell "M2_M1_CDNS_764868220890"
+ for cell "M2_M1_CDNS_764868220891"
+ for cell "M2_M1_CDNS_764868220894"
+ for cell "and2"
+ for cell "half_adder_auto"
+ for cell "inv"
+ for cell "nmos1v_CDNS_764868220891"
+ for cell "nmos1v_CDNS_764868220892"
+ for cell "pmos1v_CDNS_764868220890"
+ for cell "xor"

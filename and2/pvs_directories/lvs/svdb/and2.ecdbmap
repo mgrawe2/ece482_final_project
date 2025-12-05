@@ -1,6 +1,6 @@
 Gds_Map 2000
 Layers:
-0 0 119 Nov 30 13:51:59 2025
+0 0 105 Dec  4 17:31:14 2025
 _resnsnpoly 0 0
 _resnsnpoly_nw 1 0
 _resnspdiff 2 0
@@ -50,12 +50,6 @@ cont_poly 48 0
 metal1_conn 50 0
 metal2_conn 51 0
 metal3_conn 52 0
-metal4_conn 53 0
-metal5_conn 54 0
-metal6_conn 55 0
-metal7_conn 57 0
-metal8_conn 58 0
-metal9_conn 59 0
 nb_tap 60 0
 nwell_conn 61 0
 pdiff_conn 62 0
@@ -69,29 +63,21 @@ _resnwoxide 69 0
 Via1 70 0
 Via2 71 0
 _resnwsti 72 0
-Via3 73 0
-Via4 74 0
 nwell_conn_text 75 0
-Via5 76 0
 _vpnp2 77 0
-Via6 78 0
 _vpnp5 79 0
 _vpnp10 80 0
-Via7 81 0
-Via8 82 0
-Via9 84 0
 _ind_a 85 0
 _ind_s 88 0
 nwell_pin 89 0
 metal1_conn_text 90 0
-metal10_conn 92 0
-metal11_conn 95 0
 _mimcap 99 0
 via10_nodev 106 0
 ntap 120 0
 ptap 122 0
 _ndio_2v_nvt 128 0
 _ndio_hvt 132 0
+text 133 0
 _ndio_lvt 134 0
 _ndio_nvt 135 0
 _pdio_hvt 136 0
@@ -121,4 +107,4 @@ ind2_sp1 159 0
 ind_rad 160 0
 _ind_s_enc 161 0
 END OF RESPONSE
-0 0 0 Nov 30 13:51:59 2025
+0 0 0 Dec  4 17:31:14 2025

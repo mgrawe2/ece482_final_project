@@ -1,0 +1,17 @@
+
+/software/cadence-2024-08/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : fa_co_network_1462748.db
+ECDB dir        : ./
+Top Cell        : fa_co_network
+CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/fa_co_network/pvs_dir/lvs/svdb/fa_co_network.net
+Layer map file  : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/fa_co_network/pvs_dir/lvs/svdb/fa_co_network.ecdbmap
+Text map file   : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/fa_co_network/pvs_dir/lvs/svdb/fa_co_network.ports
+Dependency map  : fa_co_network.lmap.perc
+Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/fa_co_network/pvs_dir/lvs/svdb/fa_co_network.lvsfile
+Float net file  : .fa_co_network.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : fa_co_network_1462748

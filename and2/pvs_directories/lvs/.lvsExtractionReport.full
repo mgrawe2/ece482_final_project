@@ -12,7 +12,7 @@ LVS Softchk Report       : and2.softchk
 LVS Find Shorts Report   : and2.rep.shorts
 Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/and2/pvs_directories/lvs/and2.gds ("and2")
 User Name                : mgrawe2
-Creation Time            : Sun Nov 30 13:51:58 2025
+Creation Time            : Thu Dec  4 17:31:13 2025
 Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/and2/pvs_directories/lvs
 PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
 
@@ -32,20 +32,15 @@ PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
     LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
 
 Clean cell list (added by extraction report parser )
- for cell "M10_M9_CDNS_7645323139711"
- for cell "M11_M10_CDNS_7645323139712"
- for cell "M1_PO_CDNS_764532313970"
- for cell "M2_M1_CDNS_7645323139713"
- for cell "M2_M1_CDNS_7645323139715"
- for cell "M2_M1_CDNS_764532313974"
- for cell "M3_M2_CDNS_7645323139714"
- for cell "M3_M2_CDNS_764532313973"
- for cell "M4_M3_CDNS_764532313975"
- for cell "M5_M4_CDNS_764532313976"
- for cell "M6_M5_CDNS_764532313977"
- for cell "M7_M6_CDNS_764532313978"
- for cell "M8_M7_CDNS_764532313979"
- for cell "M9_M8_CDNS_7645323139710"
+ for cell "M1_NWELL_CDNS_764891067852"
+ for cell "M1_PO_CDNS_764891067855"
+ for cell "M1_PSUB_CDNS_764891067854"
+ for cell "M2_M1_CDNS_764891067850"
+ for cell "M2_M1_CDNS_764891067853"
+ for cell "M3_M2_CDNS_764891067851"
  for cell "and2"
- for cell "nmos1v_CDNS_764532313971"
- for cell "pmos1v_CDNS_764532313970"
+ for cell "inv"
+ for cell "nand2"
+ for cell "nmos1v_CDNS_764891067850"
+ for cell "nmos1v_CDNS_764891067852"
+ for cell "pmos1v_CDNS_764891067851"

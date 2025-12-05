@@ -12,12 +12,14 @@
 0 S 0 S
 0 B 0 B
 % and2 5 and2 5 
-0 3 0 net3
+0 4 0 net3
 0 A 0 A
 0 B 0 B
 0 OUT 0 OUT
 0 VDD 0 VDD
-0 X31/B 0 VDD
-0 X31/S_source_0 0 VDD
 0 VSS 0 VSS
+0 X7/X4/5 0 VSS
+0 X7/X4/S_source_0 0 VSS
 0 7 0 XI0/net1
+0 X6/X10/S_source_0 0 XI0/net1
+0 X6/X11/S_source_0 0 XI0/net1

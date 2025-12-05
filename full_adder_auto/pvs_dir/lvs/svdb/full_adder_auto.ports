@@ -1,0 +1,9 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary full_adder_auto
+A 3 A 12430 11070 metal1_conn
+Co 6 Co 13920 11290 metal1_conn
+B 7 B 3290 11250 metal1_conn
+VDD 1 VDD 11860 13740 metal1_conn
+VSS 10 VSS 7550 9120 metal1_conn
+Ci 2 Ci 9780 11130 metal1_conn
+S 8 S 10620 11360 metal1_conn

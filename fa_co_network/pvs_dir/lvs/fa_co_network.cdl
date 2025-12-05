@@ -1,0 +1,40 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  ece482_final_project
+* Top Cell Name: fa_co_network
+* View Name:     schematic
+* Netlisted on:  Dec  4 13:03:19 2025
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    fa_co_network
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT fa_co_network A Ci OUT P P_bar VDD VSS
+*.PININFO A:I Ci:I P:I P_bar:I OUT:O VDD:B VSS:B
+MNM0 OUT Ci net25 VSS g45n1svt m=1 l=45n w=360n
+MNM1 net25 P VSS VSS g45n1svt m=1 l=45n w=360n
+MNM2 OUT A net23 VSS g45n1svt m=1 l=45n w=360n
+MNM3 net23 P_bar VSS VSS g45n1svt m=1 l=45n w=360n
+MPM0 net26 P_bar VDD VDD g45p1svt m=1 l=45n w=720n
+MPM1 OUT Ci net26 VDD g45p1svt m=1 l=45n w=720n
+MPM2 net24 P VDD VDD g45p1svt m=1 l=45n w=720n
+MPM3 OUT A net24 VDD g45p1svt m=1 l=45n w=720n
+.ENDS
+

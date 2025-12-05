@@ -3,7 +3,7 @@
 #####                                         PVS LVS COMPARISON
 #####  
 #####  Version                       :   23.11-s036
-#####  NVN Run Start                 :   Sun Nov 30 12:11:48 2025
+#####  NVN Run Start                 :   Thu Dec  4 16:56:38 2025
 #####  ERC Summary File              :   full_adder.sum
 #####  Extraction Report File        :   full_adder.rep
 #####  Comparison Report File        :   full_adder.rep.cls
@@ -23,11 +23,11 @@
 #####  Extraction Exec Time          :   0h 0m 1s - (1s)
 #####  Extraction Peak Memory Usage  :   31.00MB
 #####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
-#####  NVN Exec Time                 :   0h 0m 1s - (1s)                 
-#####  NVN Peak Memory Usage         :   253.03MB
+#####  NVN Exec Time                 :   0h 0m 2s - (2s)                 
+#####  NVN Peak Memory Usage         :   254.91MB
 #####  LVS Total CPU Time            :   0h 0m 1s - (1s)                 
-#####  LVS Total Exec Time           :   0h 0m 2s - (2s)                 
-#####  LVS Total Peak Memory Usage   :   253.03MB
+#####  LVS Total Exec Time           :   0h 0m 3s - (3s)                 
+#####  LVS Total Peak Memory Usage   :   254.91MB
 #####  
 ##############################################################################################################
 
@@ -388,18 +388,32 @@ Effective LVS Rule Values
 Cell              |   lay   :   sch   |   lay   :   sch   |   lay   :  sch
 ------------------+---------+---------+---------+---------+---------+--------
 MP [4 pins]       |         :         |         :         |         :        
- MP(G45P1SVT)     |      11 :      11 |      11 :      11 |       4 :       4
+ MP(G45P1SVT)     |     *18 :      11 |     *18 :      11 |       4 :       4
  MP:SerMos2#1     |       - :       - |       - :       - |       2 :       2
 MN [4 pins]       |         :         |         :         |         :        
- MN(G45N1SVT)     |      11 :      11 |      11 :      11 |       4 :       4
+ MN(G45N1SVT)     |     *18 :      11 |     *18 :      11 |       4 :       4
  MN:SerMos2#1     |       - :       - |       - :       - |       2 :       2
 INV##             |       - :       - |       - :       - |       3 :       3
 ------------------+---------+---------+---------+---------+---------+--------
-Total             |      22 :      22 |      22 :      22 |      15 :      15
+Total             |      36 :      22 |      36 :      22 |      15 :      15
 ==================+=========+=========+=========+=========+=========+========
 Pins              |         :         |         :         |       7 :       7
 Nets              |         :         |         :         |       4 :       4
 ==================+=========+=========+=========+=========+=========+========
+
++===[full_adder]==============================================================================================
+|                                      DEVICES REMOVED DURING REDUCTION                                       
++=============================================================================================================
+
+
+                  |     Parallel      |      Series       |     Split Gate     |     Deleted Nets     
+Cell              |   lay   :   sch   |   lay   :   sch   |   lay   :   sch    |    lay    :   sch
+------------------+---------+---------+---------+---------+---------+----------+-----------+----------
+MP [4 pins]       |         :         |         :         |         :          |           :          
+ MP(G45P1SVT)     |       7 :       - |       - :       - |       - :        - |         0 :         0
+MN [4 pins]       |         :         |         :         |         :          |           :          
+ MN(G45N1SVT)     |       7 :       - |       - :       - |       - :        - |         0 :         0
+------------------+---------+---------+---------+---------+---------+----------+-----------+----------
 
 +===[full_adder]==============================================================================================
 |                                           INITIAL CORRESPONDENCES                                           

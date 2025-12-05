@@ -1,0 +1,14 @@
+# XXXX: Instance Cross Reference (ixf) (File format 1)
+# XXXX: Layout Primary fa_co_network
+# XXXX: End of header.
+% MN 4 MN 4
+% MP 4 MP 4
+% fa_co_network 7 fa_co_network 7
+0 X10/M0 0 MNM0 X
+0 X10/M1 0 MNM1 X
+0 X10/M3 0 MNM2  
+0 X10/M2 0 MNM3  
+0 X11/M1 0 MPM0 X
+0 X11/M0 0 MPM1 X
+0 X11/M2 0 MPM2  
+0 X11/M3 0 MPM3  

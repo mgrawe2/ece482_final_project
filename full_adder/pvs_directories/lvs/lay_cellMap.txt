@@ -1,3 +1,4 @@
 ece482_final_project full_adder layout full_adder
-ece482_final_project inv layout inv
 ece482_final_project xor layout xor
+ece482_final_project inv layout inv
+ece482_final_project fa_co_network layout fa_co_network

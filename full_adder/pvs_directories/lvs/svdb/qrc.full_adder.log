@@ -9,7 +9,7 @@ Inc.
 
 
 INFO (EXTQRCXLOG-128) : Quantus command line:
- Started at: 2025-Nov-29 19:08:23 (2025-Nov-30 01:08:23 GMT)
+ Started at: 2025-Dec-04 16:58:38 (2025-Dec-04 22:58:38 GMT)
  Executable:
 /software/cadence-2024-08/QUANTUS231/tools.lnx86/extraction/bin/64bit/qrc
  Options:     -log_file
@@ -62,10 +62,10 @@ process_technology \
 
 
 -------------------------------------------------------------------------------------
-Sat Nov 29 19:08:25 2025: BEGIN INPUT stage
+Thu Dec  4 16:58:41 2025: BEGIN INPUT stage
 -------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------
-Sat Nov 29 19:08:26 2025: DONE INPUT stage
+Thu Dec  4 16:58:42 2025: DONE INPUT stage
 -------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------
 INPUT stage summary:
@@ -94,7 +94,7 @@ INPUT stage summary:
  Design data:
     global nets:                  0
 
- Peak memory:	97 MB
+ Peak memory:	98 MB
 
  Messages:
     INFO (CAPGEN-41199): 
@@ -112,10 +112,10 @@ INPUT stage summary:
     setting dbunit 5e-10 1 5e-10
     
 -------------------------------------------------------------------------------------
-Sat Nov 29 19:08:26 2025: BEGIN EXTRACTION stage
+Thu Dec  4 16:58:42 2025: BEGIN EXTRACTION stage
 -------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------
-Sat Nov 29 19:08:34 2025: DONE EXTRACTION stage
+Thu Dec  4 16:58:53 2025: DONE EXTRACTION stage
 -------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------
 EXTRACTION stage summary:
@@ -126,13 +126,13 @@ EXTRACTION stage summary:
     floating nets:                0
     ground net name:              VSS
 
- Peak memory:	97 MB
+ Peak memory:	98 MB
 
 -------------------------------------------------------------------------------------
-Sat Nov 29 19:08:34 2025: BEGIN OUTPUT stage
+Thu Dec  4 16:58:53 2025: BEGIN OUTPUT stage
 -------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------
-Sat Nov 29 19:08:36 2025: DONE OUTPUT stage
+Thu Dec  4 16:58:56 2025: DONE OUTPUT stage
 -------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------
 OUTPUT stage summary:
@@ -149,7 +149,7 @@ OUTPUT stage summary:
     C: 14
     L: 0
 
- Peak memory:	97 MB
+ Peak memory:	128 MB
 
     Summary for ece482_final_project/full_adder/av_extracted
     
@@ -157,20 +157,20 @@ OUTPUT stage summary:
     
         lib              cell             view                    total
         analogLib        pcapacitor       symbol                     14
-        gpdk045          nmos1v           ivpcell                    11
-        gpdk045          pmos1v           ivpcell                    11
+        gpdk045          nmos1v           ivpcell                    18
+        gpdk045          pmos1v           ivpcell                    18
     
     Extracted view creation has completed.
 -------------------------------------------------------------------------------------
 
 INFO (LBRCXM-920): Host name and peak memory report
- Host Name:                    fastx3-21.ews.illinois.edu
- Peak memory used:             97 MB (sampled at 15s intervals)
+ Host Name:                    fastx3-01.ews.illinois.edu
+ Peak memory used:             128 MB (sampled at 15s intervals)
 
-INFO (LBRCXM-702): Run ended: Sat Nov 29 19:08:38 2025
+INFO (LBRCXM-702): Run ended: Thu Dec  4 16:58:58 2025
 
 
-INFO (LBRCXM-805): Quantus run took:  3s user, 4s sys, 15s elapsed
+INFO (LBRCXM-805): Quantus run took:  4s user, 5s sys, 20s elapsed
 
 
 INFO (LBRCXM-708): *****  Quantus terminated normally  *****

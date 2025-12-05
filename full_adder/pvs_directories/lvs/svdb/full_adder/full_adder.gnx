@@ -10,23 +10,30 @@ MP: MP
 = G G
 = S S
 = B B
-#18                              
+#25                              
 full_adder: full_adder
-= P 2
-= P_bar 3
-= net4 14
-= net9 5
-= net9 X25/S_source_0
-= net9 X26/S_source_0
+= net1 8
+= net1 X21/X17/S_source_0
+= P_bar 7
+= P_bar X22/X18/S_source_0
+= net4 11
+= net4 X21/X18/S_source_0
+= net9 9
+= net9 X23/X12/S_source_0
+= net9 X23/X13/S_source_0
 = A A
 = B B
 = Ci Ci
 = Co Co
 = S S
+= S X22/X17/S_source_0
 = VDD VDD
-= VDD X25/B
+= VDD X23/X13/B
 = VSS VSS
-= net23 8
-= net5 7
-= net25 11
-= net10 10
+= VSS X20/X4/S_source_0
+= VSS X22/X19/X4/S_source_0
+= VSS X21/X19/X4/S_source_0
+= XI3/net25 12
+= XI3/net23 13
+= XI3/net26 14
+= XI3/net24 15

@@ -1,0 +1,26 @@
+# SVDB: Layout Netlist Names (lnn)
+# SVDB: Layout Primary fa_co_network
+% M1_PO_CDNS_764874998100 1
+% M2_M1_CDNS_764874998101 1
+% M1_PO_CDNS_764874998104 1
+% nmos1v_CDNS_764874998100 9
+1 S_source_0
+2 D_drain_1
+4 S_source_2
+5 D_drain_3
+8 S_source_4
+% pmos1v_CDNS_764874998101 11
+1 S_source_0
+2 D_drain_1
+3 S_source_2
+6 D_drain_3
+7 S_source_4
+11 B
+% fa_co_network 7
+1 P
+2 P_bar
+3 OUT
+4 Ci
+5 A
+7 VSS
+10 VDD

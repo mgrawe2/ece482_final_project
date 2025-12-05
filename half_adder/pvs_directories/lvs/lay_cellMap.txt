@@ -1,4 +1,5 @@
 ece482_final_project half_adder layout half_adder
-ece482_final_project xor layout xor
-ece482_final_project inv layout inv
 ece482_final_project and2 layout and2
+ece482_final_project nand2 layout nand2
+ece482_final_project inv layout inv
+ece482_final_project xor layout xor

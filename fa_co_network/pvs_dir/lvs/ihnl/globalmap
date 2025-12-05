@@ -1,0 +1,8 @@
+CADENCE IHNL11140
+$model
+ece482_final_project/fa_co_network/schematic fa_co_network
+$endmodel
+$net
+$endnet
+$param
+$endparam

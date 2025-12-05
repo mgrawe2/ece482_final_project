@@ -1,0 +1,53 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : full_adder_auto.rep
+ERC Summary File         : full_adder_auto.sum
+LVS Comparison Report    : full_adder_auto.rep.cls
+LVS Softchk Report       : full_adder_auto.softchk
+LVS Find Shorts Report   : full_adder_auto.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder_auto/pvs_dir/lvs/full_adder_auto.gds ("full_adder_auto")
+User Name                : mgrawe2
+Creation Time            : Thu Dec  4 16:49:55 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder_auto/pvs_dir/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "full_adder_auto.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+Clean cell list (added by extraction report parser )
+ for cell "M1_NWELL_CDNS_7648885896412"
+ for cell "M1_PO_CDNS_7648885896413"
+ for cell "M1_PO_CDNS_764888589649"
+ for cell "M1_PSUB_CDNS_7648885896414"
+ for cell "M2_M1_CDNS_764888589640"
+ for cell "M2_M1_CDNS_764888589641"
+ for cell "M2_M1_CDNS_764888589643"
+ for cell "M2_M1_CDNS_764888589647"
+ for cell "M3_M2_CDNS_764888589642"
+ for cell "M3_M2_CDNS_764888589644"
+ for cell "M4_M3_CDNS_764888589645"
+ for cell "fa_co_network"
+ for cell "full_adder_auto"
+ for cell "inv"
+ for cell "nmos1v_CDNS_764888589641"
+ for cell "nmos1v_CDNS_764888589642"
+ for cell "pmos1v_CDNS_764888589640"
+ for cell "pmos1v_CDNS_764888589643"
+ for cell "xor"

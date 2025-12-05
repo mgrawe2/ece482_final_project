@@ -1,5 +1,5 @@
 #!/software/cadence-2024-08/QUANTUS231/tools.lnx86/extraction/bin/64bit/assura_rcx -V
-# This script was generated Sat Nov 29 19:08:24 2025 by:
+# This script was generated Thu Dec  4 16:58:40 2025 by:
 #
 # Program: /software/cadence-2024-08/QUANTUS231/tools.lnx86/extraction/bin/64bit/RCXspice
 # Version: 23.1.1-p051
@@ -185,6 +185,7 @@ agds2rcx -V -H satfile -r \
 # Calculate erosion tables for specified process layers
 #==========================================================#
 
+densitymap -V -TC -O metal4_conn.den metal4_conn_tile_spec metal4_0conn
 densitymap -V -TC -O metal3_conn.den metal3_conn_tile_spec metal3_0conn
 densitymap -V -TC -O metal2_conn.den metal2_conn_tile_spec metal2_0conn
 densitymap -V -TC -O metal1_conn.den metal1_conn_tile_spec metal1_0conn
@@ -203,6 +204,7 @@ cat global.net > power_list
 # Create RCXFS via layers for capacitance-only extraction
 #==========================================================#
 
+geom -V Via3 metal3_0conn metal4_0conn - Via3,111,i,1
 geom -V Via2 metal2_0conn metal3_0conn - Via2,111,i,1
 geom -V Via1 metal1_0conn metal2_0conn - Via1,111,i,1
 geom -V cont_0poly poly_0conn metal1_0conn - cont_0poly,111,i,1
@@ -219,10 +221,12 @@ flatnet -V -li -h '/' h_NET NET
 netprint -V -N1 power_list:power_list_nums NET
 flattenTransistorData _0nmos1v meters
 flattenTransistorData _0pmos1v meters
-flattenLayers -m Via2 cont_0ndiff_metal1_0conn_ndiff_0conn _0pmos1v_orig
-flattenLayers -m Via1 cont_0pdiff
-flattenLayers -m cont_0poly cont_0ndiff
-flattenLayers -m cont_0pdiff_metal1_0conn_pdiff_0conn _0nmos1v_orig
+flattenLayers -m Via3 cont_0ndiff_metal1_0conn_ndiff_0conn
+flattenLayers -m Via2 cont_0pdiff
+flattenLayers -m Via1 cont_0ndiff
+flattenLayers -m cont_0poly _0nmos1v_orig
+flattenLayers -m cont_0pdiff_metal1_0conn_pdiff_0conn _0pmos1v_orig
+flattenLayers -m metal4_0conn
 flattenLayers -m metal3_0conn
 flattenLayers -m metal2_0conn
 flattenLayers -m metal1_0conn
@@ -241,8 +245,7 @@ export CAP_GROUND
 echo ${CAP_GROUND} > cgnetfile
 netprint -n cgnetfile:gn_summary.log NET
 reconnect -cgnd ${CAP_GROUND} -float floatlvsnetsfile -tf _0nmos1v,_0pmos1v \
-	-probe \
-	text_metal1_0conn:metal1_0conn:text_metal1_0conn_fvia,text_nwell_0conn:nwell_0conn:text_nwell_0conn_fvia
+	-probe text_metal1_0conn:metal1_0conn:text_metal1_0conn_fvia
 iprint -count floatlvsnetsfile > floatlvsnetsfile.txt
 geom _0nmos1v,_0pmos1v - qrcgate,1,i,1
 iprint -count floatlvsnetsfile > input_nets_summary.log
@@ -262,6 +265,7 @@ flatlabel -V  -tc -F -l flatlabel.info text_metal1_0conn L1T0
 /bin/cp metal1_0conn metal1_conn
 /bin/cp metal2_0conn metal2_conn
 /bin/cp metal3_0conn metal3_conn
+/bin/cp metal4_0conn metal4_conn
 
 #==========================================================#
 # Form capacitance layers for non-resistive process layers
@@ -277,7 +281,6 @@ createEmptyLayer metal8_conn
 createEmptyLayer metal7_conn
 createEmptyLayer metal6_conn
 createEmptyLayer metal5_conn
-createEmptyLayer metal4_conn
 
 #==========================================================#
 # Form substrate
@@ -305,11 +308,6 @@ geom _0nmos1v,_0pmos1v - qrcgate,1,i,1
 #==========================================================#
 
 cat <<ENDCAT> sip.cmd
-sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal2_conn,metal3_conn -er \
-	metal4_conn.den -n 1.75 -i 0,1.751 -b \
-	metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
-	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
-	-j 0.08 -Maxw 1.8 -p metal4_conn,key 0,1.75 - metal4_conn.sip
 sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal3_conn,metal4_conn -er \
 	metal5_conn.den -n 1.75 -i 0,1.751 -b \
 	metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
@@ -363,6 +361,11 @@ sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal1_conn,metal2_conn -er \
 	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
 	metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
 	-j 0.08 -Maxw 1.8 -p metal3_conn,key 0,1.75 - metal3_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal2_conn,metal3_conn -er \
+	metal4_conn.den -n 1.75 -i 0,1.751 -b \
+	metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-j 0.08 -Maxw 1.8 -p metal4_conn,key 0,1.75 - metal4_conn.sip
 sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -b \
 	metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
 	-Maxw 4.95 -p metal10_conn,key,metal11_conn,key 0,5,0 - \
@@ -427,8 +430,8 @@ sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
 sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal5_conn -b \
 	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
 	metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
-	-Maxw 1.8 -p metal3_conn,key,metal5_conn,key 0,1.75,0 - \
-	metal3_conn_metal5_conn.sip
+	-k metal4_conn:0.15 -Maxw 1.8 -p metal3_conn,key,metal5_conn,key \
+	0,1.75,0 - metal3_conn_metal5_conn.sip
 sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
 	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
 	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
@@ -556,7 +559,6 @@ advgen -V -g0 -li -f -n -o HSPICE -cgnd ${CAP_GROUND},1.0 -dxref \
 
 cat <<ENDCAT> _save_layers
 FOX psubstrate nwell_0conn
-metal4_conn metal4_conn
 metal5_conn metal5_conn
 metal6_conn metal6_conn
 metal7_conn metal7_conn
@@ -565,6 +567,7 @@ metal9_conn metal9_conn
 metal10_conn metal10_conn
 metal11_conn metal11_conn
 Oxide pdiff_0conn ndiff_0conn
+metal4_0conn metal4_0conn
 metal3_0conn metal3_0conn
 metal2_0conn metal2_0conn
 metal1_0conn metal1_0conn
@@ -573,6 +576,7 @@ ndiff_0conn ndiff_0conn
 pdiff_0conn pdiff_0conn
 nwell_0conn nwell_0conn
 psubstrate psubstrate
+Via3 Via3
 Via2 Via2
 Via1 Via1
 cont_0poly cont_0poly

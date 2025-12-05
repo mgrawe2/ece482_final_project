@@ -3,7 +3,7 @@
 #####                                         PVS LVS COMPARISON
 #####  
 #####  Version                       :   23.11-s036
-#####  NVN Run Start                 :   Sun Nov 30 14:04:04 2025
+#####  NVN Run Start                 :   Thu Dec  4 17:22:20 2025
 #####  ERC Summary File              :   half_adder.sum
 #####  Extraction Report File        :   half_adder.rep
 #####  Comparison Report File        :   half_adder.rep.cls
@@ -20,13 +20,13 @@
 #####  Pin Swap File                 :   half_adder.rep.cps
 #####  
 #####  Extraction CPU Time           :   0h 0m 1s - (1s)
-#####  Extraction Exec Time          :   0h 0m 1s - (1s)
+#####  Extraction Exec Time          :   0h 0m 2s - (2s)
 #####  Extraction Peak Memory Usage  :   31.00MB
 #####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
-#####  NVN Exec Time                 :   0h 0m 1s - (1s)                 
+#####  NVN Exec Time                 :   0h 0m 2s - (2s)                 
 #####  NVN Peak Memory Usage         :   253.03MB
 #####  LVS Total CPU Time            :   0h 0m 1s - (1s)                 
-#####  LVS Total Exec Time           :   0h 0m 2s - (2s)                 
+#####  LVS Total Exec Time           :   0h 0m 4s - (4s)                 
 #####  LVS Total Peak Memory Usage   :   253.03MB
 #####  
 ##############################################################################################################
@@ -388,17 +388,31 @@ Effective LVS Rule Values
 Cell              |   lay   :   sch   |   lay   :   sch   |   lay   :  sch
 ------------------+---------+---------+---------+---------+---------+--------
 MP [4 pins]       |         :         |         :         |         :        
- MP(G45P1SVT)     |       6 :       6 |       6 :       6 |       2 :       2
+ MP(G45P1SVT)     |     *12 :       6 |     *12 :       6 |       2 :       2
 MN [4 pins]       |         :         |         :         |         :        
- MN(G45N1SVT)     |       6 :       6 |       6 :       6 |       2 :       2
+ MN(G45N1SVT)     |     *12 :       6 |     *12 :       6 |       2 :       2
 INV##             |       - :       - |       - :       - |       2 :       2
 NAND##2           |       - :       - |       - :       - |       1 :       1
 ------------------+---------+---------+---------+---------+---------+--------
-Total             |      12 :      12 |      12 :      12 |       7 :       7
+Total             |      24 :      12 |      24 :      12 |       7 :       7
 ==================+=========+=========+=========+=========+=========+========
 Pins              |         :         |         :         |       6 :       6
 Nets              |         :         |         :         |       2 :       2
 ==================+=========+=========+=========+=========+=========+========
+
++===[half_adder]==============================================================================================
+|                                      DEVICES REMOVED DURING REDUCTION                                       
++=============================================================================================================
+
+
+                  |     Parallel      |      Series       |     Split Gate     |     Deleted Nets     
+Cell              |   lay   :   sch   |   lay   :   sch   |   lay   :   sch    |    lay    :   sch
+------------------+---------+---------+---------+---------+---------+----------+-----------+----------
+MP [4 pins]       |         :         |         :         |         :          |           :          
+ MP(G45P1SVT)     |       6 :       - |       - :       - |       - :        - |         0 :         0
+MN [4 pins]       |         :         |         :         |         :          |           :          
+ MN(G45N1SVT)     |       6 :       - |       - :       - |       - :        - |         0 :         0
+------------------+---------+---------+---------+---------+---------+----------+-----------+----------
 
 +===[half_adder]==============================================================================================
 |                                           INITIAL CORRESPONDENCES                                           

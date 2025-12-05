@@ -1,0 +1,40 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : fa_co_network.rep
+ERC Summary File         : fa_co_network.sum
+LVS Comparison Report    : fa_co_network.rep.cls
+LVS Softchk Report       : fa_co_network.softchk
+LVS Find Shorts Report   : fa_co_network.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/fa_co_network/pvs_dir/lvs/fa_co_network.gds ("fa_co_network")
+User Name                : mgrawe2
+Creation Time            : Thu Dec  4 13:03:23 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/fa_co_network/pvs_dir/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "fa_co_network.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+Clean cell list (added by extraction report parser )
+ for cell "M1_PO_CDNS_764874998100"
+ for cell "M1_PO_CDNS_764874998104"
+ for cell "M2_M1_CDNS_764874998101"
+ for cell "fa_co_network"
+ for cell "nmos1v_CDNS_764874998100"
+ for cell "pmos1v_CDNS_764874998101"

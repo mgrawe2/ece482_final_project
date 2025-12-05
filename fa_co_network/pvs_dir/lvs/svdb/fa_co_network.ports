@@ -1,0 +1,16 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary fa_co_network
+OUT 3 OUT 820 340 metal1_conn
+OUT 3 OUT 820 350 metal1_conn
+Ci 4 Ci -590 660 metal1_conn
+Ci 4 Ci -585 645 metal1_conn
+P 1 P 200 725 metal1_conn
+P 1 P 210 740 metal1_conn
+VSS 7 VSS -10 -1600 metal1_conn
+VSS 7 VSS 5 -1605 metal1_conn
+VDD 10 VDD -10 3010 metal1_conn
+VDD 10 VDD 5 2990 metal1_conn
+P_bar 2 P_bar -220 740 metal1_conn
+P_bar 2 P_bar -210 735 metal1_conn
+A 5 A 570 650 metal1_conn
+A 5 A 575 630 metal1_conn

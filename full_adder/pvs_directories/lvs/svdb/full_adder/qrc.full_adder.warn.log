@@ -18,7 +18,7 @@ setting dbunit 5e-10 1 5e-10
     
         lib              cell             view                    total
         analogLib        pcapacitor       symbol                     14
-        gpdk045          nmos1v           ivpcell                    11
-        gpdk045          pmos1v           ivpcell                    11
+        gpdk045          nmos1v           ivpcell                    18
+        gpdk045          pmos1v           ivpcell                    18
     
     Extracted view creation has completed.

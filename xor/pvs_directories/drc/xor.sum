@@ -1,7 +1,7 @@
 ********************************************************************************
 *** PVS HDRC SUMMARY
 ***
-Execute on Date/Time    : Sat Nov 29 12:30:31 2025
+Execute on Date/Time    : Thu Dec  4 14:15:30 2025
 PVS HDRC VERSION        : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
 Rule Deck Path          : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/xor/pvs_directories/drc/.technology.rul
 Rule Deck Title         :
@@ -30,7 +30,7 @@ DRC Results Database    :
 ---
 LAYER Bondpad .................... Total Original Geometry:        0 (       0)
 LAYER CapMetal ................... Total Original Geometry:        0 (       0)
-LAYER Cont ....................... Total Original Geometry:       26 (      32)
+LAYER Cont ....................... Total Original Geometry:       41 (      99)
 LAYER ESDdummy ................... Total Original Geometry:        0 (       0)
 LAYER INDdummy ................... Total Original Geometry:        0 (       0)
 LAYER M1Resdum ................... Total Original Geometry:        0 (       0)
@@ -44,8 +44,8 @@ LAYER M8Resdum ................... Total Original Geometry:        0 (       0)
 LAYER M9Resdum ................... Total Original Geometry:        0 (       0)
 LAYER M10Resdum .................. Total Original Geometry:        0 (       0)
 LAYER M11Resdum .................. Total Original Geometry:        0 (       0)
-LAYER Metal1 ..................... Total Original Geometry:       42 (      45)
-LAYER Metal2 ..................... Total Original Geometry:        2 (       3)
+LAYER Metal1 ..................... Total Original Geometry:       61 (      86)
+LAYER Metal2 ..................... Total Original Geometry:       20 (      29)
 LAYER Metal3 ..................... Total Original Geometry:        0 (       0)
 LAYER Metal4 ..................... Total Original Geometry:        0 (       0)
 LAYER Metal5 ..................... Total Original Geometry:        0 (       0)
@@ -58,22 +58,22 @@ LAYER Metal11 .................... Total Original Geometry:        0 (       0)
 LAYER NPNdummy ................... Total Original Geometry:        0 (       0)
 LAYER Nburied .................... Total Original Geometry:        0 (       0)
 LAYER Nhvt ....................... Total Original Geometry:        0 (       0)
-LAYER Nimp ....................... Total Original Geometry:        5 (       5)
+LAYER Nimp ....................... Total Original Geometry:        3 (       7)
 LAYER Nlvt ....................... Total Original Geometry:        0 (       0)
-LAYER Nwell ...................... Total Original Geometry:        6 (       6)
+LAYER Nwell ...................... Total Original Geometry:        4 (       6)
 LAYER Nzvt ....................... Total Original Geometry:        0 (       0)
-LAYER Oxide ...................... Total Original Geometry:       18 (      18)
+LAYER Oxide ...................... Total Original Geometry:       12 (      32)
 LAYER Oxide_thk .................. Total Original Geometry:        0 (       0)
 LAYER PNPdummy ................... Total Original Geometry:        0 (       0)
 LAYER Phvt ....................... Total Original Geometry:        0 (       0)
-LAYER Pimp ....................... Total Original Geometry:        5 (       5)
+LAYER Pimp ....................... Total Original Geometry:        3 (       7)
 LAYER Plvt ....................... Total Original Geometry:        0 (       0)
-LAYER Poly ....................... Total Original Geometry:       36 (      38)
+LAYER Poly ....................... Total Original Geometry:       51 (      95)
 LAYER Psub ....................... Total Original Geometry:        0 (       0)
 LAYER ResWdum .................... Total Original Geometry:        0 (       0)
 LAYER Resdum ..................... Total Original Geometry:        0 (       0)
 LAYER SiProt ..................... Total Original Geometry:        0 (       0)
-LAYER Via1 ....................... Total Original Geometry:        3 (       6)
+LAYER Via1 ....................... Total Original Geometry:        5 (      14)
 LAYER Via2 ....................... Total Original Geometry:        0 (       0)
 LAYER Via3 ....................... Total Original Geometry:        0 (       0)
 LAYER Via4 ....................... Total Original Geometry:        0 (       0)
@@ -668,7 +668,7 @@ RULECHECK soft_check_9 ............... Total Result      0 (       0)
 ---
 Total CPU Time                    : 1(s)
 Total Real Time                   : 3(s)
-Peak Memory Used                  : 25(M)
-Total Original Geometry           : 143 (158)
+Peak Memory Used                  : 26(M)
+Total Original Geometry           : 200 (375)
 Total DRC RuleChecks              : 562
 Total DRC Results                 : 0 (0)
