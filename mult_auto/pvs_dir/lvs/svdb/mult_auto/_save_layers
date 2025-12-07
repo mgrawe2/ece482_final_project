@@ -1,0 +1,32 @@
+FOX psubstrate nwell_0conn
+Oxide pdiff_0conn ndiff_0conn
+metal11_0conn metal11_0conn
+metal10_0conn metal10_0conn
+metal9_0conn metal9_0conn
+metal8_0conn metal8_0conn
+metal7_0conn metal7_0conn
+metal6_0conn metal6_0conn
+metal5_0conn metal5_0conn
+metal4_0conn metal4_0conn
+metal3_0conn metal3_0conn
+metal2_0conn metal2_0conn
+metal1_0conn metal1_0conn
+poly_0conn poly_0conn
+ndiff_0conn ndiff_0conn
+pdiff_0conn pdiff_0conn
+nwell_0conn nwell_0conn
+psubstrate psubstrate
+via10_0nocap via10_0nocap
+via10_0nodev via10_0nodev
+Via9 Via9
+Via8 Via8
+Via7 Via7
+Via6 Via6
+Via5 Via5
+Via4 Via4
+Via3 Via3
+Via2 Via2
+Via1 Via1
+cont_0poly cont_0poly
+cont_0pdiff cont_0pdiff_metal1_0conn_pdiff_0conn
+cont_0ndiff cont_0ndiff_metal1_0conn_ndiff_0conn

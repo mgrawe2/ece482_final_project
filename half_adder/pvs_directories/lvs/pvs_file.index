@@ -5,7 +5,7 @@
 "Run Directory" internal none /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder/pvs_directories/lvs
 "Current Directory" internal none /home/mgrawe2/ece482.work/gpdk045_new
 "Cadence Directory" internal none /home/mgrawe2/ece482.work/gpdk045_new/.cadence/
-"Job Signature" internal none IPVS_1764890511_544166
+"Job Signature" internal none IPVS_1765042705_37097
 "PVS Job Mode" internal none lvs
 "GUI Flow" internal none virtuoso6
 "GUI Preset" internal none /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder/pvs_directories/lvs/.preset.autosave
@@ -16,7 +16,7 @@
 "PVS Version" internal none 23.11-s036
 "Binary Name" internal none pvsgui
 "PVS Build Date" internal none "Wed Jan 17 18:11:41 PST 2024"
-"PVS Job Time" internal none 1764890530
+"PVS Job Time" internal none 1765042710
 "DFII version" internal none IC23.1.0
 "Rule File" input text /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/half_adder/pvs_directories/lvs/.technology.rul
 "Layout Scale" internal none 0.0005
@@ -72,7 +72,7 @@
 "Extraction Result" internal none CLEAN
 "ERC Result" internal none EMPTY
 "UI Data" internal none ENABLED
-"PVS Mode Info" internal none MIFIFDPEMBFCGKEOMFFBAMKIMAANICJA
+"PVS Mode Info" internal none DFEDGFLGMAKNPEHJAELMNOHPINGCMJEO
 "Report MaxResults" internal none 1000
 "Binary Name" internal none pvs
 "Comparison Result" internal none MATCH
@@ -80,4 +80,4 @@
 "PVS Version" internal none 23.11-s036
 "Binary Name" internal none pvsnvn
 "PVS Build Date" internal none "Wed Jan 17 18:11:41 PST 2024"
-"PVS Job Time" internal none 1764890540
+"PVS Job Time" internal none 1765042719

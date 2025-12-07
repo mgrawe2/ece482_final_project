@@ -1,0 +1,42 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : mult_auto.rep
+ERC Summary File         : mult_auto.sum
+LVS Comparison Report    : mult_auto.rep.cls
+LVS Softchk Report       : mult_auto.softchk
+LVS Find Shorts Report   : mult_auto.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult_auto/pvs_dir/lvs/mult_auto.gds ("mult_auto")
+User Name                : mgrawe2
+Creation Time            : Sat Dec  6 18:47:49 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult_auto/pvs_dir/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "mult_auto.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+Warnings and errors of connectivity for cell "mult_auto"
+--------------------------------------------------------
+
+[WARN] Unattached port label:
+    Label "VSS" on layer 1063(ind11_text) at (20.530, 7.350)
+
+[WARN] Unattached port label:
+    Label "VDD" on layer 1063(ind11_text) at (21.495, 41.640)
+

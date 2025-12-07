@@ -2,9 +2,9 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version IC23.1-64b 08/20/2024 22:42 (cpgbld17) $
           : sub-version  IC23.1-64b.ISR9.24 
-Started at: 04-Dec-2025  17:22:11
+Started at: 06-Dec-2025  11:38:31
 User Name : mgrawe2
-Host Name : fastx3-01.ews.illinois.edu
+Host Name : fastx3-04.ews.illinois.edu
 Directory : /home/mgrawe2/ece482.work/gpdk045_new
 CADENCE Design Systems, Inc.
 ********************************************************************************
@@ -34,35 +34,34 @@ convertDot                              node
 convertPin                              geometryAndText
 
 INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
-INFO (XSTRM-223): 1. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764890531540.
-INFO (XSTRM-223): 2. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764890531541.
-INFO (XSTRM-223): 3. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764890531542.
-INFO (XSTRM-223): 4. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_764890531543.
-INFO (XSTRM-223): 5. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764890531544.
-INFO (XSTRM-223): 6. Translating stdVia gpdk045/M1_NWELL/layout as STRUCTURE M1_NWELL_CDNS_764890531545.
-INFO (XSTRM-223): 7. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764890531546.
-INFO (XSTRM-223): 8. Translating stdVia gpdk045/M1_PSUB/layout as STRUCTURE M1_PSUB_CDNS_764890531547.
-INFO (XSTRM-223): 9. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_764890531548.
-INFO (XSTRM-223): 10. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_764890531540.
-INFO (XSTRM-223): 11. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_764890531541.
-INFO (XSTRM-223): 12. Translating cellview ece482_final_project/nand2/layout as STRUCTURE nand2.
-INFO (XSTRM-223): 13. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_764890531542.
-INFO (XSTRM-223): 14. Translating cellview ece482_final_project/inv/layout as STRUCTURE inv.
-INFO (XSTRM-223): 15. Translating cellview ece482_final_project/and2/layout as STRUCTURE and2.
-INFO (XSTRM-223): 16. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764890531549.
-INFO (XSTRM-223): 17. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_7648905315410.
-INFO (XSTRM-223): 18. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7648905315411.
-INFO (XSTRM-223): 19. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7648905315412.
-INFO (XSTRM-223): 20. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7648905315413.
-INFO (XSTRM-223): 21. Translating cellview ece482_final_project/xor/layout as STRUCTURE xor.
-INFO (XSTRM-223): 22. Translating cellview ece482_final_project/half_adder/layout as STRUCTURE half_adder.
+INFO (XSTRM-223): 1. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765042711150.
+INFO (XSTRM-223): 2. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765042711151.
+INFO (XSTRM-223): 3. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_765042711152.
+INFO (XSTRM-223): 4. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765042711153.
+INFO (XSTRM-223): 5. Translating stdVia gpdk045/M1_NWELL/layout as STRUCTURE M1_NWELL_CDNS_765042711154.
+INFO (XSTRM-223): 6. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765042711155.
+INFO (XSTRM-223): 7. Translating stdVia gpdk045/M1_PSUB/layout as STRUCTURE M1_PSUB_CDNS_765042711156.
+INFO (XSTRM-223): 8. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_765042711157.
+INFO (XSTRM-223): 9. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_765042711150.
+INFO (XSTRM-223): 10. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_765042711151.
+INFO (XSTRM-223): 11. Translating cellview ece482_final_project/nand2/layout as STRUCTURE nand2.
+INFO (XSTRM-223): 12. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_765042711152.
+INFO (XSTRM-223): 13. Translating cellview ece482_final_project/inv/layout as STRUCTURE inv.
+INFO (XSTRM-223): 14. Translating cellview ece482_final_project/and2/layout as STRUCTURE and2.
+INFO (XSTRM-223): 15. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765042711158.
+INFO (XSTRM-223): 16. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765042711159.
+INFO (XSTRM-223): 17. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7650427111510.
+INFO (XSTRM-223): 18. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7650427111511.
+INFO (XSTRM-223): 19. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7650427111512.
+INFO (XSTRM-223): 20. Translating cellview ece482_final_project/xor/layout as STRUCTURE xor.
+INFO (XSTRM-223): 21. Translating cellview ece482_final_project/half_adder/layout as STRUCTURE half_adder.
 
 Summary of Objects Translated:
 	Scalar Instances:                       15
 	Array Instances:                        0
 	Polygons:                               5
 	Paths:                                  0
-	Rectangles:                             193
+	Rectangles:                             189
 	Lines:                                  0
 	Arcs:                                   0
 	Donuts:                                 0
@@ -78,10 +77,10 @@ Summary of Objects Translated:
 	Standard Vias                           43
 	Custom Vias:                            0
 	CdsGen Vias:                            0
-	Pathsegs:                               137
+	Pathsegs:                               140
 	Text:                                   16
 	TextDisplay:                            0
-	Cells:                                  22
+	Cells:                                  21
 
-Elapsed Time: 0.8s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 35252KB
+Elapsed Time: 0.5s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 35500KB
 INFO (XSTRM-234): Translation completed. '0' error(s) and '2' warning(s) found.

@@ -12,7 +12,7 @@ LVS Softchk Report       : full_adder.softchk
 LVS Find Shorts Report   : full_adder.rep.shorts
 Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs/full_adder.gds ("full_adder")
 User Name                : mgrawe2
-Creation Time            : Thu Dec  4 16:56:35 2025
+Creation Time            : Sat Dec  6 15:13:12 2025
 Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/full_adder/pvs_directories/lvs
 PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
 
@@ -32,22 +32,22 @@ PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
     LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
 
 Clean cell list (added by extraction report parser )
- for cell "M1_NWELL_CDNS_7648889899512"
- for cell "M1_PO_CDNS_7648889899513"
- for cell "M1_PO_CDNS_764888989959"
- for cell "M1_PSUB_CDNS_7648889899514"
- for cell "M2_M1_CDNS_764888989953"
- for cell "M2_M1_CDNS_764888989954"
- for cell "M2_M1_CDNS_764888989955"
- for cell "M2_M1_CDNS_764888989957"
- for cell "M3_M2_CDNS_764888989951"
- for cell "M3_M2_CDNS_764888989952"
- for cell "M4_M3_CDNS_764888989950"
+ for cell "M1_NWELL_CDNS_7650555870912"
+ for cell "M1_PO_CDNS_7650555870913"
+ for cell "M1_PO_CDNS_765055587099"
+ for cell "M1_PSUB_CDNS_7650555870914"
+ for cell "M2_M1_CDNS_765055587093"
+ for cell "M2_M1_CDNS_765055587094"
+ for cell "M2_M1_CDNS_765055587095"
+ for cell "M2_M1_CDNS_765055587097"
+ for cell "M3_M2_CDNS_765055587091"
+ for cell "M3_M2_CDNS_765055587092"
+ for cell "M4_M3_CDNS_765055587090"
  for cell "fa_co_network"
  for cell "full_adder"
  for cell "inv"
- for cell "nmos1v_CDNS_764888989951"
- for cell "nmos1v_CDNS_764888989952"
- for cell "pmos1v_CDNS_764888989950"
- for cell "pmos1v_CDNS_764888989953"
+ for cell "nmos1v_CDNS_765055587091"
+ for cell "nmos1v_CDNS_765055587092"
+ for cell "pmos1v_CDNS_765055587090"
+ for cell "pmos1v_CDNS_765055587093"
  for cell "xor"

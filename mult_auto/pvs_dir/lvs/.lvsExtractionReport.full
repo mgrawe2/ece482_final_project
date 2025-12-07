@@ -1,0 +1,82 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : mult_auto.rep
+ERC Summary File         : mult_auto.sum
+LVS Comparison Report    : mult_auto.rep.cls
+LVS Softchk Report       : mult_auto.softchk
+LVS Find Shorts Report   : mult_auto.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult_auto/pvs_dir/lvs/mult_auto.gds ("mult_auto")
+User Name                : mgrawe2
+Creation Time            : Sat Dec  6 18:47:49 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult_auto/pvs_dir/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "mult_auto.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+Warnings and errors of connectivity for cell "mult_auto"
+--------------------------------------------------------
+
+[WARN] Unattached port label:
+    Label "VSS" on layer 1063(ind11_text) at (20.530, 7.350)
+
+[WARN] Unattached port label:
+    Label "VDD" on layer 1063(ind11_text) at (21.495, 41.640)
+
+
+Clean cell list (added by extraction report parser )
+ for cell "M10_M9_CDNS_7650684642118"
+ for cell "M11_M10_CDNS_7650684642119"
+ for cell "M1_NWELL_CDNS_7650684642120"
+ for cell "M1_PO_CDNS_7650684642123"
+ for cell "M1_PO_CDNS_7650684642128"
+ for cell "M1_PSUB_CDNS_7650684642122"
+ for cell "M2_M1_CDNS_765068464211"
+ for cell "M2_M1_CDNS_7650684642121"
+ for cell "M2_M1_CDNS_7650684642124"
+ for cell "M2_M1_CDNS_7650684642125"
+ for cell "M2_M1_CDNS_765068464213"
+ for cell "M2_M1_CDNS_765068464219"
+ for cell "M3_M2_CDNS_7650684642111"
+ for cell "M3_M2_CDNS_765068464212"
+ for cell "M3_M2_CDNS_7650684642131"
+ for cell "M3_M2_CDNS_765068464216"
+ for cell "M4_M3_CDNS_765068464210"
+ for cell "M4_M3_CDNS_7650684642110"
+ for cell "M4_M3_CDNS_765068464214"
+ for cell "M4_M3_CDNS_765068464215"
+ for cell "M4_M3_CDNS_765068464217"
+ for cell "M5_M4_CDNS_7650684642113"
+ for cell "M5_M4_CDNS_765068464218"
+ for cell "M6_M5_CDNS_7650684642114"
+ for cell "M7_M6_CDNS_7650684642115"
+ for cell "M8_M7_CDNS_7650684642116"
+ for cell "M9_M8_CDNS_7650684642117"
+ for cell "and2"
+ for cell "fa_co_network"
+ for cell "full_adder"
+ for cell "half_adder"
+ for cell "inv"
+ for cell "nmos1v_CDNS_765068464210"
+ for cell "nmos1v_CDNS_765068464212"
+ for cell "nmos1v_CDNS_765068464213"
+ for cell "pmos1v_CDNS_765068464211"
+ for cell "pmos1v_CDNS_765068464214"
+ for cell "xor"

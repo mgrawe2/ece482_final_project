@@ -1,0 +1,7 @@
+cell: "mult_auto"
+selected net: "35"
+rejected nets: "34" "37" "39" "41" "43" "45" "47" "49" "51" "53" "55" "57" "59" "61" "63" "65" "68" "71" "74" "77" "85" "89" "93" "98" "102" "107" "113" 
+contact layer:  "ptap"
+lower layer: "psubstrate"
+upper layer:  "pdiff_conn"
+command:  "sconnect pdiff_conn psubstrate -by ptap"
