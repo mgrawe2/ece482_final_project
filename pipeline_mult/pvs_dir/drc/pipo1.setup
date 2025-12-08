@@ -1,0 +1,17 @@
+case	"preserve"
+convertDot	"node"
+convertPin	"geometry"
+hierDepth	32
+labelCase	"preserve"
+labelDepth	32
+library	"ece482_final_project"
+logFile	"/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/drc/PIPO1.LOG"
+maxVertices	2048
+pinAttNum	0
+runDir	"/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/drc"
+strmFile	"/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/drc/pipeline_mult.gds"
+strmVersion	5
+techLib	"gpdk045"
+topCell	"pipeline_mult"
+view	"layout"
+enableColoring

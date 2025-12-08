@@ -1,0 +1,38 @@
+#--------------------------------------------------------------------------------------
+# OPTION COMMAND FILE created by Cadence Extraction Quantus UI Version 23.1.1-p051
+#--------------------------------------------------------------------------------------
+
+capacitance \
+	 -decoupling_factor 1.0 \
+	 -ground_net "VSS"
+extract \
+	 -selection "all" \
+	 -type "c_only_decoupled"
+extraction_setup \
+	 -split_via_by_unit_area false \
+	 -net_name_space "LAYOUT"
+input_db -type pegasus \
+	 -design_cell_name "pipeline_mult layout ece482_final_project" \
+	 -run_name "pipeline_mult" \
+	 -directory_name "/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb" \
+	 -format "DFII" \
+	 -library_definitions_file "/home/mgrawe2/ece482.work/gpdk045_new/cds.lib"
+output_db -type extracted_view \
+	 -cap_component "pcapacitor" \
+	 -cap_property_name "c" \
+	 -enable_cellview_check true \
+	 -device_finger_delimiter "@" \
+	 -cdl_out_map_directory \
+		"/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs" \
+	 -include_cap_model "false" \
+	 -include_parasitic_cap_model "false" \
+	 -include_res_model "false" \
+	 -view_name "av_extracted"
+output_setup \
+	 -directory_name "/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb" \
+	 -temporary_directory_name "pipeline_mult"
+process_technology \
+	 -technology_corner \
+		"rcx_typical" \
+	 -technology_library_file "/class/ece482/gpdk045_v_6_0/pvtech.lib" \
+	 -technology_name "gpdk045_pvs"

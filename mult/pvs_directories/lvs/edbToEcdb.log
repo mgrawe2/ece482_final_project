@@ -3,7 +3,7 @@
 ========================================================================
 
 Delete EDB      : N
-EDB Library dir : mult_2791796.db
+EDB Library dir : mult_1363778.db
 ECDB dir        : ./
 Top Cell        : mult
 CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult/pvs_directories/lvs/svdb/mult.net
@@ -14,4 +14,4 @@ Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mul
 Float net file  : .mult.info.softchk
 threads         : 32
 debug           : 0
-Source Library  : mult_2791796
+Source Library  : mult_1363778

@@ -1,0 +1,191 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  ece482_final_project
+* Top Cell Name: pipeline_mult_debug
+* View Name:     schematic
+* Netlisted on:  Dec  7 19:43:50 2025
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    c2mos
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT c2mos CLK D Q RST VDD VSS
+*.PININFO CLK:I D:I RST:I Q:O VDD:B VSS:B
+MPM5 clk_bar CLK VDD VDD g45p1svt m=1 l=45n w=480n
+MPM23 net12 m_s VDD VDD g45p1svt m=1 l=45n w=480n
+MPM22 m_s CLK net4 VDD g45p1svt m=1 l=45n w=480n
+MPM18 net4 D VDD VDD g45p1svt m=1 l=45n w=480n
+MPM24 Q clk_bar net12 VDD g45p1svt m=1 l=45n w=480n
+MNM29 Q RST VSS VSS g45n1svt m=1 l=45n w=480n
+MNM4 clk_bar CLK VSS VSS g45n1svt m=1 l=45n w=240n
+MNM27 Q CLK net25 VSS g45n1svt m=1 l=45n w=240n
+MNM26 net17 D VSS VSS g45n1svt m=1 l=45n w=240n
+MNM28 net25 m_s VSS VSS g45n1svt m=1 l=45n w=240n
+MNM21 m_s clk_bar net17 VSS g45n1svt m=1 l=45n w=240n
+.ENDS
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    inv
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT inv IN OUT VDD VSS
+*.PININFO IN:I OUT:O VDD:B VSS:B
+MPM0 OUT IN VDD VDD g45p1svt m=1 l=45n w=1.44u
+MNM0 OUT IN VSS VSS g45n1svt m=1 l=45n w=720n
+.ENDS
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    xor
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT xor A B B_bar OUT VDD VSS
+*.PININFO A:I B:I B_bar:O OUT:O VDD:B VSS:B
+MNM1 OUT A B_bar VSS g45n1svt m=1 l=45n w=720n
+MNM0 A B_bar OUT VSS g45n1svt m=1 l=45n w=720n
+MPM2 OUT A B VDD g45p1svt m=1 l=45n w=1.44u
+MPM0 A B OUT VDD g45p1svt m=1 l=45n w=1.44u
+XI0 B B_bar VDD VSS / inv
+.ENDS
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    fa_co_network
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT fa_co_network A Ci OUT P P_bar VDD VSS
+*.PININFO A:I Ci:I P:I P_bar:I OUT:O VDD:B VSS:B
+MNM0 OUT Ci net25 VSS g45n1svt m=1 l=45n w=360n
+MNM1 net25 P VSS VSS g45n1svt m=1 l=45n w=360n
+MNM2 OUT A net23 VSS g45n1svt m=1 l=45n w=360n
+MNM3 net23 P_bar VSS VSS g45n1svt m=1 l=45n w=360n
+MPM0 net26 P_bar VDD VDD g45p1svt m=1 l=45n w=720n
+MPM1 OUT Ci net26 VDD g45p1svt m=1 l=45n w=720n
+MPM2 net24 P VDD VDD g45p1svt m=1 l=45n w=720n
+MPM3 OUT A net24 VDD g45p1svt m=1 l=45n w=720n
+.ENDS
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    full_adder
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT full_adder A B Ci Co S VDD VSS
+*.PININFO A:I B:I Ci:I Co:O S:O VDD:B VSS:B
+XI1 Ci net1 P_bar S VDD VSS / xor
+XI0 A B net4 net1 VDD VSS / xor
+XI3 A Ci net9 net1 P_bar VDD VSS / fa_co_network
+XI2 net9 Co VDD VSS / inv
+.ENDS
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    nand2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT nand2 A B OUT VDD VSS
+*.PININFO A:I B:I OUT:O VDD:B VSS:B
+MNM1 net1 B VSS VSS g45n1svt m=1 l=45n w=1.44u
+MNM0 OUT A net1 VSS g45n1svt m=1 l=45n w=1.44u
+MPM1 OUT A VDD VDD g45p1svt m=1 l=45n w=1.44u
+MPM0 OUT B VDD VDD g45p1svt m=1 l=45n w=1.44u
+.ENDS
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    and2
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT and2 A B OUT VDD VSS
+*.PININFO A:I B:I OUT:O VDD:B VSS:B
+XI0 A B net3 VDD VSS / nand2
+XI1 net3 OUT VDD VSS / inv
+.ENDS
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    half_adder
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT half_adder A B Co S VDD VSS
+*.PININFO A:I B:I Co:O S:O VDD:B VSS:B
+XI0 A B net4 S VDD VSS / xor
+XI1 A B Co VDD VSS / and2
+.ENDS
+
+************************************************************************
+* Library Name: ece482_final_project
+* Cell Name:    pipeline_mult_debug
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT pipeline_mult_debug A0 A1 A2 A3 B0 B1 B2 B3 CLK P0 P1 P2 P3 P4 P5 P6 
++ P7 RST VDD VSS
+*.PININFO A0:I A1:I A2:I A3:I B0:I B1:I B2:I B3:I CLK:I RST:I P0:O P1:O P2:O 
+*.PININFO P3:O P4:O P5:O P6:O P7:O VDD:B VSS:B
+XI45 CLK net9 P0 RST VDD VSS / c2mos
+XI43 CLK net116 P2 RST VDD VSS / c2mos
+XI44 CLK net10 P1 RST VDD VSS / c2mos
+XI5 CLK net11 net17 RST VDD VSS / c2mos
+XI36 CLK net12 net18 RST VDD VSS / c2mos
+XI37 CLK net1 net3 RST VDD VSS / c2mos
+XI38 CLK net2 net4 RST VDD VSS / c2mos
+XI40 CLK net5 net7 RST VDD VSS / c2mos
+XI39 CLK net6 net8 RST VDD VSS / c2mos
+XI41 CLK net16 net13 RST VDD VSS / c2mos
+XI42 CLK net15 net14 RST VDD VSS / c2mos
+XI3 net111 net112 net114 net96 net19 VDD VSS / full_adder
+XI6 net100 net103 net105 net106 net11 VDD VSS / full_adder
+XI4 net93 net94 net96 net97 net100 VDD VSS / full_adder
+XI10 net3 net4 net101 net108 P4 VDD VSS / full_adder
+XI8 net99 net102 net106 net104 net1 VDD VSS / full_adder
+XI9 net98 net107 net104 net16 net5 VDD VSS / full_adder
+XI11 net7 net8 net108 net109 P5 VDD VSS / full_adder
+XI12 net13 net14 net109 P7 P6 VDD VSS / full_adder
+XI0 A0 B0 net9 VDD VSS / and2
+XI1 A1 B0 net110 VDD VSS / and2
+XI15 A0 B1 net113 VDD VSS / and2
+XI19 A2 B0 net111 VDD VSS / and2
+XI21 A0 B2 net115 VDD VSS / and2
+XI16 A1 B1 net112 VDD VSS / and2
+XI20 A3 B0 net93 VDD VSS / and2
+XI25 A0 B3 net12 VDD VSS / and2
+XI22 A1 B2 net103 VDD VSS / and2
+XI17 A2 B1 net94 VDD VSS / and2
+XI26 A1 B3 net2 VDD VSS / and2
+XI23 A2 B2 net102 VDD VSS / and2
+XI18 A3 B1 net95 VDD VSS / and2
+XI27 A2 B3 net6 VDD VSS / and2
+XI24 A3 B2 net107 VDD VSS / and2
+XI28 A3 B3 net15 VDD VSS / and2
+XI2 net110 net113 net114 net10 VDD VSS / half_adder
+XI14 net17 net18 net101 P3 VDD VSS / half_adder
+XI13 net19 net115 net105 net116 VDD VSS / half_adder
+XI7 net95 net97 net98 net99 VDD VSS / half_adder
+.ENDS
+

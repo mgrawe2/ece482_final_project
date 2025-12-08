@@ -3,7 +3,7 @@
 #####                                         PVS LVS COMPARISON
 #####  
 #####  Version                       :   23.11-s036
-#####  NVN Run Start                 :   Sun Nov 30 19:17:06 2025
+#####  NVN Run Start                 :   Sun Dec  7 18:49:36 2025
 #####  ERC Summary File              :   mult.sum
 #####  Extraction Report File        :   mult.rep
 #####  Comparison Report File        :   mult.rep.cls
@@ -20,14 +20,14 @@
 #####  Pin Swap File                 :   mult.rep.cps
 #####  
 #####  Extraction CPU Time           :   0h 0m 1s - (1s)
-#####  Extraction Exec Time          :   0h 0m 1s - (1s)
+#####  Extraction Exec Time          :   0h 0m 2s - (2s)
 #####  Extraction Peak Memory Usage  :   31.00MB
 #####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
 #####  NVN Exec Time                 :   0h 0m 1s - (1s)                 
-#####  NVN Peak Memory Usage         :   250.78MB
+#####  NVN Peak Memory Usage         :   254.66MB
 #####  LVS Total CPU Time            :   0h 0m 1s - (1s)                 
-#####  LVS Total Exec Time           :   0h 0m 2s - (2s)                 
-#####  LVS Total Peak Memory Usage   :   250.78MB
+#####  LVS Total Exec Time           :   0h 0m 3s - (3s)                 
+#####  LVS Total Peak Memory Usage   :   254.66MB
 #####  
 ##############################################################################################################
 

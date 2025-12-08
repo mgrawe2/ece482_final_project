@@ -1,0 +1,30 @@
+( ( nil
+  version "2.1"
+  mapType "incremental"
+  blockName "pipeline_mult"
+  repList "auCdl schematic"
+  stopList "auCdl"
+  hierDelim "."
+  netlistDir "/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/"
+ )
+( model
+( "ece482_final_project/xor/schematic" "xor" )
+( "ece482_final_project/inv/schematic" "inv" )
+( "ece482_final_project/pipeline_mult/schematic" "pipeline_mult" )
+( "ece482_final_project/and2/schematic" "and2" )
+( "ece482_final_project/c2mos/schematic" "c2mos" )
+( "ece482_final_project/full_adder/schematic" "full_adder" )
+( "ece482_final_project/half_adder/schematic" "half_adder" )
+( "ece482_final_project/nand2/schematic" "nand2" )
+( "ece482_final_project/fa_co_network/schematic" "fa_co_network" )
+ )
+( "half_adder" "ihnl/cds6/map" )
+( "c2mos" "ihnl/cds7/map" )
+( "inv" "ihnl/cds1/map" )
+( "pipeline_mult" "ihnl/cds8/map" )
+( "nand2" "ihnl/cds0/map" )
+( "xor" "ihnl/cds3/map" )
+( "fa_co_network" "ihnl/cds4/map" )
+( "and2" "ihnl/cds2/map" )
+( "full_adder" "ihnl/cds5/map" )
+ )

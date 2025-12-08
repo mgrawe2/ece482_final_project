@@ -1,0 +1,24 @@
+INFO (CAPGEN-41199): 
+
+
+Techgen -trans results will be written to directory: /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult
+
+INFO (CAPGEN-41737): Lvs connect layers Bondpad CapMetal Nburied ind10 ind11 ind_ct npn_emit pnp_emit are not mapped in layer_setup file
+
+INFO (CAPGEN-41809):  Lvs connect via bp_tap via10_cap via10_nocap ind_via_diva via10_nodev Via9 Via8 Via7 Via6 Via5 Via4 Via3 Via2 Via1 cont_poly cont_pdiff cont_ndiff ptap ntap nb_tap are not mapped in layer_setup file.
+
+WARNING (AGDSEXT-30124): The <design>.props file is not available. The CCL option "input_db calibre/pvs/pegasus -device_properties_file <filename>" can be used to specify the .props file. 
+
+INFO (AGDSEXT-30016): 
+setting dbunit 5e-10 1 5e-10
+
+    Summary for ece482_final_project/pipeline_mult/av_extracted
+    
+    instance count totals:
+    
+        lib              cell             view                    total
+        analogLib        pcapacitor       symbol                    236
+        gpdk045          nmos1v           ivpcell                   354
+        gpdk045          pmos1v           ivpcell                   343
+    
+    Extracted view creation has completed.

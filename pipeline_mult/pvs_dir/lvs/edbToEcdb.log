@@ -1,0 +1,17 @@
+
+/software/cadence-2024-08/PVS231/tools.lnx86/pvs/bin/64bit/edbToEcdb Output Summary
+========================================================================
+
+Delete EDB      : N
+EDB Library dir : pipeline_mult_1537456.db
+ECDB dir        : ./
+Top Cell        : pipeline_mult
+CDL netlist     : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult.net
+Layer map file  : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult.ecdbmap
+Text map file   : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult.ports
+Dependency map  : pipeline_mult.lmap.perc
+Lvs file        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult.lvsfile
+Float net file  : .pipeline_mult.info.softchk
+threads         : 32
+debug           : 0
+Source Library  : pipeline_mult_1537456

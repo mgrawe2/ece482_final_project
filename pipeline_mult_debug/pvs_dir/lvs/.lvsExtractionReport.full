@@ -1,0 +1,90 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : pipeline_mult_debug.rep
+ERC Summary File         : pipeline_mult_debug.sum
+LVS Comparison Report    : pipeline_mult_debug.rep.cls
+LVS Softchk Report       : pipeline_mult_debug.softchk
+LVS Find Shorts Report   : pipeline_mult_debug.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult_debug/pvs_dir/lvs/pipeline_mult_debug.gds ("pipeline_mult_debug")
+User Name                : mgrawe2
+Creation Time            : Sun Dec  7 19:43:54 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult_debug/pvs_dir/lvs
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "pipeline_mult_debug.rep.shorts"
+
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+Warnings and errors of connectivity for cell "pipeline_mult_debug"
+------------------------------------------------------------------
+
+[WARN] Unattached port label:
+    Label "VSS" on layer 1063(ind11_text) at (-12.625, -23.355)
+
+[WARN] Unattached port label:
+    Label "VDD" on layer 1063(ind11_text) at (-11.660, 10.935)
+
+
+Clean cell list (added by extraction report parser )
+ for cell "M10_M9_CDNS_765158229090"
+ for cell "M11_M10_CDNS_765158229094"
+ for cell "M1_NWELL_CDNS_7651582290922"
+ for cell "M1_PO_CDNS_7651582290925"
+ for cell "M1_PO_CDNS_7651582290930"
+ for cell "M1_PO_CDNS_7651582290932"
+ for cell "M1_PSUB_CDNS_7651582290924"
+ for cell "M2_M1_CDNS_7651582290911"
+ for cell "M2_M1_CDNS_7651582290914"
+ for cell "M2_M1_CDNS_7651582290916"
+ for cell "M2_M1_CDNS_7651582290923"
+ for cell "M2_M1_CDNS_7651582290926"
+ for cell "M2_M1_CDNS_7651582290927"
+ for cell "M2_M1_CDNS_765158229098"
+ for cell "M3_M2_CDNS_7651582290912"
+ for cell "M3_M2_CDNS_7651582290915"
+ for cell "M3_M2_CDNS_7651582290918"
+ for cell "M3_M2_CDNS_7651582290933"
+ for cell "M3_M2_CDNS_765158229097"
+ for cell "M4_M3_CDNS_7651582290913"
+ for cell "M4_M3_CDNS_7651582290917"
+ for cell "M4_M3_CDNS_7651582290919"
+ for cell "M4_M3_CDNS_7651582290920"
+ for cell "M4_M3_CDNS_7651582290921"
+ for cell "M4_M3_CDNS_765158229095"
+ for cell "M5_M4_CDNS_7651582290910"
+ for cell "M5_M4_CDNS_765158229092"
+ for cell "M6_M5_CDNS_765158229091"
+ for cell "M7_M6_CDNS_765158229093"
+ for cell "M8_M7_CDNS_765158229096"
+ for cell "M9_M8_CDNS_765158229099"
+ for cell "and2"
+ for cell "c2mos"
+ for cell "fa_co_network"
+ for cell "full_adder"
+ for cell "half_adder"
+ for cell "inv"
+ for cell "nmos1v_CDNS_765158229090"
+ for cell "nmos1v_CDNS_765158229092"
+ for cell "nmos1v_CDNS_765158229093"
+ for cell "nmos1v_CDNS_765158229096"
+ for cell "nmos1v_CDNS_765158229097"
+ for cell "pmos1v_CDNS_765158229091"
+ for cell "pmos1v_CDNS_765158229094"
+ for cell "pmos1v_CDNS_765158229095"
+ for cell "xor"
