@@ -6,54 +6,6 @@
 			<corner enabled="1">_default</corner>
 		</corners>
 		<sharedvarinfo></sharedvarinfo>
-		<overwritehistory>0</overwritehistory>
-		<tests>
-			<test>super_buffer_ext_super_test_1
-				<tool>ADE</tool>
-				<tooloptions>
-					<option>cell
-						<value>super_buffer_ext</value>
-					</option>
-					<option>lib
-						<value>super_buffer_ext</value>
-					</option>
-					<option>path
-						<value>$AXL_SETUPDB_DIR</value>
-					</option>
-					<option>sim
-						<value>hspiceD</value>
-					</option>
-					<option>view
-						<value>schematic</value>
-					</option>
-					<option>state
-						<value>active</value>
-					</option>
-				</tooloptions>
-				<origoptions></origoptions>
-			</test>
-		</tests>
-		<extensions>
-			<extension>Parasitics
-				<callback>_parSetupDBExtensionCB</callback>
-				<iconvalue></iconvalue>
-				<icontype></icontype>
-			</extension>
-		</extensions>
-		<currentmode>Single Run, Sweeps and Corners</currentmode>
-		<checksasserts netlist="0">
-			<test netlist="0" netlistscope="all">super_buffer_ext_super_test_1</test>
-		</checksasserts>
-		<plottingoptions>
-			<plottingoption>waveformtemplate
-				<value>(None)</value>
-			</plottingoption>
-		</plottingoptions>
-		<exploreroptions>
-			<exploreroption>waveformtemplate
-				<value>(None)</value>
-			</exploreroption>
-		</exploreroptions>
 	</active>
 	<history>History</history>
 </setupdb>

@@ -1,11 +1,11 @@
-Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.05s.
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.04s.
 ********************************************************************************
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version IC23.1-64b 08/20/2024 22:42 (cpgbld17) $
           : sub-version  IC23.1-64b.ISR9.24 
-Started at: 04-Dec-2025  16:56:29
+Started at: 06-Dec-2025  15:13:07
 User Name : mgrawe2
-Host Name : fastx3-01.ews.illinois.edu
+Host Name : fastx3-04.ews.illinois.edu
 Directory : /home/mgrawe2/ece482.work/gpdk045_new
 CADENCE Design Systems, Inc.
 ********************************************************************************
@@ -57,27 +57,27 @@ convertDot                              node
 convertPin                              geometryAndText
 
 INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
-INFO (XSTRM-223): 1. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_764888989950.
-INFO (XSTRM-223): 2. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_764888989951.
-INFO (XSTRM-223): 3. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_764888989952.
-INFO (XSTRM-223): 4. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764888989953.
-INFO (XSTRM-223): 5. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764888989954.
-INFO (XSTRM-223): 6. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764888989955.
-INFO (XSTRM-223): 7. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764888989956.
-INFO (XSTRM-223): 8. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764888989957.
-INFO (XSTRM-223): 9. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764888989958.
-INFO (XSTRM-223): 10. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_764888989959.
-INFO (XSTRM-223): 11. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7648889899510.
-INFO (XSTRM-223): 12. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7648889899511.
-INFO (XSTRM-223): 13. Translating stdVia gpdk045/M1_NWELL/layout as STRUCTURE M1_NWELL_CDNS_7648889899512.
-INFO (XSTRM-223): 14. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7648889899513.
-INFO (XSTRM-223): 15. Translating stdVia gpdk045/M1_PSUB/layout as STRUCTURE M1_PSUB_CDNS_7648889899514.
-INFO (XSTRM-223): 16. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_764888989950.
-INFO (XSTRM-223): 17. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_764888989951.
+INFO (XSTRM-223): 1. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_765055587090.
+INFO (XSTRM-223): 2. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_765055587091.
+INFO (XSTRM-223): 3. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_765055587092.
+INFO (XSTRM-223): 4. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765055587093.
+INFO (XSTRM-223): 5. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765055587094.
+INFO (XSTRM-223): 6. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765055587095.
+INFO (XSTRM-223): 7. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765055587096.
+INFO (XSTRM-223): 8. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765055587097.
+INFO (XSTRM-223): 9. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765055587098.
+INFO (XSTRM-223): 10. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_765055587099.
+INFO (XSTRM-223): 11. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7650555870910.
+INFO (XSTRM-223): 12. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7650555870911.
+INFO (XSTRM-223): 13. Translating stdVia gpdk045/M1_NWELL/layout as STRUCTURE M1_NWELL_CDNS_7650555870912.
+INFO (XSTRM-223): 14. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7650555870913.
+INFO (XSTRM-223): 15. Translating stdVia gpdk045/M1_PSUB/layout as STRUCTURE M1_PSUB_CDNS_7650555870914.
+INFO (XSTRM-223): 16. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_765055587090.
+INFO (XSTRM-223): 17. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_765055587091.
 INFO (XSTRM-223): 18. Translating cellview ece482_final_project/inv/layout as STRUCTURE inv.
 INFO (XSTRM-223): 19. Translating cellview ece482_final_project/xor/layout as STRUCTURE xor.
-INFO (XSTRM-223): 20. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_764888989952.
-INFO (XSTRM-223): 21. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_764888989953.
+INFO (XSTRM-223): 20. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_765055587092.
+INFO (XSTRM-223): 21. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_765055587093.
 INFO (XSTRM-223): 22. Translating cellview ece482_final_project/fa_co_network/layout as STRUCTURE fa_co_network.
 INFO (XSTRM-223): 23. Translating cellview ece482_final_project/full_adder/layout as STRUCTURE full_adder.
 INFO (XSTRM-317): The 'ece482_final_project/full_adder/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (2580, 1370). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
@@ -108,5 +108,5 @@ Summary of Objects Translated:
 	TextDisplay:                            7
 	Cells:                                  23
 
-Elapsed Time: 0.7s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 35484KB
+Elapsed Time: 0.5s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 35564KB
 INFO (XSTRM-234): Translation completed. '0' error(s) and '2' warning(s) found.

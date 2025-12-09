@@ -1,5 +1,6 @@
 CADENCE IHNL11140
 $model
+ece482_final_project/fa_co_network/schematic fa_co_network
 ece482_final_project/inv/schematic inv
 ece482_final_project/xor/schematic xor
 ece482_final_project/half_adder/schematic half_adder

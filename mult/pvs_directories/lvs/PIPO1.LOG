@@ -2,9 +2,9 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version IC23.1-64b 08/20/2024 22:42 (cpgbld17) $
           : sub-version  IC23.1-64b.ISR9.24 
-Started at: 30-Nov-2025  19:16:56
+Started at: 07-Dec-2025  18:49:23
 User Name : mgrawe2
-Host Name : fastx3-03.ews.illinois.edu
+Host Name : fastx3-15.ews.illinois.edu
 Directory : /home/mgrawe2/ece482.work/gpdk045_new
 CADENCE Design Systems, Inc.
 ********************************************************************************
@@ -34,51 +34,61 @@ convertDot                              node
 convertPin                              geometryAndText
 
 INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
-INFO (XSTRM-223): 1. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_764551816960.
-INFO (XSTRM-223): 2. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764551816961.
-INFO (XSTRM-223): 3. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_764551816962.
-INFO (XSTRM-223): 4. Translating stdVia gpdk045/M1_NWELL/layout as STRUCTURE M1_NWELL_CDNS_764551816963.
-INFO (XSTRM-223): 5. Translating stdVia gpdk045/M1_PSUB/layout as STRUCTURE M1_PSUB_CDNS_764551816964.
-INFO (XSTRM-223): 6. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764551816965.
-INFO (XSTRM-223): 7. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_764551816966.
-INFO (XSTRM-223): 8. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_764551816967.
-INFO (XSTRM-223): 9. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_764551816968.
-INFO (XSTRM-223): 10. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_764551816969.
-INFO (XSTRM-223): 11. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_7645518169610.
-INFO (XSTRM-223): 12. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_7645518169611.
-INFO (XSTRM-223): 13. Translating stdVia gpdk045/M5_M4/layout as STRUCTURE M5_M4_CDNS_7645518169612.
-INFO (XSTRM-223): 14. Translating stdVia gpdk045/M6_M5/layout as STRUCTURE M6_M5_CDNS_7645518169613.
-INFO (XSTRM-223): 15. Translating stdVia gpdk045/M7_M6/layout as STRUCTURE M7_M6_CDNS_7645518169614.
-INFO (XSTRM-223): 16. Translating stdVia gpdk045/M8_M7/layout as STRUCTURE M8_M7_CDNS_7645518169615.
-INFO (XSTRM-223): 17. Translating stdVia gpdk045/M9_M8/layout as STRUCTURE M9_M8_CDNS_7645518169616.
-INFO (XSTRM-223): 18. Translating stdVia gpdk045/M10_M9/layout as STRUCTURE M10_M9_CDNS_7645518169617.
-INFO (XSTRM-223): 19. Translating stdVia gpdk045/M11_M10/layout as STRUCTURE M11_M10_CDNS_7645518169618.
-INFO (XSTRM-223): 20. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_764551816960.
-INFO (XSTRM-223): 21. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_764551816961.
-INFO (XSTRM-223): 22. Translating stdVia gpdk045/M1_PSUB/layout as STRUCTURE M1_PSUB_CDNS_7645518169619.
-INFO (XSTRM-223): 23. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7645518169620.
-INFO (XSTRM-223): 24. Translating stdVia gpdk045/M1_NWELL/layout as STRUCTURE M1_NWELL_CDNS_7645518169621.
-INFO (XSTRM-223): 25. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_764551816962.
-INFO (XSTRM-223): 26. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_764551816963.
-INFO (XSTRM-223): 27. Translating cellview ece482_final_project/inv/layout as STRUCTURE inv.
-INFO (XSTRM-223): 28. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_764551816964.
-INFO (XSTRM-223): 29. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_764551816965.
-INFO (XSTRM-223): 30. Translating cellview ece482_final_project/xor/layout as STRUCTURE xor.
-INFO (XSTRM-223): 31. Translating cellview ece482_final_project/full_adder/layout as STRUCTURE full_adder.
-INFO (XSTRM-223): 32. Translating stdVia gpdk045/M11_M10/layout as STRUCTURE M11_M10_CDNS_7645518169622.
-INFO (XSTRM-223): 33. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_764551816966.
-INFO (XSTRM-223): 34. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_764551816967.
-INFO (XSTRM-223): 35. Translating cellview ece482_final_project/and2/layout as STRUCTURE and2.
-INFO (XSTRM-223): 36. Translating cellview ece482_final_project/half_adder/layout as STRUCTURE half_adder.
-INFO (XSTRM-223): 37. Translating cellview ece482_final_project/mult/layout as STRUCTURE mult.
-INFO (XSTRM-317): The 'ece482_final_project/mult/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (26480, 5710). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-223): 1. Translating stdVia gpdk045/M11_M10/layout as STRUCTURE M11_M10_CDNS_765154963930.
+INFO (XSTRM-223): 2. Translating stdVia gpdk045/M5_M4/layout as STRUCTURE M5_M4_CDNS_765154963931.
+INFO (XSTRM-223): 3. Translating stdVia gpdk045/M6_M5/layout as STRUCTURE M6_M5_CDNS_765154963932.
+INFO (XSTRM-223): 4. Translating stdVia gpdk045/M7_M6/layout as STRUCTURE M7_M6_CDNS_765154963933.
+INFO (XSTRM-223): 5. Translating stdVia gpdk045/M8_M7/layout as STRUCTURE M8_M7_CDNS_765154963934.
+INFO (XSTRM-223): 6. Translating stdVia gpdk045/M10_M9/layout as STRUCTURE M10_M9_CDNS_765154963935.
+INFO (XSTRM-223): 7. Translating stdVia gpdk045/M9_M8/layout as STRUCTURE M9_M8_CDNS_765154963936.
+INFO (XSTRM-223): 8. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_765154963937.
+INFO (XSTRM-223): 9. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_765154963938.
+INFO (XSTRM-223): 10. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_765154963939.
+INFO (XSTRM-223): 11. Translating stdVia gpdk045/M5_M4/layout as STRUCTURE M5_M4_CDNS_7651549639310.
+INFO (XSTRM-223): 12. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_7651549639311.
+INFO (XSTRM-223): 13. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_7651549639312.
+INFO (XSTRM-223): 14. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_7651549639313.
+INFO (XSTRM-223): 15. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_7651549639314.
+INFO (XSTRM-223): 16. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_7651549639315.
+INFO (XSTRM-223): 17. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_7651549639316.
+INFO (XSTRM-223): 18. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_7651549639317.
+INFO (XSTRM-223): 19. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_7651549639318.
+INFO (XSTRM-223): 20. Translating stdVia gpdk045/M4_M3/layout as STRUCTURE M4_M3_CDNS_7651549639319.
+INFO (XSTRM-223): 21. Translating stdVia gpdk045/M1_NWELL/layout as STRUCTURE M1_NWELL_CDNS_7651549639320.
+INFO (XSTRM-223): 22. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_7651549639321.
+INFO (XSTRM-223): 23. Translating stdVia gpdk045/M1_PSUB/layout as STRUCTURE M1_PSUB_CDNS_7651549639322.
+INFO (XSTRM-223): 24. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7651549639323.
+INFO (XSTRM-223): 25. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_765154963930.
+INFO (XSTRM-223): 26. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_765154963931.
+INFO (XSTRM-223): 27. Translating cellview ece482_final_project/nand2/layout as STRUCTURE nand2.
+INFO (XSTRM-223): 28. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_765154963932.
+INFO (XSTRM-223): 29. Translating cellview ece482_final_project/inv/layout as STRUCTURE inv.
+INFO (XSTRM-223): 30. Translating cellview ece482_final_project/and2/layout as STRUCTURE and2.
+INFO (XSTRM-223): 31. Translating stdVia gpdk045/M3_M2/layout as STRUCTURE M3_M2_CDNS_7651549639324.
+INFO (XSTRM-223): 32. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_7651549639325.
+INFO (XSTRM-223): 33. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_7651549639326.
+INFO (XSTRM-223): 34. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_7651549639327.
+INFO (XSTRM-223): 35. Translating stdVia gpdk045/M2_M1/layout as STRUCTURE M2_M1_CDNS_7651549639328.
+INFO (XSTRM-223): 36. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7651549639329.
+INFO (XSTRM-223): 37. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7651549639330.
+INFO (XSTRM-223): 38. Translating stdVia gpdk045/M1_PO/layout as STRUCTURE M1_PO_CDNS_7651549639331.
+INFO (XSTRM-223): 39. Translating cellview ece482_final_project/xor/layout as STRUCTURE xor.
+INFO (XSTRM-223): 40. Translating cellview gpdk045/nmos1v/layout as STRUCTURE nmos1v_CDNS_765154963933.
+INFO (XSTRM-223): 41. Translating cellview gpdk045/pmos1v/layout as STRUCTURE pmos1v_CDNS_765154963934.
+INFO (XSTRM-223): 42. Translating cellview ece482_final_project/fa_co_network/layout as STRUCTURE fa_co_network.
+INFO (XSTRM-223): 43. Translating cellview ece482_final_project/full_adder/layout as STRUCTURE full_adder.
+INFO (XSTRM-317): The 'ece482_final_project/full_adder/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (2580, 1370). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-223): 44. Translating cellview ece482_final_project/half_adder/layout as STRUCTURE half_adder.
+INFO (XSTRM-223): 45. Translating cellview ece482_final_project/mult/layout as STRUCTURE mult.
+INFO (XSTRM-317): The 'ece482_final_project/mult/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (33140, 22190). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
+INFO (XSTRM-317): The 'ece482_final_project/mult/layout' has a pathSeg with diagonal orientation, or end style as custom or chamfer at (57950, 40560). This pathSeg will be translated as a boundary record in the GDS file during XStream Out.
 
 Summary of Objects Translated:
-	Scalar Instances:                       42
+	Scalar Instances:                       49
 	Array Instances:                        0
-	Polygons:                               3
+	Polygons:                               14
 	Paths:                                  0
-	Rectangles:                             410
+	Rectangles:                             449
 	Lines:                                  0
 	Arcs:                                   0
 	Donuts:                                 0
@@ -91,13 +101,13 @@ Summary of Objects Translated:
 	Markers:                                0
 	Rows:                                   0
 	Stitch:                                 0
-	Standard Vias                           116
+	Standard Vias                           661
 	Custom Vias:                            0
 	CdsGen Vias:                            0
-	Pathsegs:                               455
-	Text:                                   0
-	TextDisplay:                            45
-	Cells:                                  37
+	Pathsegs:                               725
+	Text:                                   23
+	TextDisplay:                            7
+	Cells:                                  45
 
-Elapsed Time: 0.5s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 36328KB
+Elapsed Time: 0.8s   User Time: 0.2s   CPU Time: 0.1s   Peak VM: 36560KB
 INFO (XSTRM-234): Translation completed. '0' error(s) and '2' warning(s) found.

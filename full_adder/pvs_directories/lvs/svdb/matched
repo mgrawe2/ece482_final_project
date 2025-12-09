@@ -3,7 +3,7 @@
 #####                                         PVS LVS COMPARISON
 #####  
 #####  Version                       :   23.11-s036
-#####  NVN Run Start                 :   Thu Dec  4 16:56:38 2025
+#####  NVN Run Start                 :   Sat Dec  6 15:13:17 2025
 #####  ERC Summary File              :   full_adder.sum
 #####  Extraction Report File        :   full_adder.rep
 #####  Comparison Report File        :   full_adder.rep.cls
@@ -23,11 +23,11 @@
 #####  Extraction Exec Time          :   0h 0m 1s - (1s)
 #####  Extraction Peak Memory Usage  :   31.00MB
 #####  NVN CPU Time                  :   0h 0m 0s - (0s)                 
-#####  NVN Exec Time                 :   0h 0m 2s - (2s)                 
-#####  NVN Peak Memory Usage         :   254.91MB
+#####  NVN Exec Time                 :   0h 0m 1s - (1s)                 
+#####  NVN Peak Memory Usage         :   254.90MB
 #####  LVS Total CPU Time            :   0h 0m 1s - (1s)                 
-#####  LVS Total Exec Time           :   0h 0m 3s - (3s)                 
-#####  LVS Total Peak Memory Usage   :   254.91MB
+#####  LVS Total Exec Time           :   0h 0m 2s - (2s)                 
+#####  LVS Total Peak Memory Usage   :   254.90MB
 #####  
 ##############################################################################################################
 

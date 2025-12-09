@@ -12,7 +12,7 @@ LVS Softchk Report       : mult.softchk
 LVS Find Shorts Report   : mult.rep.shorts
 Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult/pvs_directories/lvs/mult.gds ("mult")
 User Name                : mgrawe2
-Creation Time            : Sun Nov 30 19:17:02 2025
+Creation Time            : Sun Dec  7 18:49:30 2025
 Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult/pvs_directories/lvs
 PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
 
@@ -35,14 +35,8 @@ Warnings and errors of connectivity for cell "mult"
 ---------------------------------------------------
 
 [WARN] Unattached port label:
-    Label "VSS" on layer 1062(ind10_text) at (27.085, 10.745)
+    Label "VSS" on layer 1063(ind11_text) at (13.495, 2.030)
 
 [WARN] Unattached port label:
-    Label "VSS" on layer 1062(ind10_text) at (27.093, 10.745)
-
-[WARN] Unattached port label:
-    Label "VDD" on layer 1063(ind11_text) at (-1.455, 10.325)
-
-[WARN] Unattached port label:
-    Label "VDD" on layer 1063(ind11_text) at (-1.452, 10.307)
+    Label "VDD" on layer 1063(ind11_text) at (14.460, 36.320)
 
