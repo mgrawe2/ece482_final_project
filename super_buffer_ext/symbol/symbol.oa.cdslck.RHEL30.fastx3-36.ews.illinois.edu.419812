@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      teddyb2
+HostName                       fastx3-36.ews.illinois.edu
+ProcessIdentifier              419812
+ProcessCreationTime_UTC        1763995257
+ProcessCreationTime_Readable   Mon Nov 24 08:40:57 2025 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/teddyb2/ece482.work/gpdk045_new/ece482_final_project/super_buffer_ext/symbol/symbol.oa.cdslck
+TimeEditLocked                 Mon Nov 24 08:50:30 2025 CST

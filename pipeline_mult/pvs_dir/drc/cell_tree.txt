@@ -15,8 +15,8 @@ full_adder
 	xor
 
 pipeline_mult
+	c2mos
 	and2
 	half_adder
 	full_adder
-	c2mos
 

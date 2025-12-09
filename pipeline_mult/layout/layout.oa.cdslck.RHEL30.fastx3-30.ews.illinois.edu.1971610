@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      mgrawe2
+HostName                       fastx3-30.ews.illinois.edu
+ProcessIdentifier              1971610
+ProcessCreationTime_UTC        1765237307
+ProcessCreationTime_Readable   Mon Dec  8 17:41:47 2025 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/layout/layout.oa.cdslck
+TimeEditLocked                 Mon Dec  8 17:44:45 2025 CST

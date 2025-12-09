@@ -30,26 +30,6 @@
 						<value>active</value>
 					</option>
 				</tooloptions>
-				<vars>
-					<var>Wp_inv
-						<value></value>
-					</var>
-					<var>Wn_inv
-						<value></value>
-					</var>
-					<var>Wn_nand2
-						<value></value>
-					</var>
-					<var>Wp_nand2
-						<value></value>
-					</var>
-					<var>Wn_xor
-						<value></value>
-					</var>
-					<var>Wp_xor
-						<value></value>
-					</var>
-				</vars>
 			</test>
 		</tests>
 		<extensions>
