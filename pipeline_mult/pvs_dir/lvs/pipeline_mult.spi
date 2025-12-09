@@ -1,0 +1,264 @@
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* CDL Netlist:                                              *
+*                                                           *
+* Cell Name  : pipeline_mult                                *
+* Netlisted  : Sun Dec  7 19:50:41 2025                     *
+* PVS Version: 23.11-s036 Wed Jan 17 18:11:41 PST 2024      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+*.LDD
+*.DEVTMPLT 0 MN(g45n1svt) _nmos1v ndiff_conn(D) poly_conn(G) ndiff_conn(S) psubstrate(B)
+*.DEVTMPLT 1 MP(g45p1svt) _pmos1v pdiff_conn(D) poly_conn(G) pdiff_conn(S) nwell_conn(B)
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: c2mos                                           *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt c2mos CLK VDD VSS D Q RST 7
+*.DEVICECLIMB
+** N=12 EP=7 FDC=9
+M0 11 D VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=2240 $Y=650 $dt=0
+M1 8 7 11 VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=3750 $Y=650 $dt=0
+M2 12 8 VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=5230 $Y=650 $dt=0
+M3 Q CLK 12 VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=6720 $Y=650 $dt=0
+M4 7 CLK VDD VDD g45p1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917 $X=750 $Y=2360 $dt=1
+M5 9 D VDD VDD g45p1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543 $X=2240 $Y=2360 $dt=1
+M6 8 CLK 9 VDD g45p1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503 $X=3740 $Y=2350 $dt=1
+M7 10 8 VDD VDD g45p1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543 $X=5230 $Y=2360 $dt=1
+M8 Q 7 10 VDD g45p1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813 $X=6720 $Y=2340 $dt=1
+.ends c2mos
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_765158635883                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_765158635883 S_source_0 S_source_2 D_drain_1 4 5
+** N=5 EP=5 FDC=2
+M0 D_drain_1 4 S_source_0 5 g45n1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07 $X=0 $Y=0 $dt=0
+M1 S_source_2 4 D_drain_1 5 g45n1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07 $X=410 $Y=0 $dt=0
+.ends nmos1v_CDNS_765158635883
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_765158635885                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_765158635885 S_source_0 D_drain_1 3 S_source_2 5
+** N=5 EP=5 FDC=2
+M0 D_drain_1 3 S_source_0 5 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.76e-14 AS=5.04e-14 PD=1.04e-06 PS=1e-06 fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=0 $Y=0 $dt=0
+M1 S_source_2 3 D_drain_1 5 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.04e-14 AS=5.76e-14 PD=1e-06 PS=1.04e-06 fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=410 $Y=0 $dt=0
+.ends nmos1v_CDNS_765158635885
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: inv                                             *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt inv IN VDD OUT VSS
+*.DEVICECLIMB
+** N=4 EP=4 FDC=2
+X4 VSS OUT IN VSS VSS nmos1v_CDNS_765158635885 $T=-60 -1520 0 0 $X=-480 $Y=-1720
+.ends inv
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: and2                                            *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt and2 A VDD B VSS OUT 7
+*.DEVICECLIMB
+** N=7 EP=6 FDC=9
+X10 6 6 7 A VSS nmos1v_CDNS_765158635883 $T=-2250 -1940 0 0 $X=-2670 $Y=-2140
+X11 6 6 VSS B VSS nmos1v_CDNS_765158635883 $T=-950 -1940 0 0 $X=-1370 $Y=-2140
+X14 7 VDD OUT VSS inv $T=410 300 0 0 $X=-70 $Y=-1860
+M0 VDD B 7 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=-540 $Y=930 $dt=1
+M1 OUT 7 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=350 $Y=930 $dt=1
+M2 VDD 7 OUT VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=760 $Y=930 $dt=1
+.ends and2
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: xor                                             *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt xor B VDD VSS B_bar OUT A
+*.DEVICECLIMB
+** N=6 EP=6 FDC=9
+X18 OUT A B_bar OUT VSS nmos1v_CDNS_765158635885 $T=-500 -1920 0 0 $X=-920 $Y=-2120
+X19 B_bar OUT A B_bar VSS nmos1v_CDNS_765158635885 $T=800 -1920 0 0 $X=380 $Y=-2120
+X20 B VDD B_bar VSS inv $T=-1740 -400 0 0 $X=-2220 $Y=-2560
+M0 OUT B A VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=-90 $Y=230 $dt=1
+M1 OUT A B VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=800 $Y=230 $dt=1
+M2 B A OUT VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=1210 $Y=230 $dt=1
+.ends xor
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: half_adder                                      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt half_adder B A VSS VDD S Co
+** N=9 EP=6 FDC=24
+X9 A VDD B VSS Co 8 and2 $T=9010 2860 0 0 $X=6340 $Y=280
+X10 B VDD VSS 7 S A xor $T=4660 3560 0 0 $X=2440 $Y=1000
+M0 7 B VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=2860 $Y=3790 $dt=1
+M1 VDD B 7 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=3270 $Y=3790 $dt=1
+M2 A B S VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=4160 $Y=3790 $dt=1
+M3 8 A VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=6760 $Y=3790 $dt=1
+M4 VDD A 8 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=7170 $Y=3790 $dt=1
+M5 8 B VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=8060 $Y=3790 $dt=1
+.ends half_adder
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: nmos1v_CDNS_765158635886                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt nmos1v_CDNS_765158635886 S_source_0 D_drain_1 3 S_source_2 D_drain_3 6 7 S_source_4 9
+** N=9 EP=9 FDC=4
+M0 D_drain_1 3 S_source_0 S_source_2 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.76e-14 AS=5.04e-14 PD=1.04e-06 PS=1e-06 fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=0 $Y=0 $dt=0
+M1 S_source_2 6 D_drain_1 S_source_2 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.76e-14 AS=5.76e-14 PD=1.04e-06 PS=1.04e-06 fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=410 $Y=0 $dt=0
+M2 D_drain_3 7 S_source_2 S_source_2 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.76e-14 AS=5.76e-14 PD=1.04e-06 PS=1.04e-06 fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=820 $Y=0 $dt=0
+M3 S_source_4 9 D_drain_3 S_source_2 g45n1svt L=4.5e-08 W=3.6e-07 AD=5.04e-14 AS=5.76e-14 PD=1e-06 PS=1.04e-06 fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07 $X=1230 $Y=0 $dt=0
+.ends nmos1v_CDNS_765158635886
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: pmos1v_CDNS_765158635887                        *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt pmos1v_CDNS_765158635887 S_source_0 D_drain_1 S_source_2 4 5 D_drain_3 S_source_4 8 9 B
+** N=11 EP=10 FDC=4
+M0 D_drain_1 4 S_source_0 B g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=0 $Y=0 $dt=1
+M1 S_source_2 5 D_drain_1 B g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.152e-13 PD=1.76e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=410 $Y=0 $dt=1
+M2 D_drain_3 8 S_source_2 B g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.152e-13 PD=1.76e-06 PS=1.76e-06 fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=820 $Y=0 $dt=1
+M3 S_source_4 9 D_drain_3 B g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=1230 $Y=0 $dt=1
+.ends pmos1v_CDNS_765158635887
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: fa_co_network                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt fa_co_network OUT P Ci VDD P_bar VSS A
+** N=11 EP=7 FDC=8
+X12 OUT 8 Ci VSS 9 P P_bar OUT A nmos1v_CDNS_765158635886 $T=-670 -1100 0 0 $X=-1090 $Y=-1300
+X13 OUT 10 VDD Ci P_bar 11 OUT P A VDD pmos1v_CDNS_765158635887 $T=-670 1050 0 0 $X=-1090 $Y=850
+.ends fa_co_network
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: full_adder                                      *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt full_adder B A Ci VDD VSS S Co
+** N=15 EP=7 FDC=36
+X18 10 VDD Co VSS inv $T=12350 3410 0 0 $X=11870 $Y=1250
+X19 B VDD VSS 11 9 A xor $T=4170 3810 0 0 $X=1950 $Y=1250
+X20 9 VDD VSS 8 S Ci xor $T=8070 3810 0 0 $X=5850 $Y=1250
+X23 10 9 Ci VDD 8 VSS A fa_co_network $T=10840 2990 0 0 $X=9750 $Y=1250
+M0 11 B VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=2370 $Y=4040 $dt=1
+M1 VDD B 11 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=2780 $Y=4040 $dt=1
+M2 A B 9 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=3670 $Y=4040 $dt=1
+M3 8 9 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=6270 $Y=4040 $dt=1
+M4 VDD 9 8 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=6680 $Y=4040 $dt=1
+M5 Ci 9 S VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127 $X=7570 $Y=4040 $dt=1
+M6 Co 10 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=12290 $Y=4040 $dt=1
+M7 VDD 10 Co VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=12700 $Y=4040 $dt=1
+.ends full_adder
+
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+* Sub cell: pipeline_mult                                   *
+* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++ *
+.subckt pipeline_mult A0 A1 A2 A3 B0 B1 B2 B3 CLK P0
++ P1 P2 P3 P4 P5 P6 P7 RST VDD VSS
+** N=199 EP=20 FDC=697
+X805 CLK VDD VSS 34 48 RST 64 c2mos $T=83140 12860 0 0 $X=83140 $Y=12710
+X806 CLK VDD VSS 33 49 RST 66 c2mos $T=83140 20330 0 0 $X=83140 $Y=20180
+X807 CLK VDD VSS 35 50 RST 68 c2mos $T=83140 29510 0 0 $X=83140 $Y=29360
+X808 CLK VDD VSS 40 51 RST 70 c2mos $T=83140 36740 0 0 $X=83140 $Y=36590
+X809 CLK VDD VSS 41 52 RST 72 c2mos $T=92740 8970 0 0 $X=92740 $Y=8820
+X810 CLK VDD VSS 9 53 RST 74 c2mos $T=92740 16440 0 0 $X=92740 $Y=16290
+X811 CLK VDD VSS 10 54 RST 76 c2mos $T=92740 25620 0 0 $X=92740 $Y=25470
+X812 CLK VDD VSS 11 55 RST 78 c2mos $T=92740 32850 0 0 $X=92740 $Y=32700
+X813 CLK VDD VSS 8 P1 RST 80 c2mos $T=98960 56760 0 0 $X=98960 $Y=56610
+X814 CLK VDD VSS 12 P2 RST 82 c2mos $T=98990 46730 0 0 $X=98990 $Y=46580
+X815 CLK VDD VSS 39 P0 RST 84 c2mos $T=104400 62160 0 0 $X=104400 $Y=62010
+X816 A1 VDD B0 VSS 24 86 and2 $T=15650 55370 0 0 $X=12980 $Y=52790
+X817 A0 VDD B0 VSS 39 87 and2 $T=15650 65170 0 0 $X=12980 $Y=62590
+X818 A3 VDD B0 VSS 19 88 and2 $T=15950 34640 0 0 $X=13280 $Y=32060
+X819 A2 VDD B0 VSS 20 89 and2 $T=15950 44110 0 0 $X=13280 $Y=41530
+X820 A3 VDD B1 VSS 15 90 and2 $T=24170 29010 0 0 $X=21500 $Y=26430
+X821 A2 VDD B1 VSS 18 91 and2 $T=24270 39260 0 0 $X=21600 $Y=36680
+X822 A1 VDD B1 VSS 21 92 and2 $T=24270 48510 0 0 $X=21600 $Y=45930
+X823 A0 VDD B1 VSS 23 93 and2 $T=24270 58330 0 0 $X=21600 $Y=55750
+X824 A3 VDD B2 VSS 26 94 and2 $T=45790 21400 0 0 $X=43120 $Y=18820
+X825 A2 VDD B2 VSS 25 95 and2 $T=46640 30040 0 0 $X=43970 $Y=27460
+X826 A1 VDD B2 VSS 28 96 and2 $T=47840 38160 0 0 $X=45170 $Y=35580
+X827 A0 VDD B2 VSS 29 97 and2 $T=49730 46350 0 0 $X=47060 $Y=43770
+X828 A3 VDD B3 VSS 34 98 and2 $T=72230 11810 0 0 $X=69560 $Y=9230
+X829 A2 VDD B3 VSS 33 99 and2 $T=72470 21070 0 0 $X=69800 $Y=18490
+X830 A1 VDD B3 VSS 35 100 and2 $T=73020 29170 0 0 $X=70350 $Y=26590
+X831 A0 VDD B3 VSS 40 101 and2 $T=74450 37230 0 0 $X=71780 $Y=34650
+X832 22 15 VSS VDD 5 27 half_adder $T=29710 27070 0 0 $X=32010 $Y=27350
+X833 23 24 VSS VDD 8 17 half_adder $T=30010 51510 0 0 $X=32310 $Y=51790
+X834 29 7 VSS VDD 12 31 half_adder $T=55120 42950 0 0 $X=57420 $Y=43230
+X835 51 55 VSS VDD P3 36 half_adder $T=104810 34950 0 0 $X=107110 $Y=35230
+X836 18 19 16 VDD VSS 6 22 full_adder $T=28640 34740 0 0 $X=30420 $Y=35990
+X837 21 20 17 VDD VSS 7 16 full_adder $T=28640 43080 0 0 $X=30420 $Y=44330
+X838 25 5 30 VDD VSS 10 32 full_adder $T=53750 26520 0 0 $X=55530 $Y=27770
+X839 28 6 31 VDD VSS 11 30 full_adder $T=53750 34740 0 0 $X=55530 $Y=35990
+X840 26 27 32 VDD VSS 9 41 full_adder $T=54350 18300 0 0 $X=56130 $Y=19550
+X841 50 54 36 VDD VSS P4 38 full_adder $T=104430 26180 0 0 $X=106210 $Y=27430
+X842 49 53 38 VDD VSS P5 37 full_adder $T=105090 17720 0 0 $X=106870 $Y=18970
+X843 48 52 37 VDD VSS P6 P7 full_adder $T=105100 9270 0 0 $X=106880 $Y=10520
+M0 64 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=83890 $Y=13510 $dt=0
+M1 66 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=83890 $Y=20980 $dt=0
+M2 68 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=83890 $Y=30160 $dt=0
+M3 70 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=83890 $Y=37390 $dt=0
+M4 VSS RST 48 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.42231 scb=0.000192056 scc=1.27713e-07 $X=91350 $Y=13030 $dt=0
+M5 VSS RST 49 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.42231 scb=0.000192056 scc=1.27713e-07 $X=91350 $Y=20500 $dt=0
+M6 VSS RST 50 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.42231 scb=0.000192056 scc=1.27713e-07 $X=91350 $Y=29680 $dt=0
+M7 VSS RST 51 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.42231 scb=0.000192056 scc=1.27713e-07 $X=91350 $Y=36910 $dt=0
+M8 72 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=93490 $Y=9620 $dt=0
+M9 74 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=93490 $Y=17090 $dt=0
+M10 76 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=93490 $Y=26270 $dt=0
+M11 78 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=93490 $Y=33500 $dt=0
+M12 80 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=99710 $Y=57410 $dt=0
+M13 82 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06 $X=99740 $Y=47380 $dt=0
+M14 VSS RST 52 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09 $X=100950 $Y=9140 $dt=0
+M15 VSS RST 53 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09 $X=100950 $Y=16610 $dt=0
+M16 VSS RST 54 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09 $X=100950 $Y=25790 $dt=0
+M17 VSS RST 55 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09 $X=100950 $Y=33020 $dt=0
+M18 84 CLK VSS VSS g45n1svt L=4.5e-08 W=2.4e-07 AD=3.36e-14 AS=3.36e-14 PD=7.6e-07 PS=7.6e-07 fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.48209 scb=0.00151892 scc=4.69814e-06 $X=105150 $Y=62810 $dt=0
+M19 VSS RST P1 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09 $X=107170 $Y=56930 $dt=0
+M20 VSS RST P2 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09 $X=107200 $Y=46900 $dt=0
+M21 VSS RST P0 VSS g45n1svt L=4.5e-08 W=4.8e-07 AD=6.72e-14 AS=6.72e-14 PD=1.24e-06 PS=1.24e-06 fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09 $X=112610 $Y=62330 $dt=0
+M22 86 A1 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=13400 $Y=56300 $dt=1
+M23 87 A0 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=13400 $Y=66100 $dt=1
+M24 88 A3 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=13700 $Y=35570 $dt=1
+M25 89 A2 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=13700 $Y=45040 $dt=1
+M26 VDD A1 86 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=13810 $Y=56300 $dt=1
+M27 VDD A0 87 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=13810 $Y=66100 $dt=1
+M28 VDD A3 88 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=14110 $Y=35570 $dt=1
+M29 VDD A2 89 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=14110 $Y=45040 $dt=1
+M30 86 B0 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=14700 $Y=56300 $dt=1
+M31 87 B0 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=14700 $Y=66100 $dt=1
+M32 88 B0 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=15000 $Y=35570 $dt=1
+M33 89 B0 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=15000 $Y=45040 $dt=1
+M34 90 A3 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=21920 $Y=29940 $dt=1
+M35 91 A2 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=22020 $Y=40190 $dt=1
+M36 92 A1 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=22020 $Y=49440 $dt=1
+M37 93 A0 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=22020 $Y=59260 $dt=1
+M38 VDD A3 90 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=22330 $Y=29940 $dt=1
+M39 VDD A2 91 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=22430 $Y=40190 $dt=1
+M40 VDD A1 92 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=22430 $Y=49440 $dt=1
+M41 VDD A0 93 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=22430 $Y=59260 $dt=1
+M42 90 B1 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=23220 $Y=29940 $dt=1
+M43 91 B1 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=23320 $Y=40190 $dt=1
+M44 92 B1 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=23320 $Y=49440 $dt=1
+M45 93 B1 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=23320 $Y=59260 $dt=1
+M46 94 A3 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=43540 $Y=22330 $dt=1
+M47 VDD A3 94 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=43950 $Y=22330 $dt=1
+M48 95 A2 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=44390 $Y=30970 $dt=1
+M49 VDD A2 95 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=44800 $Y=30970 $dt=1
+M50 94 B2 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=44840 $Y=22330 $dt=1
+M51 96 A1 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=45590 $Y=39090 $dt=1
+M52 95 B2 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=45690 $Y=30970 $dt=1
+M53 VDD A1 96 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=46000 $Y=39090 $dt=1
+M54 96 B2 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=46890 $Y=39090 $dt=1
+M55 97 A0 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=47480 $Y=47280 $dt=1
+M56 VDD A0 97 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=47890 $Y=47280 $dt=1
+M57 97 B2 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=48780 $Y=47280 $dt=1
+M58 98 A3 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=69980 $Y=12740 $dt=1
+M59 99 A2 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=70220 $Y=22000 $dt=1
+M60 VDD A3 98 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=70390 $Y=12740 $dt=1
+M61 VDD A2 99 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=70630 $Y=22000 $dt=1
+M62 100 A1 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=70770 $Y=30100 $dt=1
+M63 VDD A1 100 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=71180 $Y=30100 $dt=1
+M64 98 B3 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=71280 $Y=12740 $dt=1
+M65 99 B3 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=71520 $Y=22000 $dt=1
+M66 100 B3 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=72070 $Y=30100 $dt=1
+M67 101 A0 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812 $X=72200 $Y=38160 $dt=1
+M68 VDD A0 101 VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.008e-13 AS=1.152e-13 PD=1.72e-06 PS=1.76e-06 fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616 $X=72610 $Y=38160 $dt=1
+M69 101 B3 VDD VDD g45p1svt L=4.5e-08 W=7.2e-07 AD=1.152e-13 AS=1.008e-13 PD=1.76e-06 PS=1.72e-06 fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129 $X=73500 $Y=38160 $dt=1
+.ends pipeline_mult

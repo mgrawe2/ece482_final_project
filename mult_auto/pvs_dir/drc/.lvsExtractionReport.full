@@ -1,0 +1,91 @@
+			*****************************************************
+			**                                                 **
+			**                L V S  R E P O R T               **
+			**                                                 **
+			*****************************************************
+
+
+Report File Name         : mult_auto.rep
+ERC Summary File         : mult_auto.sum
+LVS Comparison Report    : mult_auto.rep.cls
+LVS Softchk Report       : mult_auto.softchk
+LVS Find Shorts Report   : mult_auto.rep.shorts
+Layout Name              : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult_auto/pvs_dir/drc/mult_auto.gds ("mult_auto")
+User Name                : mgrawe2
+Creation Time            : Sat Dec  6 15:35:25 2025
+Current directory        : /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/mult_auto/pvs_dir/drc
+PVS Version              : 23.11-s036 Wed Jan 17 18:11:41 PST 2024
+
+
+			*****************************************************
+			**                                                 **
+			**            D E V E X T  R E P O R T             **
+			**                                                 **
+			*****************************************************
+
+
+    LVS_FIND_SHORTS  -cell primary
+    LVS_FIND_SHORTS result file "mult_auto.rep.shorts"
+
+    LVS_SOFTCHK result file "mult_auto.softchk"
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result       31 (      72)
+    LVS_SOFTCHK nwell_conn -TYPE CONTACT   Total Result        0 (       0)
+    LVS_SOFTCHK Nburied -TYPE CONTACT   Total Result        0 (       0)
+
+Warnings and errors of connectivity for cell "and2"
+---------------------------------------------------
+
+[WARN] Stamping conflict in SCONNECT(Multiple source nets stamp one target net):
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        2 (      40)
+
+
+
+Warnings and errors of connectivity for cell "half_adder"
+---------------------------------------------------------
+
+[WARN] Stamping conflict in SCONNECT(Multiple source nets stamp one target net):
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result        1 (       4)
+
+
+
+Warnings and errors of connectivity for cell "mult_auto"
+--------------------------------------------------------
+
+[WARN] Unattached port label:
+    Label "VSS" on layer 1063(ind11_text) at (20.530, 7.350)
+
+[WARN] Unattached port label:
+    Label "VDD" on layer 1063(ind11_text) at (21.495, 41.640)
+
+[WARN] Stamping conflict in SCONNECT(Multiple source nets stamp one target net):
+    LVS_SOFTCHK psubstrate -TYPE CONTACT   Total Result       28 (      28)
+
+
+
+Clean cell list (added by extraction report parser )
+ for cell "M1_NWELL_CDNS_7650569203810"
+ for cell "M1_PO_CDNS_7650569203813"
+ for cell "M1_PO_CDNS_7650569203818"
+ for cell "M1_PSUB_CDNS_7650569203812"
+ for cell "M2_M1_CDNS_765056920381"
+ for cell "M2_M1_CDNS_7650569203811"
+ for cell "M2_M1_CDNS_7650569203814"
+ for cell "M2_M1_CDNS_7650569203815"
+ for cell "M2_M1_CDNS_765056920383"
+ for cell "M3_M2_CDNS_765056920382"
+ for cell "M3_M2_CDNS_7650569203821"
+ for cell "M3_M2_CDNS_765056920388"
+ for cell "M4_M3_CDNS_765056920380"
+ for cell "M4_M3_CDNS_765056920384"
+ for cell "M4_M3_CDNS_765056920385"
+ for cell "M4_M3_CDNS_765056920387"
+ for cell "M5_M4_CDNS_765056920386"
+ for cell "fa_co_network"
+ for cell "full_adder"
+ for cell "inv"
+ for cell "nmos1v_CDNS_765056920380"
+ for cell "nmos1v_CDNS_765056920382"
+ for cell "nmos1v_CDNS_765056920383"
+ for cell "pmos1v_CDNS_765056920381"
+ for cell "pmos1v_CDNS_765056920384"
+ for cell "xor"

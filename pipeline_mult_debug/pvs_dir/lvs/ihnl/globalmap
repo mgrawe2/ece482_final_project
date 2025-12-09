@@ -1,0 +1,16 @@
+CADENCE IHNL11140
+$model
+ece482_final_project/fa_co_network/schematic fa_co_network
+ece482_final_project/inv/schematic inv
+ece482_final_project/xor/schematic xor
+ece482_final_project/pipeline_mult_debug/schematic pipeline_mult_debug
+ece482_final_project/half_adder/schematic half_adder
+ece482_final_project/and2/schematic and2
+ece482_final_project/nand2/schematic nand2
+ece482_final_project/full_adder/schematic full_adder
+ece482_final_project/c2mos/schematic c2mos
+$endmodel
+$net
+$endnet
+$param
+$endparam

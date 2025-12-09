@@ -1,0 +1,22 @@
+pipeline_mult
+
+and2
+	inv
+
+xor
+	inv
+
+half_adder
+	and2
+	xor
+
+full_adder
+	inv
+	xor
+
+pipeline_mult
+	and2
+	half_adder
+	full_adder
+	c2mos
+

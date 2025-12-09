@@ -1,0 +1,20 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary mult_auto
+VDD 26 VDD 42990 83280 metal11_conn
+A3 1 A3 500 48390 metal3_conn
+P1 28 P1 93560 72810 metal3_conn
+A2 2 A2 640 57150 metal3_conn
+P0 4 P0 93300 78660 metal3_conn
+A1 19 A1 540 69630 metal3_conn
+A0 20 A0 710 78860 metal3_conn
+B0 21 B0 4800 83280 metal3_conn
+P3 47 P3 93540 50970 metal3_conn
+B1 22 B1 13470 83360 metal3_conn
+P4 48 P4 93490 42180 metal3_conn
+P2 35 P2 93380 63300 metal3_conn
+B2 23 B2 39610 83360 metal3_conn
+P5 49 P5 93450 34430 metal3_conn
+B3 24 B3 63660 83450 metal3_conn
+P6 50 P6 93550 25970 metal3_conn
+P7 51 P7 93460 19690 metal3_conn
+VSS 25 VSS 41060 14700 metal11_conn

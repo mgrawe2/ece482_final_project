@@ -1,0 +1,3068 @@
+*
+*
+*
+*                       LINUX           Sun Dec  7 19:53:34 2025
+*
+*
+*
+*  PROGRAM  advgen
+*
+*  Name           : advgen - Quantus - (64-bit)
+*  Version        : 23.1.1-p051
+*  Build Date     : Thu Feb 15 21:11:17 PST 2024
+*
+*  HSPICE LIBRARY
+*
+* GLOBAL_TEMPERATURE 25
+*  OPERATING_TEMPERATURE 25
+*  QRC_TECH_DIR /class/ece482/gpdk045_v_6_0/qrc/typical 
+*
+*!LENGTH_UNITS METERS
+*
+*
+*
+
+*
+.SUBCKT pipeline_mult A0 A1 A2 A3 B0 B1 B2 B3 CLK P0 P1 P2 P3 P4 P5 P6 P7 RST
++ VDD VSS
+*
+*
+*  caps2d version: 10
+*
+*
+*       TRANSISTOR CARDS
+*
+*
+MXI12/XI3/MNM1	XI12/XI3/net25	net126	XI12/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI3/MNM0	VSS	XI12/net1	XI12/XI3/net25	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI3/MNM2	VSS	XI12/P_bar	XI12/XI3/net23	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI3/MNM3	XI12/XI3/net23	p7_out_sum	XI12/net9	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI1/XI0/MNM0@1	XI12/P_bar	XI12/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI1/XI0/MNM0	XI12/P_bar	XI12/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI1/MNM1	P6	net126	XI12/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI1/MNM1@1	P6	net126	XI12/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI1/MNM0@1	net126	XI12/P_bar	P6	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI1/MNM0	net126	XI12/P_bar	P6	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI0/XI0/MNM0@1	XI12/net4	p7_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI0/XI0/MNM0	XI12/net4	p7_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI0/MNM1@1	XI12/net1	p7_out_sum	XI12/net4	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI0/MNM1	XI12/net1	p7_out_sum	XI12/net4	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI0/MNM0	p7_out_sum	XI12/net4	XI12/net1	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI0/MNM0@1	p7_out_sum	XI12/net4	XI12/net1	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI2/MNM0@1	P7	XI12/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI12/XI2/MNM0	P7	XI12/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI3/MNM1	XI11/XI3/net25	net127	XI11/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI3/MNM0	VSS	XI11/net1	XI11/XI3/net25	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI3/MNM2	VSS	XI11/P_bar	XI11/XI3/net23	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI3/MNM3	XI11/XI3/net23	p5_out_sum	XI11/net9	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI1/XI0/MNM0	XI11/P_bar	XI11/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI1/XI0/MNM0@1	XI11/P_bar	XI11/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI1/MNM1	P5	net127	XI11/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI1/MNM1@1	P5	net127	XI11/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI1/MNM0@1	net127	XI11/P_bar	P5	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI1/MNM0	net127	XI11/P_bar	P5	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI0/XI0/MNM0	XI11/net4	p5_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI0/XI0/MNM0@1	XI11/net4	p5_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI0/MNM1	XI11/net1	p5_out_sum	XI11/net4	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI0/MNM1@1	XI11/net1	p5_out_sum	XI11/net4	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI0/MNM0@1	p5_out_sum	XI11/net4	XI11/net1	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI0/MNM0	p5_out_sum	XI11/net4	XI11/net1	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI2/MNM0@1	net126	XI11/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI11/XI2/MNM0	net126	XI11/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI3/MNM1	XI10/XI3/net25	net135	XI10/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI3/MNM0	VSS	XI10/net1	XI10/XI3/net25	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI3/MNM2	VSS	XI10/P_bar	XI10/XI3/net23	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI3/MNM3	XI10/XI3/net23	p4_out_sum	XI10/net9	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI1/XI0/MNM0	XI10/P_bar	XI10/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI1/XI0/MNM0@1	XI10/P_bar	XI10/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI1/MNM1	P4	net135	XI10/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI1/MNM1@1	P4	net135	XI10/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI1/MNM0	net135	XI10/P_bar	P4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI1/MNM0@1	net135	XI10/P_bar	P4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI0/XI0/MNM0@1	XI10/net4	p4_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI0/XI0/MNM0	XI10/net4	p4_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI0/MNM1@1	XI10/net1	p4_out_sum	XI10/net4	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI0/MNM1	XI10/net1	p4_out_sum	XI10/net4	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI0/MNM0	p4_out_sum	XI10/net4	XI10/net1	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI0/MNM0@1	p4_out_sum	XI10/net4	XI10/net1	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI2/MNM0	net127	XI10/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI10/XI2/MNM0@1	net127	XI10/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI3/MNM1	XI9/XI3/net25	net130	XI9/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI3/MNM0	VSS	XI9/net1	XI9/XI3/net25	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI3/MNM2	VSS	XI9/P_bar	XI9/XI3/net23	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI3/MNM3	XI9/XI3/net23	net137	XI9/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI1/XI0/MNM0@1	XI9/P_bar	XI9/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI1/XI0/MNM0	XI9/P_bar	XI9/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI1/MNM1@1	p5_buf_sum	net130	XI9/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI1/MNM1	p5_buf_sum	net130	XI9/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI1/MNM0@1	net130	XI9/P_bar	p5_buf_sum	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI1/MNM0	net130	XI9/P_bar	p5_buf_sum	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI0/XI0/MNM0	XI9/net4	net143	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI0/XI0/MNM0@1	XI9/net4	net143	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI0/MNM1@1	XI9/net1	net137	XI9/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI0/MNM1	XI9/net1	net137	XI9/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI0/MNM0@1	net137	XI9/net4	XI9/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI0/MNM0	net137	XI9/net4	XI9/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI2/MNM0@1	p7_buf_sum	XI9/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI9/XI2/MNM0	p7_buf_sum	XI9/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI3/MNM1	XI6/XI3/net25	net128	XI6/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI3/MNM0	VSS	XI6/net1	XI6/XI3/net25	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI3/MNM2	VSS	XI6/P_bar	XI6/XI3/net23	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI3/MNM3	XI6/XI3/net23	net139	XI6/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI1/XI0/MNM0@1	XI6/P_bar	XI6/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI1/XI0/MNM0	XI6/P_bar	XI6/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI1/MNM1	p3_buf_sum	net128	XI6/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI1/MNM1@1	p3_buf_sum	net128	XI6/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI1/MNM0	net128	XI6/P_bar	p3_buf_sum	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI1/MNM0@1	net128	XI6/P_bar	p3_buf_sum	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI0/XI0/MNM0@1	XI6/net4	net140	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI0/XI0/MNM0	XI6/net4	net140	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI0/MNM1@1	XI6/net1	net139	XI6/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI0/MNM1	XI6/net1	net139	XI6/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI0/MNM0	net139	XI6/net4	XI6/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI0/MNM0@1	net139	XI6/net4	XI6/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI2/MNM0@1	net129	XI6/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI6/XI2/MNM0	net129	XI6/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI3/MNM1	XI8/XI3/net25	net129	XI8/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI3/MNM0	VSS	XI8/net1	XI8/XI3/net25	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI3/MNM2	VSS	XI8/P_bar	XI8/XI3/net23	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI3/MNM3	XI8/XI3/net23	net138	XI8/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI1/XI0/MNM0	XI8/P_bar	XI8/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI1/XI0/MNM0@1	XI8/P_bar	XI8/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI1/MNM1	p4_buf_sum	net129	XI8/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI1/MNM1@1	p4_buf_sum	net129	XI8/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI1/MNM0@1	net129	XI8/P_bar	p4_buf_sum	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI1/MNM0	net129	XI8/P_bar	p4_buf_sum	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI0/XI0/MNM0	XI8/net4	net142	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI0/XI0/MNM0@1	XI8/net4	net142	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI0/MNM1@1	XI8/net1	net138	XI8/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI0/MNM1	XI8/net1	net138	XI8/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI0/MNM0@1	net138	XI8/net4	XI8/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI0/MNM0	net138	XI8/net4	XI8/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI2/MNM0	net130	XI8/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI8/XI2/MNM0@1	net130	XI8/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI3/MNM1	XI3/XI3/net25	net114	XI3/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI3/MNM0	VSS	XI3/net1	XI3/XI3/net25	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI3/MNM2	VSS	XI3/P_bar	XI3/XI3/net23	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI3/MNM3	XI3/XI3/net23	net116	XI3/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI1/XI0/MNM0	XI3/P_bar	XI3/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI1/XI0/MNM0@1	XI3/P_bar	XI3/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI1/MNM1@1	p2_buf	net114	XI3/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI1/MNM1	p2_buf	net114	XI3/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI1/MNM0@1	net114	XI3/P_bar	p2_buf	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI1/MNM0	net114	XI3/P_bar	p2_buf	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI0/XI0/MNM0@1	XI3/net4	net118	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI0/XI0/MNM0	XI3/net4	net118	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI0/MNM1@1	XI3/net1	net116	XI3/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI0/MNM1	XI3/net1	net116	XI3/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI0/MNM0	net116	XI3/net4	XI3/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI0/MNM0@1	net116	XI3/net4	XI3/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI2/MNM0	net119	XI3/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI3/XI2/MNM0@1	net119	XI3/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI3/MNM1	XI4/XI3/net25	net119	XI4/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=7.55e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI3/MNM0	VSS	XI4/net1	XI4/XI3/net25	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=3.45e-07 sb=5.5e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI3/MNM2	VSS	XI4/P_bar	XI4/XI3/net23	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.76e-14	PD=1.04e-06	PS=1.04e-06
++ fw=3.6e-07 sa=5.5e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI3/MNM3	XI4/XI3/net23	net115	XI4/net9	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=7.55e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI1/XI0/MNM0@1	XI4/P_bar	XI4/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI1/XI0/MNM0	XI4/P_bar	XI4/net1	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI1/MNM1	net139	net119	XI4/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI1/MNM1@1	net139	net119	XI4/P_bar	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI1/MNM0	net119	XI4/P_bar	net139	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI1/MNM0@1	net119	XI4/P_bar	net139	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI0/XI0/MNM0@1	XI4/net4	net117	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI0/XI0/MNM0	XI4/net4	net117	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI0/MNM1	XI4/net1	net115	XI4/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI0/MNM1@1	XI4/net1	net115	XI4/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI0/MNM0	net115	XI4/net4	XI4/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI0/MNM0@1	net115	XI4/net4	XI4/net1	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI2/MNM0@1	net120	XI4/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI4/XI2/MNM0	net120	XI4/net9	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI14/XI0/XI0/MNM0	XI14/net4	p3_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI14/XI0/XI0/MNM0@1	XI14/net4	p3_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI14/XI0/MNM1@1	P3	p3_out_sum	XI14/net4	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI14/XI0/MNM1	P3	p3_out_sum	XI14/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI14/XI0/MNM0	p3_out_sum	XI14/net4	P3	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI14/XI0/MNM0@1	p3_out_sum	XI14/net4	P3	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI14/XI1/XI1/MNM0@1	net135	XI14/XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI14/XI1/XI1/MNM0	net135	XI14/XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI14/XI1/XI0/MNM1@1	XI14/XI1/XI0/net1	p3_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI14/XI1/XI0/MNM1	XI14/XI1/XI0/net1	p3_out_and	VSS	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI14/XI1/XI0/MNM0@1	XI14/XI1/net3	p3_out_sum	XI14/XI1/XI0/net1
++ VSS	g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI14/XI1/XI0/MNM0	XI14/XI1/net3	p3_out_sum	XI14/XI1/XI0/net1
++ VSS	g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI13/XI0/XI0/MNM0@1	XI13/net4	net141	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI13/XI0/XI0/MNM0	XI13/net4	net141	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI13/XI0/MNM1	net4	p2_buf	XI13/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI13/XI0/MNM1@1	net4	p2_buf	XI13/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI13/XI0/MNM0	p2_buf	XI13/net4	net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI13/XI0/MNM0@1	p2_buf	XI13/net4	net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI13/XI1/XI1/MNM0	net128	XI13/XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI13/XI1/XI1/MNM0@1	net128	XI13/XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI13/XI1/XI0/MNM1	XI13/XI1/XI0/net1	net141	VSS	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI13/XI1/XI0/MNM1@1	XI13/XI1/XI0/net1	net141	VSS	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI13/XI1/XI0/MNM0	XI13/XI1/net3	p2_buf	XI13/XI1/XI0/net1	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI13/XI1/XI0/MNM0@1	XI13/XI1/net3	p2_buf	XI13/XI1/XI0/net1	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI2/XI0/XI0/MNM0	XI2/net4	net113	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/XI0/XI0/MNM0@1	XI2/net4	net113	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/XI0/MNM1@1	p1_buf	net112	XI2/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/XI0/MNM1	p1_buf	net112	XI2/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/XI0/MNM0	net112	XI2/net4	p1_buf	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/XI0/MNM0@1	net112	XI2/net4	p1_buf	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/XI1/XI1/MNM0@1	net114	XI2/XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/XI1/XI1/MNM0	net114	XI2/XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI2/XI1/XI0/MNM1	XI2/XI1/XI0/net1	net113	VSS	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI2/XI1/XI0/MNM1@1	XI2/XI1/XI0/net1	net113	VSS	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI2/XI1/XI0/MNM0@1	XI2/XI1/net3	net112	XI2/XI1/XI0/net1	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI2/XI1/XI0/MNM0	XI2/XI1/net3	net112	XI2/XI1/XI0/net1	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI7/XI0/XI0/MNM0@1	XI7/net4	net120	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI7/XI0/XI0/MNM0	XI7/net4	net120	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI7/XI0/MNM1	net138	net121	XI7/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI7/XI0/MNM1@1	net138	net121	XI7/net4	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI7/XI0/MNM0@1	net121	XI7/net4	net138	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI7/XI0/MNM0	net121	XI7/net4	net138	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI7/XI1/XI1/MNM0	net137	XI7/XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI7/XI1/XI1/MNM0@1	net137	XI7/XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI7/XI1/XI0/MNM1@1	XI7/XI1/XI0/net1	net120	VSS	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI7/XI1/XI0/MNM1	XI7/XI1/XI0/net1	net120	VSS	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI7/XI1/XI0/MNM0	XI7/XI1/net3	net121	XI7/XI1/XI0/net1	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI7/XI1/XI0/MNM0@1	XI7/XI1/net3	net121	XI7/XI1/XI0/net1	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI25/XI1/MNM0@1	p3_buf_and	XI25/net3	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI25/XI1/MNM0	p3_buf_and	XI25/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI25/XI0/MNM0	VSS	B3	XI25/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI25/XI0/MNM0@1	VSS	B3	XI25/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI25/XI0/MNM1	XI25/XI0/net1	A0	XI25/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI25/XI0/MNM1@1	XI25/XI0/net1	A0	XI25/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI26/XI1/MNM0@1	p4_buf_and	XI26/net3	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI26/XI1/MNM0	p4_buf_and	XI26/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI26/XI0/MNM0@1	VSS	B3	XI26/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI26/XI0/MNM0	VSS	B3	XI26/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI26/XI0/MNM1@1	XI26/XI0/net1	A1	XI26/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI26/XI0/MNM1	XI26/XI0/net1	A1	XI26/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI27/XI1/MNM0@1	p5_buf_and	XI27/net3	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI27/XI1/MNM0	p5_buf_and	XI27/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI27/XI0/MNM0@1	VSS	B3	XI27/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI27/XI0/MNM0	VSS	B3	XI27/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI27/XI0/MNM1@1	XI27/XI0/net1	A2	XI27/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI27/XI0/MNM1	XI27/XI0/net1	A2	XI27/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI28/XI1/MNM0	p7_buf_and	XI28/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI28/XI1/MNM0@1	p7_buf_and	XI28/net3	VSS	VSS
++ g45n1svt	L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI28/XI0/MNM0@1	VSS	B3	XI28/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI28/XI0/MNM0	VSS	B3	XI28/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI28/XI0/MNM1@1	XI28/XI0/net1	A3	XI28/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI28/XI0/MNM1	XI28/XI0/net1	A3	XI28/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI21/XI1/MNM0@1	net141	XI21/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI21/XI1/MNM0	net141	XI21/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI21/XI0/MNM0	VSS	B2	XI21/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI21/XI0/MNM0@1	VSS	B2	XI21/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI21/XI0/MNM1@1	XI21/XI0/net1	A0	XI21/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI21/XI0/MNM1	XI21/XI0/net1	A0	XI21/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI22/XI1/MNM0	net140	XI22/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI22/XI1/MNM0@1	net140	XI22/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI22/XI0/MNM0	VSS	B2	XI22/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI22/XI0/MNM0@1	VSS	B2	XI22/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI22/XI0/MNM1@1	XI22/XI0/net1	A1	XI22/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI22/XI0/MNM1	XI22/XI0/net1	A1	XI22/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI23/XI1/MNM0	net142	XI23/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI23/XI1/MNM0@1	net142	XI23/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI23/XI0/MNM0	VSS	B2	XI23/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI23/XI0/MNM0@1	VSS	B2	XI23/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI23/XI0/MNM1@1	XI23/XI0/net1	A2	XI23/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI23/XI0/MNM1	XI23/XI0/net1	A2	XI23/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI24/XI1/MNM0@1	net143	XI24/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI24/XI1/MNM0	net143	XI24/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI24/XI0/MNM0@1	VSS	B2	XI24/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI24/XI0/MNM0	VSS	B2	XI24/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI24/XI0/MNM1@1	XI24/XI0/net1	A3	XI24/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI24/XI0/MNM1	XI24/XI0/net1	A3	XI24/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI15/XI1/MNM0@1	net113	XI15/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI15/XI1/MNM0	net113	XI15/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI15/XI0/MNM0	VSS	B1	XI15/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI15/XI0/MNM0@1	VSS	B1	XI15/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI15/XI0/MNM1	XI15/XI0/net1	A0	XI15/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI15/XI0/MNM1@1	XI15/XI0/net1	A0	XI15/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI16/XI1/MNM0@1	net118	XI16/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI16/XI1/MNM0	net118	XI16/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI16/XI0/MNM0@1	VSS	B1	XI16/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI16/XI0/MNM0	VSS	B1	XI16/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI16/XI0/MNM1	XI16/XI0/net1	A1	XI16/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI16/XI0/MNM1@1	XI16/XI0/net1	A1	XI16/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI17/XI1/MNM0@1	net117	XI17/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI17/XI1/MNM0	net117	XI17/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI17/XI0/MNM0@1	VSS	B1	XI17/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI17/XI0/MNM0	VSS	B1	XI17/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI17/XI0/MNM1	XI17/XI0/net1	A2	XI17/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI17/XI0/MNM1@1	XI17/XI0/net1	A2	XI17/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI18/XI1/MNM0@1	net121	XI18/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI18/XI1/MNM0	net121	XI18/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI18/XI0/MNM0@1	VSS	B1	XI18/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI18/XI0/MNM0	VSS	B1	XI18/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI18/XI0/MNM1@1	XI18/XI0/net1	A3	XI18/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI18/XI0/MNM1	XI18/XI0/net1	A3	XI18/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI19/XI1/MNM0	net116	XI19/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI19/XI1/MNM0@1	net116	XI19/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI19/XI0/MNM0@1	VSS	B0	XI19/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI19/XI0/MNM0	VSS	B0	XI19/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI19/XI0/MNM1	XI19/XI0/net1	A2	XI19/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI19/XI0/MNM1@1	XI19/XI0/net1	A2	XI19/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI20/XI1/MNM0@1	net115	XI20/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI20/XI1/MNM0	net115	XI20/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI20/XI0/MNM0@1	VSS	B0	XI20/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI20/XI0/MNM0	VSS	B0	XI20/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI20/XI0/MNM1@1	XI20/XI0/net1	A3	XI20/net3	VSS
++ g45n1svt	L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI20/XI0/MNM1	XI20/XI0/net1	A3	XI20/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI0/XI1/MNM0	p0_buf	XI0/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI0/XI1/MNM0@1	p0_buf	XI0/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI0/XI0/MNM0@1	VSS	B0	XI0/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI0/XI0/MNM0	VSS	B0	XI0/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI0/XI0/MNM1	XI0/XI0/net1	A0	XI0/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI0/XI0/MNM1@1	XI0/XI0/net1	A0	XI0/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI1/XI1/MNM0@1	net112	XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=1.4e-07 sb=3.45e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI1/XI1/MNM0	net112	XI1/net3	VSS	VSS	g45n1svt
++ L=4.5e-08	W=3.6e-07
++ AD=5.76e-14	AS=5.04e-14	PD=1.04e-06	PS=1e-06
++ fw=3.6e-07 sa=3.45e-07 sb=1.4e-07 sca=4.15332 scb=0.000375834 scc=2.03107e-07
+MXI1/XI0/MNM0	VSS	B0	XI1/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI1/XI0/MNM0@1	VSS	B0	XI1/XI0/net1	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI1/XI0/MNM1	XI1/XI0/net1	A1	XI1/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI1/XI0/MNM1@1	XI1/XI0/net1	A1	XI1/net3	VSS	g45n1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.008e-13	AS=1.152e-13	PD=1.72e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=3.60561 scb=0.000231313 scc=1.03051e-07
+MXI45/MNM21	VSS	p0_buf	XI45/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI45/MNM26	XI45/net17	XI45/clk_bar	XI45/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI45/MNM28	XI45/net25	XI45/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI45/MNM27	P0	CLK	XI45/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI43/MNM21	VSS	net4	XI43/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI43/MNM26	XI43/net17	XI43/clk_bar	XI43/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI43/MNM28	XI43/net25	XI43/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI43/MNM27	P2	CLK	XI43/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI44/MNM21	VSS	p1_buf	XI44/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI44/MNM26	XI44/net17	XI44/clk_bar	XI44/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI44/MNM28	XI44/net25	XI44/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI44/MNM27	P1	CLK	XI44/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI5/MNM21	VSS	p3_buf_sum	XI5/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI5/MNM26	XI5/net17	XI5/clk_bar	XI5/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI5/MNM28	XI5/net25	XI5/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI5/MNM27	p3_out_sum	CLK	XI5/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI37/MNM21	VSS	p4_buf_sum	XI37/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI37/MNM26	XI37/net17	XI37/clk_bar	XI37/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI37/MNM28	XI37/net25	XI37/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI37/MNM27	p4_out_sum	CLK	XI37/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI40/MNM21	VSS	p5_buf_sum	XI40/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI40/MNM26	XI40/net17	XI40/clk_bar	XI40/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI40/MNM28	XI40/net25	XI40/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI40/MNM27	p5_out_sum	CLK	XI40/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI41/MNM21	VSS	p7_buf_sum	XI41/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI41/MNM26	XI41/net17	XI41/clk_bar	XI41/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI41/MNM28	XI41/net25	XI41/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI41/MNM27	p7_out_sum	CLK	XI41/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI36/MNM21	VSS	p3_buf_and	XI36/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI36/MNM26	XI36/net17	XI36/clk_bar	XI36/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI36/MNM28	XI36/net25	XI36/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI36/MNM27	p3_out_and	CLK	XI36/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI38/MNM21	VSS	p4_buf_and	XI38/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI38/MNM26	XI38/net17	XI38/clk_bar	XI38/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI38/MNM28	XI38/net25	XI38/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI38/MNM27	p4_out_and	CLK	XI38/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI39/MNM21	VSS	p5_buf_and	XI39/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI39/MNM26	XI39/net17	XI39/clk_bar	XI39/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI39/MNM28	XI39/net25	XI39/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI39/MNM27	p5_out_and	CLK	XI39/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI42/MNM21	VSS	p7_buf_and	XI42/net17	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI42/MNM26	XI42/net17	XI42/clk_bar	XI42/m_s	VSS
++ g45n1svt	L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI42/MNM28	XI42/net25	XI42/m_s	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI42/MNM27	p7_out_and	CLK	XI42/net25	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI42/MNM4	XI42/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI39/MNM4	XI39/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI38/MNM4	XI38/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI36/MNM4	XI36/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI42/MNM29	p7_out_and	RST	VSS	VSS	g45n1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.42231 scb=0.000192056 scc=1.27713e-07
+MXI39/MNM29	p5_out_and	RST	VSS	VSS	g45n1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.42231 scb=0.000192056 scc=1.27713e-07
+MXI38/MNM29	p4_out_and	RST	VSS	VSS	g45n1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.42231 scb=0.000192056 scc=1.27713e-07
+MXI36/MNM29	p3_out_and	RST	VSS	VSS	g45n1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.42231 scb=0.000192056 scc=1.27713e-07
+MXI41/MNM4	XI41/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI40/MNM4	XI40/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI37/MNM4	XI37/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI5/MNM4	XI5/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI44/MNM4	XI44/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI43/MNM4	XI43/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.37831 scb=0.00150412 scc=4.69705e-06
+MXI41/MNM29	p7_out_sum	RST	VSS	VSS	g45n1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09
+MXI40/MNM29	p5_out_sum	RST	VSS	VSS	g45n1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09
+MXI37/MNM29	p4_out_sum	RST	VSS	VSS	g45n1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09
+MXI5/MNM29	p3_out_sum	RST	VSS	VSS	g45n1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09
+MXI45/MNM4	XI45/clk_bar	CLK	VSS	VSS	g45n1svt
++ L=4.5e-08	W=2.4e-07
++ AD=3.36e-14	AS=3.36e-14	PD=7.6e-07	PS=7.6e-07
++ fw=2.4e-07 sa=1.4e-07 sb=1.4e-07 sca=5.48209 scb=0.00151892 scc=4.69814e-06
+MXI44/MNM29	P1	RST	VSS	VSS	g45n1svt	L=4.5e-08
++ W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09
+MXI43/MNM29	P2	RST	VSS	VSS	g45n1svt	L=4.5e-08
++ W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09
+MXI45/MNM29	P0	RST	VSS	VSS	g45n1svt	L=4.5e-08
++ W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=3.26523 scb=9.5203e-05 scc=3.22105e-09
+MXI12/XI3/MPM0	XI12/XI3/net26	net126	XI12/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI3/MPM1	VDD	XI12/P_bar	XI12/XI3/net26	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI3/MPM3	VDD	XI12/net1	XI12/XI3/net24	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI3/MPM2	XI12/XI3/net24	p7_out_sum	XI12/net9	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI12/XI1/MPM0	net126	XI12/net1	P6	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI1/MPM2	P6	net126	XI12/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI1/MPM2@1	P6	net126	XI12/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI0/MPM0@1	p7_out_sum	p7_out_and	XI12/net1	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI0/MPM2@1	XI12/net1	p7_out_sum	p7_out_and	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI0/MPM2	XI12/net1	p7_out_sum	p7_out_and	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI0/XI0/MPM0	XI12/net4	p7_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI12/XI0/XI0/MPM0@1	XI12/net4	p7_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI12/XI0/MPM0	p7_out_sum	p7_out_and	XI12/net1	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI12/XI1/XI0/MPM0@1	XI12/P_bar	XI12/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI1/XI0/MPM0	XI12/P_bar	XI12/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI1/MPM0@1	net126	XI12/net1	P6	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI12/XI2/MPM0	P7	XI12/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI12/XI2/MPM0@1	P7	XI12/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI11/XI3/MPM0	XI11/XI3/net26	net127	XI11/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI3/MPM1	VDD	XI11/P_bar	XI11/XI3/net26	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI3/MPM3	VDD	XI11/net1	XI11/XI3/net24	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI3/MPM2	XI11/XI3/net24	p5_out_sum	XI11/net9	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI11/XI1/MPM0@1	net127	XI11/net1	P5	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI1/MPM2@1	P5	net127	XI11/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI1/MPM2	P5	net127	XI11/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI0/MPM0	p5_out_sum	p5_out_and	XI11/net1	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI0/MPM2@1	XI11/net1	p5_out_sum	p5_out_and	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI0/MPM2	XI11/net1	p5_out_sum	p5_out_and	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI0/XI0/MPM0@1	XI11/net4	p5_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI11/XI0/XI0/MPM0	XI11/net4	p5_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI11/XI0/MPM0@1	p5_out_sum	p5_out_and	XI11/net1	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI11/XI1/XI0/MPM0	XI11/P_bar	XI11/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI1/XI0/MPM0@1	XI11/P_bar	XI11/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI1/MPM0	net127	XI11/net1	P5	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI11/XI2/MPM0@1	net126	XI11/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI11/XI2/MPM0	net126	XI11/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI10/XI3/MPM0	XI10/XI3/net26	net135	XI10/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI3/MPM1	VDD	XI10/P_bar	XI10/XI3/net26	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI3/MPM3	VDD	XI10/net1	XI10/XI3/net24	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI3/MPM2	XI10/XI3/net24	p4_out_sum	XI10/net9	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI10/XI1/MPM0@1	net135	XI10/net1	P4	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI1/MPM2@1	P4	net135	XI10/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI1/MPM2	P4	net135	XI10/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI0/MPM0	p4_out_sum	p4_out_and	XI10/net1	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI0/MPM2	XI10/net1	p4_out_sum	p4_out_and	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI0/MPM2@1	XI10/net1	p4_out_sum	p4_out_and	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI0/XI0/MPM0	XI10/net4	p4_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI10/XI0/XI0/MPM0@1	XI10/net4	p4_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI10/XI0/MPM0@1	p4_out_sum	p4_out_and	XI10/net1	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI10/XI1/XI0/MPM0@1	XI10/P_bar	XI10/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI1/XI0/MPM0	XI10/P_bar	XI10/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI1/MPM0	net135	XI10/net1	P4	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI10/XI2/MPM0@1	net127	XI10/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI10/XI2/MPM0	net127	XI10/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI9/XI3/MPM0	XI9/XI3/net26	net130	XI9/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI3/MPM1	VDD	XI9/P_bar	XI9/XI3/net26	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI3/MPM3	VDD	XI9/net1	XI9/XI3/net24	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI3/MPM2	XI9/XI3/net24	net137	XI9/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI9/XI1/MPM0@1	net130	XI9/net1	p5_buf_sum	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI1/MPM2	p5_buf_sum	net130	XI9/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI1/MPM2@1	p5_buf_sum	net130	XI9/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI0/MPM0	net137	net143	XI9/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI0/MPM2@1	XI9/net1	net137	net143	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI0/MPM2	XI9/net1	net137	net143	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI0/XI0/MPM0	XI9/net4	net143	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI9/XI0/XI0/MPM0@1	XI9/net4	net143	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI9/XI0/MPM0@1	net137	net143	XI9/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI9/XI1/XI0/MPM0	XI9/P_bar	XI9/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI1/XI0/MPM0@1	XI9/P_bar	XI9/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI1/MPM0	net130	XI9/net1	p5_buf_sum	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI9/XI2/MPM0@1	p7_buf_sum	XI9/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI9/XI2/MPM0	p7_buf_sum	XI9/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI6/XI3/MPM0	XI6/XI3/net26	net128	XI6/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI3/MPM1	VDD	XI6/P_bar	XI6/XI3/net26	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI3/MPM3	VDD	XI6/net1	XI6/XI3/net24	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI3/MPM2	XI6/XI3/net24	net139	XI6/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI6/XI1/MPM0	net128	XI6/net1	p3_buf_sum	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI1/MPM2	p3_buf_sum	net128	XI6/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI1/MPM2@1	p3_buf_sum	net128	XI6/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI0/MPM0@1	net139	net140	XI6/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI0/MPM2@1	XI6/net1	net139	net140	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI0/MPM2	XI6/net1	net139	net140	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI0/XI0/MPM0@1	XI6/net4	net140	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI6/XI0/XI0/MPM0	XI6/net4	net140	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI6/XI0/MPM0	net139	net140	XI6/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI6/XI1/XI0/MPM0@1	XI6/P_bar	XI6/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI1/XI0/MPM0	XI6/P_bar	XI6/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI1/MPM0@1	net128	XI6/net1	p3_buf_sum	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI6/XI2/MPM0	net129	XI6/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI6/XI2/MPM0@1	net129	XI6/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI8/XI3/MPM0	XI8/XI3/net26	net129	XI8/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI3/MPM1	VDD	XI8/P_bar	XI8/XI3/net26	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI3/MPM3	VDD	XI8/net1	XI8/XI3/net24	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI3/MPM2	XI8/XI3/net24	net138	XI8/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI8/XI1/MPM0	net129	XI8/net1	p4_buf_sum	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI1/MPM2	p4_buf_sum	net129	XI8/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI1/MPM2@1	p4_buf_sum	net129	XI8/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI0/MPM0@1	net138	net142	XI8/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI0/MPM2	XI8/net1	net138	net142	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI0/MPM2@1	XI8/net1	net138	net142	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI0/XI0/MPM0	XI8/net4	net142	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI8/XI0/XI0/MPM0@1	XI8/net4	net142	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI8/XI0/MPM0	net138	net142	XI8/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI8/XI1/XI0/MPM0@1	XI8/P_bar	XI8/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI1/XI0/MPM0	XI8/P_bar	XI8/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI1/MPM0@1	net129	XI8/net1	p4_buf_sum	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI8/XI2/MPM0	net130	XI8/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI8/XI2/MPM0@1	net130	XI8/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI3/XI3/MPM0	XI3/XI3/net26	net114	XI3/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI3/MPM1	VDD	XI3/P_bar	XI3/XI3/net26	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI3/MPM3	VDD	XI3/net1	XI3/XI3/net24	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI3/MPM2	XI3/XI3/net24	net116	XI3/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI3/XI1/MPM0@1	net114	XI3/net1	p2_buf	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI1/MPM2@1	p2_buf	net114	XI3/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI1/MPM2	p2_buf	net114	XI3/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI0/MPM0@1	net116	net118	XI3/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI0/MPM2	XI3/net1	net116	net118	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI0/MPM2@1	XI3/net1	net116	net118	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI0/XI0/MPM0@1	XI3/net4	net118	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI3/XI0/XI0/MPM0	XI3/net4	net118	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI3/XI0/MPM0	net116	net118	XI3/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI3/XI1/XI0/MPM0	XI3/P_bar	XI3/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI1/XI0/MPM0@1	XI3/P_bar	XI3/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI1/MPM0	net114	XI3/net1	p2_buf	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI3/XI2/MPM0@1	net119	XI3/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI3/XI2/MPM0	net119	XI3/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI4/XI3/MPM0	XI4/XI3/net26	net119	XI4/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=7.55e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI3/MPM1	VDD	XI4/P_bar	XI4/XI3/net26	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=3.45e-07 sb=5.5e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI3/MPM3	VDD	XI4/net1	XI4/XI3/net24	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.152e-13	PD=1.76e-06	PS=1.76e-06
++ fw=7.2e-07 sa=5.5e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI3/MPM2	XI4/XI3/net24	net115	XI4/net9	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=7.55e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI4/XI1/MPM0	net119	XI4/net1	net139	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI1/MPM2	net139	net119	XI4/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI1/MPM2@1	net139	net119	XI4/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI0/MPM0	net115	net117	XI4/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI0/MPM2	XI4/net1	net115	net117	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI0/MPM2@1	XI4/net1	net115	net117	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI0/XI0/MPM0@1	XI4/net4	net117	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI4/XI0/XI0/MPM0	XI4/net4	net117	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI4/XI0/MPM0@1	net115	net117	XI4/net1	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI4/XI1/XI0/MPM0	XI4/P_bar	XI4/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI1/XI0/MPM0@1	XI4/P_bar	XI4/net1	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI1/MPM0@1	net119	XI4/net1	net139	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI4/XI2/MPM0@1	net120	XI4/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI4/XI2/MPM0	net120	XI4/net9	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI14/XI0/MPM0@1	p3_out_sum	p3_out_and	P3	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI14/XI0/MPM2@1	P3	p3_out_sum	p3_out_and	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI14/XI0/MPM2	P3	p3_out_sum	p3_out_and	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI14/XI1/XI0/MPM0	XI14/XI1/net3	p3_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI14/XI1/XI1/MPM0	net135	XI14/XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI14/XI1/XI1/MPM0@1	net135	XI14/XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI14/XI0/XI0/MPM0	XI14/net4	p3_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI14/XI0/XI0/MPM0@1	XI14/net4	p3_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI14/XI0/MPM0	p3_out_sum	p3_out_and	P3	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI14/XI1/XI0/MPM1@1	XI14/XI1/net3	p3_out_sum	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI14/XI1/XI0/MPM1	XI14/XI1/net3	p3_out_sum	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI14/XI1/XI0/MPM0@1	XI14/XI1/net3	p3_out_and	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI13/XI0/MPM0	p2_buf	net141	net4	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI13/XI0/MPM2	net4	p2_buf	net141	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI13/XI0/MPM2@1	net4	p2_buf	net141	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI13/XI1/XI0/MPM0@1	XI13/XI1/net3	net141	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI13/XI1/XI1/MPM0	net128	XI13/XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI13/XI1/XI1/MPM0@1	net128	XI13/XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI13/XI0/XI0/MPM0	XI13/net4	net141	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI13/XI0/XI0/MPM0@1	XI13/net4	net141	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI13/XI0/MPM0@1	p2_buf	net141	net4	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI13/XI1/XI0/MPM1	XI13/XI1/net3	p2_buf	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI13/XI1/XI0/MPM1@1	XI13/XI1/net3	p2_buf	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI13/XI1/XI0/MPM0	XI13/XI1/net3	net141	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI2/XI0/MPM0@1	net112	net113	p1_buf	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI2/XI0/MPM2	p1_buf	net112	net113	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI2/XI0/MPM2@1	p1_buf	net112	net113	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI2/XI1/XI0/MPM0@1	XI2/XI1/net3	net113	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI2/XI1/XI1/MPM0	net114	XI2/XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI2/XI1/XI1/MPM0@1	net114	XI2/XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI2/XI0/XI0/MPM0	XI2/net4	net113	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI2/XI0/XI0/MPM0@1	XI2/net4	net113	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI2/XI0/MPM0	net112	net113	p1_buf	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI2/XI1/XI0/MPM1@1	XI2/XI1/net3	net112	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI2/XI1/XI0/MPM1	XI2/XI1/net3	net112	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI2/XI1/XI0/MPM0	XI2/XI1/net3	net113	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI7/XI0/MPM0	net121	net120	net138	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI7/XI0/MPM2	net138	net121	net120	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI7/XI0/MPM2@1	net138	net121	net120	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI7/XI1/XI0/MPM0@1	XI7/XI1/net3	net120	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI7/XI1/XI1/MPM0@1	net137	XI7/XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI7/XI1/XI1/MPM0	net137	XI7/XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI7/XI0/XI0/MPM0@1	XI7/net4	net120	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI7/XI0/XI0/MPM0	XI7/net4	net120	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI7/XI0/MPM0@1	net121	net120	net138	VDD	g45p1svt	L=4.5e-08
++ W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI7/XI1/XI0/MPM1@1	XI7/XI1/net3	net121	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI7/XI1/XI0/MPM1	XI7/XI1/net3	net121	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI7/XI1/XI0/MPM0	XI7/XI1/net3	net120	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.5135 scb=0.01349 scc=0.00231127
+MXI25/XI0/MPM0	XI25/net3	B3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI25/XI1/MPM0	p3_buf_and	XI25/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI25/XI1/MPM0@1	p3_buf_and	XI25/net3	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI26/XI0/MPM0	XI26/net3	B3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI26/XI1/MPM0	p4_buf_and	XI26/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI26/XI1/MPM0@1	p4_buf_and	XI26/net3	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI27/XI0/MPM0	XI27/net3	B3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI27/XI1/MPM0@1	p5_buf_and	XI27/net3	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI27/XI1/MPM0	p5_buf_and	XI27/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI28/XI0/MPM0@1	XI28/net3	B3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI28/XI1/MPM0	p7_buf_and	XI28/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI28/XI1/MPM0@1	p7_buf_and	XI28/net3	VDD	VDD
++ g45p1svt	L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI21/XI0/MPM0@1	XI21/net3	B2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI21/XI1/MPM0	net141	XI21/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI21/XI1/MPM0@1	net141	XI21/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI22/XI0/MPM0@1	XI22/net3	B2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI22/XI1/MPM0	net140	XI22/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI22/XI1/MPM0@1	net140	XI22/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI23/XI0/MPM0	XI23/net3	B2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI23/XI1/MPM0@1	net142	XI23/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI23/XI1/MPM0	net142	XI23/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI24/XI0/MPM0@1	XI24/net3	B2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI24/XI1/MPM0	net143	XI24/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI24/XI1/MPM0@1	net143	XI24/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI15/XI0/MPM0	XI15/net3	B1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI15/XI1/MPM0@1	net113	XI15/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI15/XI1/MPM0	net113	XI15/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI16/XI0/MPM0@1	XI16/net3	B1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI16/XI1/MPM0@1	net118	XI16/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI16/XI1/MPM0	net118	XI16/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI17/XI0/MPM0@1	XI17/net3	B1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI17/XI1/MPM0	net117	XI17/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI17/XI1/MPM0@1	net117	XI17/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI18/XI0/MPM0	XI18/net3	B1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI18/XI1/MPM0@1	net121	XI18/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI18/XI1/MPM0	net121	XI18/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI19/XI0/MPM0@1	XI19/net3	B0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI19/XI1/MPM0	net116	XI19/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI19/XI1/MPM0@1	net116	XI19/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI20/XI0/MPM0@1	XI20/net3	B0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI20/XI1/MPM0	net115	XI20/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI20/XI1/MPM0@1	net115	XI20/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI0/XI0/MPM0@1	XI0/net3	B0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI0/XI1/MPM0	p0_buf	XI0/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI0/XI1/MPM0@1	p0_buf	XI0/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI1/XI0/MPM0@1	XI1/net3	B0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI1/XI1/MPM0@1	net112	XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI1/XI1/MPM0	net112	XI1/net3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI45/MPM5	XI45/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI45/MPM22	VDD	p0_buf	XI45/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI45/MPM18	XI45/net4	CLK	XI45/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI45/MPM23	XI45/net12	XI45/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI45/MPM24	P0	XI45/clk_bar	XI45/net12	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI43/MPM5	XI43/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI43/MPM22	VDD	net4	XI43/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI43/MPM18	XI43/net4	CLK	XI43/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI43/MPM23	XI43/net12	XI43/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI43/MPM24	P2	XI43/clk_bar	XI43/net12	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI44/MPM5	XI44/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI44/MPM22	VDD	p1_buf	XI44/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI44/MPM18	XI44/net4	CLK	XI44/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI44/MPM23	XI44/net12	XI44/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI44/MPM24	P1	XI44/clk_bar	XI44/net12	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI5/MPM5	XI5/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI5/MPM22	VDD	p3_buf_sum	XI5/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI5/MPM18	XI5/net4	CLK	XI5/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI5/MPM23	XI5/net12	XI5/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI5/MPM24	p3_out_sum	XI5/clk_bar	XI5/net12	VDD
++ g45p1svt	L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI37/MPM5	XI37/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI37/MPM22	VDD	p4_buf_sum	XI37/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI37/MPM18	XI37/net4	CLK	XI37/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI37/MPM23	XI37/net12	XI37/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI37/MPM24	p4_out_sum	XI37/clk_bar	XI37/net12	VDD
++ g45p1svt	L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI40/MPM5	XI40/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI40/MPM22	VDD	p5_buf_sum	XI40/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI40/MPM18	XI40/net4	CLK	XI40/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI40/MPM23	XI40/net12	XI40/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI40/MPM24	p5_out_sum	XI40/clk_bar	XI40/net12	VDD
++ g45p1svt	L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI41/MPM5	XI41/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI41/MPM22	VDD	p7_buf_sum	XI41/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI41/MPM18	XI41/net4	CLK	XI41/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI41/MPM23	XI41/net12	XI41/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI41/MPM24	p7_out_sum	XI41/clk_bar	XI41/net12	VDD
++ g45p1svt	L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI36/MPM5	XI36/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI36/MPM22	VDD	p3_buf_and	XI36/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI36/MPM18	XI36/net4	CLK	XI36/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI36/MPM23	XI36/net12	XI36/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI36/MPM24	p3_out_and	XI36/clk_bar	XI36/net12	VDD
++ g45p1svt	L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI38/MPM5	XI38/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI38/MPM22	VDD	p4_buf_and	XI38/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI38/MPM18	XI38/net4	CLK	XI38/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI38/MPM23	XI38/net12	XI38/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI38/MPM24	p4_out_and	XI38/clk_bar	XI38/net12	VDD
++ g45p1svt	L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI39/MPM5	XI39/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI39/MPM22	VDD	p5_buf_and	XI39/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI39/MPM18	XI39/net4	CLK	XI39/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI39/MPM23	XI39/net12	XI39/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI39/MPM24	p5_out_and	XI39/clk_bar	XI39/net12	VDD
++ g45p1svt	L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI42/MPM5	XI42/clk_bar	CLK	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.27 scb=0.0231774 scc=0.00199917
+MXI42/MPM22	VDD	p7_buf_and	XI42/net4	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI42/MPM18	XI42/net4	CLK	XI42/m_s	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=20.7063 scb=0.016025 scc=0.00198503
+MXI42/MPM23	XI42/net12	XI42/m_s	VDD	VDD	g45p1svt
++ L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=19.8778 scb=0.0157187 scc=0.00185543
+MXI42/MPM24	p7_out_and	XI42/clk_bar	XI42/net12	VDD
++ g45p1svt	L=4.5e-08	W=4.8e-07
++ AD=6.72e-14	AS=6.72e-14	PD=1.24e-06	PS=1.24e-06
++ fw=4.8e-07 sa=1.4e-07 sb=1.4e-07 sca=25.6749 scb=0.0214174 scc=0.0021813
+MXI1/XI0/MPM1	XI1/net3	A1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI0/XI0/MPM1	XI0/net3	A0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI20/XI0/MPM1	XI20/net3	A3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI19/XI0/MPM1@1	XI19/net3	A2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI1/XI0/MPM1@1	XI1/net3	A1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI0/XI0/MPM1@1	XI0/net3	A0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI20/XI0/MPM1@1	XI20/net3	A3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI19/XI0/MPM1	XI19/net3	A2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI1/XI0/MPM0	XI1/net3	B0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI0/XI0/MPM0	XI0/net3	B0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI20/XI0/MPM0	XI20/net3	B0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI19/XI0/MPM0	XI19/net3	B0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI18/XI0/MPM1	XI18/net3	A3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI17/XI0/MPM1	XI17/net3	A2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI16/XI0/MPM1	XI16/net3	A1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI15/XI0/MPM1	XI15/net3	A0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI18/XI0/MPM1@1	XI18/net3	A3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI17/XI0/MPM1@1	XI17/net3	A2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI16/XI0/MPM1@1	XI16/net3	A1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI15/XI0/MPM1@1	XI15/net3	A0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI18/XI0/MPM0@1	XI18/net3	B1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI17/XI0/MPM0	XI17/net3	B1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI16/XI0/MPM0	XI16/net3	B1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI15/XI0/MPM0@1	XI15/net3	B1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI24/XI0/MPM1	XI24/net3	A3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI24/XI0/MPM1@1	XI24/net3	A3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI23/XI0/MPM1	XI23/net3	A2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI23/XI0/MPM1@1	XI23/net3	A2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI24/XI0/MPM0	XI24/net3	B2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI22/XI0/MPM1	XI22/net3	A1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI23/XI0/MPM0@1	XI23/net3	B2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI22/XI0/MPM1@1	XI22/net3	A1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI22/XI0/MPM0	XI22/net3	B2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI21/XI0/MPM1	XI21/net3	A0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI21/XI0/MPM1@1	XI21/net3	A0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI21/XI0/MPM0	XI21/net3	B2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI28/XI0/MPM1@1	XI28/net3	A3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI27/XI0/MPM1	XI27/net3	A2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI28/XI0/MPM1	XI28/net3	A3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI27/XI0/MPM1@1	XI27/net3	A2	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI26/XI0/MPM1@1	XI26/net3	A1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI26/XI0/MPM1	XI26/net3	A1	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI28/XI0/MPM0	XI28/net3	B3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI27/XI0/MPM0@1	XI27/net3	B3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI26/XI0/MPM0@1	XI26/net3	B3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+MXI25/XI0/MPM1@1	XI25/net3	A0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=44.9648 scb=0.0375178 scc=0.00495812
+MXI25/XI0/MPM1	XI25/net3	A0	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=3.45e-07 sb=1.4e-07 sca=30.0436 scb=0.0194268 scc=0.00239616
+MXI25/XI0/MPM0@1	XI25/net3	B3	VDD	VDD	g45p1svt
++ L=4.5e-08	W=7.2e-07
++ AD=1.152e-13	AS=1.008e-13	PD=1.76e-06	PS=1.72e-06
++ fw=7.2e-07 sa=1.4e-07 sb=3.45e-07 sca=25.8711 scb=0.0135953 scc=0.00231129
+*
+*
+*       CAPACITOR CARDS
+*
+*
+C1	A0	VSS	4.89767e-15	$X=18.466 $Y=26.7905
+C2	A1	VSS	5.20457e-15	$X=18.651 $Y=22.789
+C3	A2	VSS	5.45488e-15	$X=18.7105 $Y=17.6845
+C4	A3	VSS	5.12642e-15	$X=18.5485 $Y=12.981
+C5	B0	VSS	2.68789e-15	$X=7.382 $Y=25.433
+C6	B1	VSS	2.95712e-15	$X=11.6065 $Y=22.139
+C7	B2	VSS	3.42661e-15	$X=23.308 $Y=17.4315
+C8	B3	VSS	3.60709e-15	$X=36.0415 $Y=12.85
+C9	CLK	VSS	1.37825e-14	$X=47.1305 $Y=17.0655
+C10	P0	VSS	8.84847e-16	$X=56.681 $Y=32.0325
+C11	P1	VSS	1.07956e-15	$X=54.646 $Y=29.357
+C12	P2	VSS	1.04154e-15	$X=54.5335 $Y=24.3475
+C13	P3	VSS	1.97963e-15	$X=55.5155 $Y=19.0645
+C14	P4	VSS	1.80587e-15	$X=56.643 $Y=14.882
+C15	P5	VSS	1.77521e-15	$X=56.958 $Y=10.6665
+C16	P6	VSS	1.77752e-15	$X=56.9535 $Y=6.4425
+C17	P7	VSS	8.07253e-16	$X=59.482 $Y=5.812
+C18	RST	VSS	4.9382e-15	$X=49.9575 $Y=17.1645
+C19	VDD	VSS	6.16235e-14	$X=31.125 $Y=18.4635
+C20	net138	VSS	3.96134e-15	$X=23.379 $Y=14.977
+C21	net139	VSS	3.90855e-15	$X=24.2115 $Y=19.0675
+C22	p2_buf	VSS	3.60049e-15	$X=22.874 $Y=23.1895
+C23	p1_buf	VSS	3.79368e-15	$X=25.6305 $Y=27.7735
+C24	p5_buf_sum	VSS	2.97551e-15	$X=34.5895 $Y=10.604
+C25	p4_buf_sum	VSS	3.00467e-15	$X=34.318 $Y=14.788
+C26	p3_buf_sum	VSS	2.96026e-15	$X=34.5605 $Y=18.8315
+C27	net4	VSS	3.1203e-15	$X=34.6725 $Y=23.4105
+C28	net121	VSS	1.93885e-15	$X=15.738 $Y=14.936
+C29	net119	VSS	3.16174e-15	$X=18.897 $Y=20.198
+C30	net114	VSS	3.1443e-15	$X=18.7155 $Y=24.3455
+C31	net117	VSS	1.77804e-15	$X=15.03 $Y=19.575
+C32	net115	VSS	2.76056e-15	$X=15.8345 $Y=18.697
+C33	net116	VSS	2.75028e-15	$X=15.8615 $Y=22.9745
+C34	net118	VSS	1.77105e-15	$X=15.063 $Y=23.8665
+C35	net120	VSS	3.09977e-15	$X=18.137 $Y=16.3515
+C36	net113	VSS	2.80595e-15	$X=16.329 $Y=27.9645
+C37	net112	VSS	2.37893e-15	$X=14.663 $Y=27.4385
+C38	net142	VSS	1.77369e-15	$X=27.0145 $Y=15.336
+C39	net143	VSS	1.86234e-15	$X=27.128 $Y=11.1625
+C40	net137	VSS	3.19005e-15	$X=27.724 $Y=11.872
+C41	net140	VSS	1.76867e-15	$X=27.2595 $Y=19.427
+C42	net141	VSS	2.60816e-15	$X=28.8255 $Y=23.32
+C43	net129	VSS	3.09608e-15	$X=31.4895 $Y=16.0675
+C44	net128	VSS	3.15147e-15	$X=31.2925 $Y=20.1525
+C45	net130	VSS	3.0744e-15	$X=31.692 $Y=11.9625
+C46	p5_buf_and	VSS	1.12969e-15	$X=39.2175 $Y=11.0895
+C47	p7_buf_and	VSS	1.17877e-15	$X=39.233 $Y=6.8985
+C48	p4_buf_and	VSS	1.18609e-15	$X=39.425 $Y=15.3115
+C49	net135	VSS	3.03415e-15	$X=56.4805 $Y=15.9415
+C50	net126	VSS	3.0374e-15	$X=57.1355 $Y=7.48
+C51	net127	VSS	2.99412e-15	$X=57.0505 $Y=11.7165
+C52	p0_buf	VSS	3.38674e-15	$X=26.846 $Y=32.5875
+C53	p3_buf_and	VSS	1.09047e-15	$X=39.634 $Y=19.184
+C54	p7_buf_sum	VSS	2.07142e-15	$X=38.1775 $Y=8.85
+C55	p7_out_and	VSS	2.21755e-15	$X=51.073 $Y=7
+C56	p5_out_and	VSS	2.11256e-15	$X=51.0885 $Y=11.0305
+C57	p4_out_and	VSS	2.28295e-15	$X=50.7355 $Y=15.4025
+C58	p3_out_and	VSS	3.03935e-15	$X=51.925 $Y=19.296
+C59	p7_out_sum	VSS	2.45588e-15	$X=54.2755 $Y=6.023
+C60	p5_out_sum	VSS	2.47879e-15	$X=54.276 $Y=10.117
+C61	p4_out_sum	VSS	2.49262e-15	$X=54.0915 $Y=14.439
+C62	p3_out_sum	VSS	2.10876e-15	$X=53.048 $Y=18.351
+C63	XI42/clk_bar	VSS	9.18582e-16	$X=43.3815 $Y=7.3135
+C64	XI42/m_s	VSS	5.99804e-16	$X=43.8235 $Y=7.355
+C65	XI42/net17	VSS	1.44164e-16	$X=43.089 $Y=6.8795
+C66	XI42/net25	VSS	1.63781e-16	$X=44.579 $Y=6.8795
+C67	XI39/clk_bar	VSS	9.2205e-16	$X=43.3815 $Y=11.0475
+C68	XI39/m_s	VSS	6.01657e-16	$X=43.8235 $Y=11.09
+C69	XI39/net17	VSS	1.41893e-16	$X=43.089 $Y=10.6145
+C70	XI39/net25	VSS	1.56521e-16	$X=44.579 $Y=10.6145
+C71	XI38/clk_bar	VSS	9.23392e-16	$X=43.3815 $Y=15.6375
+C72	XI38/m_s	VSS	6.02312e-16	$X=43.8235 $Y=15.68
+C73	XI38/net17	VSS	1.42552e-16	$X=43.089 $Y=15.2045
+C74	XI38/net25	VSS	1.56693e-16	$X=44.579 $Y=15.2045
+C75	XI36/clk_bar	VSS	9.15567e-16	$X=43.3815 $Y=19.2525
+C76	XI36/m_s	VSS	6.07245e-16	$X=43.8235 $Y=19.2945
+C77	XI36/net17	VSS	1.41391e-16	$X=43.089 $Y=18.819
+C78	XI36/net25	VSS	1.56108e-16	$X=44.579 $Y=18.819
+C79	XI41/clk_bar	VSS	9.12874e-16	$X=48.181 $Y=5.3685
+C80	XI41/m_s	VSS	6.03108e-16	$X=48.6235 $Y=5.4105
+C81	XI41/net17	VSS	1.39474e-16	$X=47.889 $Y=4.9345
+C82	XI41/net25	VSS	1.54727e-16	$X=49.379 $Y=4.9345
+C83	XI40/clk_bar	VSS	9.11642e-16	$X=48.181 $Y=9.103
+C84	XI40/m_s	VSS	6.06284e-16	$X=48.6235 $Y=9.145
+C85	XI40/net17	VSS	1.41782e-16	$X=47.889 $Y=8.6695
+C86	XI40/net25	VSS	1.56119e-16	$X=49.379 $Y=8.6695
+C87	XI37/clk_bar	VSS	9.09622e-16	$X=48.181 $Y=13.6925
+C88	XI37/m_s	VSS	6.10159e-16	$X=48.6235 $Y=13.735
+C89	XI37/net17	VSS	1.40912e-16	$X=47.889 $Y=13.2595
+C90	XI37/net25	VSS	1.56154e-16	$X=49.379 $Y=13.2595
+C91	XI5/clk_bar	VSS	9.47471e-16	$X=48.181 $Y=17.3075
+C92	XI5/m_s	VSS	6.04988e-16	$X=48.6235 $Y=17.3495
+C93	XI5/net17	VSS	1.4232e-16	$X=47.889 $Y=16.874
+C94	XI5/net25	VSS	1.59984e-16	$X=49.379 $Y=16.874
+C95	XI44/clk_bar	VSS	9.10215e-16	$X=51.2905 $Y=29.261
+C96	XI44/m_s	VSS	6.01769e-16	$X=51.733 $Y=29.304
+C97	XI44/net17	VSS	1.39474e-16	$X=50.999 $Y=28.829
+C98	XI44/net25	VSS	1.54819e-16	$X=52.489 $Y=28.829
+C99	XI43/clk_bar	VSS	9.28597e-16	$X=51.3055 $Y=24.247
+C100	XI43/m_s	VSS	6.01843e-16	$X=51.748 $Y=24.2895
+C101	XI43/net17	VSS	1.40297e-16	$X=51.014 $Y=23.814
+C102	XI43/net25	VSS	1.55551e-16	$X=52.504 $Y=23.814
+C103	XI45/clk_bar	VSS	9.11578e-16	$X=54.0105 $Y=31.961
+C104	XI45/m_s	VSS	6.01971e-16	$X=54.453 $Y=32.004
+C105	XI45/net17	VSS	1.42244e-16	$X=53.719 $Y=31.529
+C106	XI45/net25	VSS	1.62536e-16	$X=55.209 $Y=31.529
+C107	XI1/XI0/net1	VSS	5.55727e-16	$X=7.1515 $Y=27.073
+C108	XI1/net3	VSS	1.04937e-15	$X=7.22 $Y=28.0825
+C109	XI0/XI0/net1	VSS	5.55462e-16	$X=7.1515 $Y=31.972
+C110	XI0/net3	VSS	1.05522e-15	$X=7.22 $Y=32.982
+C111	XI20/XI0/net1	VSS	5.39676e-16	$X=7.3015 $Y=16.7095
+C112	XI20/net3	VSS	1.04913e-15	$X=7.37 $Y=17.719
+C113	XI19/XI0/net1	VSS	5.65451e-16	$X=7.3015 $Y=21.4435
+C114	XI19/net3	VSS	1.05194e-15	$X=7.37 $Y=22.4535
+C115	XI18/XI0/net1	VSS	5.37225e-16	$X=11.4115 $Y=13.8945
+C116	XI18/net3	VSS	1.03927e-15	$X=11.4795 $Y=14.9045
+C117	XI17/XI0/net1	VSS	5.38989e-16	$X=11.461 $Y=19.019
+C118	XI17/net3	VSS	1.0335e-15	$X=11.5295 $Y=20.029
+C119	XI16/XI0/net1	VSS	5.45656e-16	$X=11.461 $Y=23.6435
+C120	XI16/net3	VSS	1.03571e-15	$X=11.5295 $Y=24.653
+C121	XI15/XI0/net1	VSS	5.5754e-16	$X=11.461 $Y=28.5525
+C122	XI15/net3	VSS	1.04665e-15	$X=11.5295 $Y=29.5625
+C123	XI24/XI0/net1	VSS	5.3673e-16	$X=22.2195 $Y=10.09
+C124	XI24/net3	VSS	1.0448e-15	$X=22.288 $Y=11.1
+C125	XI23/XI0/net1	VSS	5.57583e-16	$X=22.6445 $Y=14.4095
+C126	XI23/net3	VSS	1.06395e-15	$X=22.713 $Y=15.4195
+C127	XI22/XI0/net1	VSS	5.57647e-16	$X=23.2445 $Y=18.469
+C128	XI22/net3	VSS	1.04955e-15	$X=23.313 $Y=19.479
+C129	XI21/XI0/net1	VSS	5.33167e-16	$X=24.1895 $Y=22.5635
+C130	XI21/net3	VSS	1.04274e-15	$X=24.2575 $Y=23.5735
+C131	XI28/XI0/net1	VSS	5.38289e-16	$X=35.4375 $Y=5.296
+C132	XI28/net3	VSS	1.04151e-15	$X=35.506 $Y=6.3055
+C133	XI27/XI0/net1	VSS	5.63681e-16	$X=35.5575 $Y=9.925
+C134	XI27/net3	VSS	1.05277e-15	$X=35.626 $Y=10.935
+C135	XI26/XI0/net1	VSS	5.50767e-16	$X=35.8325 $Y=13.9745
+C136	XI26/net3	VSS	1.04349e-15	$X=35.901 $Y=14.9845
+C137	XI25/XI0/net1	VSS	5.46977e-16	$X=36.5475 $Y=18.004
+C138	XI25/net3	VSS	1.05039e-15	$X=36.616 $Y=19.014
+C139	XI7/net4	VSS	9.28775e-16	$X=17.0935 $Y=14.7735
+C140	XI2/net4	VSS	9.33698e-16	$X=17.2435 $Y=26.992
+C141	XI13/net4	VSS	9.2608e-16	$X=29.797 $Y=22.7125
+C142	XI14/net4	VSS	9.31601e-16	$X=54.639 $Y=18.713
+C143	XI4/P_bar	VSS	1.61662e-15	$X=18.7835 $Y=18.8045
+C144	XI4/net1	VSS	2.97757e-15	$X=17.639 $Y=19.243
+C145	XI4/net9	VSS	1.18575e-15	$X=19.8245 $Y=19.0285
+C146	XI4/net4	VSS	9.60856e-16	$X=16.3135 $Y=18.733
+C147	XI3/P_bar	VSS	1.61679e-15	$X=18.7835 $Y=22.973
+C148	XI3/net1	VSS	2.97383e-15	$X=17.639 $Y=23.4095
+C149	XI3/net9	VSS	1.18726e-15	$X=19.8245 $Y=23.198
+C150	XI3/net4	VSS	9.58181e-16	$X=16.3135 $Y=22.9025
+C151	XI8/P_bar	VSS	1.61504e-15	$X=31.336 $Y=14.6945
+C152	XI8/net1	VSS	2.96866e-15	$X=30.184 $Y=15.136
+C153	XI8/net9	VSS	1.17369e-15	$X=32.3775 $Y=14.919
+C154	XI8/net4	VSS	9.63371e-16	$X=28.867 $Y=14.6235
+C155	XI6/P_bar	VSS	1.61708e-15	$X=31.336 $Y=18.8045
+C156	XI6/net1	VSS	2.96837e-15	$X=30.184 $Y=19.243
+C157	XI6/net9	VSS	1.1793e-15	$X=32.3775 $Y=19.0285
+C158	XI6/net4	VSS	9.62024e-16	$X=28.867 $Y=18.733
+C159	XI9/P_bar	VSS	1.61858e-15	$X=31.6355 $Y=10.586
+C160	XI9/net1	VSS	2.96089e-15	$X=30.4835 $Y=11.0295
+C161	XI9/net9	VSS	1.18014e-15	$X=32.6775 $Y=10.8095
+C162	XI9/net4	VSS	9.6048e-16	$X=29.167 $Y=10.514
+C163	XI10/P_bar	VSS	1.61645e-15	$X=56.6705 $Y=14.5245
+C164	XI10/net1	VSS	2.96024e-15	$X=55.5035 $Y=14.9665
+C165	XI10/net9	VSS	1.17983e-15	$X=57.714 $Y=14.749
+C166	XI10/net4	VSS	9.57345e-16	$X=54.204 $Y=14.4535
+C167	XI11/P_bar	VSS	1.61682e-15	$X=57.0005 $Y=10.296
+C168	XI11/net1	VSS	2.96043e-15	$X=55.8335 $Y=10.7395
+C169	XI11/net9	VSS	1.17734e-15	$X=58.044 $Y=10.5195
+C170	XI11/net4	VSS	9.58446e-16	$X=54.534 $Y=10.224
+C171	XI12/P_bar	VSS	1.6182e-15	$X=57.0055 $Y=6.0715
+C172	XI12/net1	VSS	2.95552e-15	$X=55.8385 $Y=6.518
+C173	XI12/net9	VSS	1.19006e-15	$X=58.049 $Y=6.2955
+C174	XI12/net4	VSS	9.5566e-16	$X=54.539 $Y=5.9995
+C175	XI12/XI3/net25	VSS	9.97739e-17	$X=57.759 $Y=5.7595
+C176	XI12/XI3/net23	VSS	9.26055e-17	$X=58.169 $Y=5.7595
+C177	XI12/XI3/net26	VSS	1.52471e-16	$X=57.759 $Y=7.0145
+C178	XI12/XI3/net24	VSS	1.62664e-16	$X=58.169 $Y=7.0145
+C179	XI11/XI3/net25	VSS	9.91002e-17	$X=57.754 $Y=9.9845
+C180	XI11/XI3/net23	VSS	9.20813e-17	$X=58.164 $Y=9.9845
+C181	XI11/XI3/net26	VSS	1.52173e-16	$X=57.754 $Y=11.2395
+C182	XI11/XI3/net24	VSS	1.61355e-16	$X=58.164 $Y=11.2395
+C183	XI10/XI3/net25	VSS	9.91578e-17	$X=57.424 $Y=14.2145
+C184	XI10/XI3/net23	VSS	9.19255e-17	$X=57.834 $Y=14.2145
+C185	XI10/XI3/net26	VSS	1.52517e-16	$X=57.424 $Y=15.4695
+C186	XI10/XI3/net24	VSS	1.62488e-16	$X=57.834 $Y=15.4695
+C187	XI9/XI3/net25	VSS	9.97318e-17	$X=32.384 $Y=10.2745
+C188	XI9/XI3/net23	VSS	9.21538e-17	$X=32.794 $Y=10.2745
+C189	XI9/XI3/net26	VSS	1.5252e-16	$X=32.384 $Y=11.5295
+C190	XI9/XI3/net24	VSS	1.5977e-16	$X=32.794 $Y=11.5295
+C191	XI6/XI3/net25	VSS	9.97628e-17	$X=32.084 $Y=18.494
+C192	XI6/XI3/net23	VSS	9.28315e-17	$X=32.494 $Y=18.494
+C193	XI6/XI3/net26	VSS	1.52533e-16	$X=32.084 $Y=19.749
+C194	XI6/XI3/net24	VSS	1.59803e-16	$X=32.494 $Y=19.749
+C195	XI8/XI3/net25	VSS	9.90632e-17	$X=32.084 $Y=14.3845
+C196	XI8/XI3/net23	VSS	9.1921e-17	$X=32.494 $Y=14.3845
+C197	XI8/XI3/net26	VSS	1.52518e-16	$X=32.084 $Y=15.6395
+C198	XI8/XI3/net24	VSS	1.60068e-16	$X=32.494 $Y=15.6395
+C199	XI3/XI3/net25	VSS	9.97309e-17	$X=19.5295 $Y=22.664
+C200	XI3/XI3/net23	VSS	9.25684e-17	$X=19.9395 $Y=22.664
+C201	XI3/XI3/net26	VSS	1.5292e-16	$X=19.5295 $Y=23.919
+C202	XI3/XI3/net24	VSS	1.6287e-16	$X=19.9395 $Y=23.919
+C203	XI4/XI3/net25	VSS	9.97584e-17	$X=19.5295 $Y=18.494
+C204	XI4/XI3/net23	VSS	9.27747e-17	$X=19.9395 $Y=18.494
+C205	XI4/XI3/net26	VSS	1.52556e-16	$X=19.5295 $Y=19.749
+C206	XI4/XI3/net24	VSS	1.62047e-16	$X=19.9395 $Y=19.749
+C207	XI14/XI1/XI0/net1	VSS	6.0912e-16	$X=56.2295 $Y=18.294
+C208	XI14/XI1/net3	VSS	1.04281e-15	$X=56.2985 $Y=19.304
+C209	XI13/XI1/XI0/net1	VSS	6.28442e-16	$X=31.3885 $Y=22.2935
+C210	XI13/XI1/net3	VSS	1.04849e-15	$X=31.457 $Y=23.3035
+C211	XI2/XI1/XI0/net1	VSS	6.2231e-16	$X=18.835 $Y=26.573
+C212	XI2/XI1/net3	VSS	1.06165e-15	$X=18.9035 $Y=27.583
+C213	XI7/XI1/XI0/net1	VSS	5.99726e-16	$X=18.685 $Y=14.3545
+C214	XI7/XI1/net3	VSS	1.05208e-15	$X=18.7535 $Y=15.3645
+C215	XI45/net4	VSS	1.96689e-16	$X=53.7155 $Y=32.455
+C216	XI45/net12	VSS	1.81889e-16	$X=55.2085 $Y=32.4505
+C217	XI43/net4	VSS	1.93385e-16	$X=51.0105 $Y=24.7405
+C218	XI43/net12	VSS	1.81868e-16	$X=52.5035 $Y=24.7355
+C219	XI44/net4	VSS	1.9353e-16	$X=50.9955 $Y=29.755
+C220	XI44/net12	VSS	1.77995e-16	$X=52.4885 $Y=29.7505
+C221	XI5/net4	VSS	1.97311e-16	$X=47.8855 $Y=17.8005
+C222	XI5/net12	VSS	1.81252e-16	$X=49.3785 $Y=17.7955
+C223	XI37/net4	VSS	1.94352e-16	$X=47.8855 $Y=14.186
+C224	XI37/net12	VSS	1.99395e-16	$X=49.3785 $Y=14.181
+C225	XI40/net4	VSS	1.94523e-16	$X=47.8855 $Y=9.596
+C226	XI40/net12	VSS	1.81422e-16	$X=49.3785 $Y=9.591
+C227	XI41/net4	VSS	1.95949e-16	$X=47.8855 $Y=5.861
+C228	XI41/net12	VSS	1.82532e-16	$X=49.3785 $Y=5.856
+C229	XI36/net4	VSS	1.93158e-16	$X=43.086 $Y=19.7455
+C230	XI36/net12	VSS	1.90169e-16	$X=44.579 $Y=19.7405
+C231	XI38/net4	VSS	1.96812e-16	$X=43.086 $Y=16.131
+C232	XI38/net12	VSS	1.81358e-16	$X=44.579 $Y=16.126
+C233	XI39/net4	VSS	1.96002e-16	$X=43.086 $Y=11.541
+C234	XI39/net12	VSS	1.84327e-16	$X=44.579 $Y=11.536
+C235	XI42/net4	VSS	1.91107e-16	$X=43.086 $Y=7.806
+C236	XI42/net12	VSS	1.81639e-16	$X=44.579 $Y=7.801
+*
+*
+.ENDS pipeline_mult
+*

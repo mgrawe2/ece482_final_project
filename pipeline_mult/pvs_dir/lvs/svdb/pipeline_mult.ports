@@ -1,0 +1,22 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary pipeline_mult
+A3 13 A3 10260 35250 metal3_conn
+VSS 1 VSS 50820 1560 metal11_conn
+A2 14 A2 10400 44010 metal3_conn
+VDD 2 VDD 52750 70140 metal11_conn
+B0 42 B0 14560 70140 metal3_conn
+A1 3 A1 10300 56490 metal3_conn
+B1 43 B1 23230 70220 metal3_conn
+P2 56 P2 128620 50160 metal3_conn
+A0 4 A0 10470 65720 metal3_conn
+B2 44 B2 49370 70220 metal3_conn
+P1 57 P1 128800 59670 metal3_conn
+B3 45 B3 73420 70310 metal3_conn
+P0 58 P0 128540 65520 metal3_conn
+P3 59 P3 128780 37830 metal3_conn
+CLK 46 CLK 100760 70310 metal3_conn
+RST 47 RST 112680 70310 metal3_conn
+P4 60 P4 128730 29040 metal3_conn
+P5 61 P5 128690 21290 metal3_conn
+P6 62 P6 128790 12830 metal3_conn
+P7 63 P7 128700 6550 metal3_conn

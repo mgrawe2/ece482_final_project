@@ -1,0 +1,13 @@
+# SVDB: Port Table (ports)
+# SVDB: Layout Primary c2mos
+VDD 6 VDD 480 3830 metal1_conn
+VDD 6 VDD 595 3845 metal1_conn
+CLK 1 CLK 505 1975 metal1_conn
+CLK 1 CLK 540 1980 metal1_conn
+D 4 D 2105 1740 metal1_conn
+VSS 7 VSS 520 80 metal1_conn
+VSS 7 VSS 530 75 metal1_conn
+Q 10 Q 6980 1675 metal1_conn
+Q 10 Q 7000 1680 metal1_conn
+RST 5 RST 8255 1600 metal1_conn
+RST 5 RST 8270 1610 metal1_conn

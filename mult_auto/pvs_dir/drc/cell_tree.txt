@@ -1,0 +1,21 @@
+mult_auto
+
+and2
+	inv
+
+xor
+	inv
+
+half_adder
+	and2
+	xor
+
+full_adder
+	inv
+	xor
+
+mult_auto
+	and2
+	half_adder
+	full_adder
+

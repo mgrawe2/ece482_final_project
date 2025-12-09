@@ -1,0 +1,17 @@
+# XXXX: Instance Cross Reference (ixf) (File format 1)
+# XXXX: Layout Primary c2mos
+# XXXX: End of header.
+% MP 4 MP 4
+% MN 4 MN 4
+% c2mos 6 c2mos 6
+0 M3 0 MPM23  
+0 M2 0 MPM22  
+0 M1 0 MPM18  
+0 M4 0 MPM24  
+0 X26/M0 0 MNM29 X
+0 X25/M0 0 MNM27  
+0 X22/M0 0 MNM26  
+0 X24/M0 0 MNM28  
+0 X23/M0 0 MNM21  
+0 M0 0 MPM5  
+0 X21/M0 0 MNM4  

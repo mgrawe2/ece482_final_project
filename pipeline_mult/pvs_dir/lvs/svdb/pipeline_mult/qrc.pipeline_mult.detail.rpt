@@ -1,0 +1,4241 @@
+INFO (LBRCXU-108): Starting
+
+ runUserCmd /software/cadence-2024-08/IC231/bin/qrcToDfII -extract cap -run_name pipeline_mult -cdlout_run_dir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs -check_cell_view TRUE -device_finger_delimiter @ -extracted_view av_extracted -lvs_source agds -cap_models no -capacitor pcapacitor -res_models no -cap_prop_name c -transfer_net_expression TRUE -t -extview_tmp /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/extview.tmp -run_dir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult -cdslib /home/mgrawe2/ece482.work/gpdk045_new/cds.lib -lib_name ece482_final_project -cell_name pipeline_mult -view_name layout -extview_rul /class/ece482/gpdk045_v_6_0/pvs/extview.rul -server /software/cadence-2024-08/QUANTUS231/tools.lnx86/extraction/bin/64bit/../shapeServer
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.05s.
+device        g45n1svt  M          _nmos1v          nmos1v  ivpcell     gpdk045  D G S B
+Loading gpdk045/libInit.il ...
+	Loading gpdk045/loadCxt.ile ... done!
+	Loading context 'gpdk045' from library 'gpdk045' ... done!
+	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+	Loading gpdk045/gpdk045_customFilter.il ... done!
+	Loading gpdk045/libInitCustomExit.il ... 
+	Loading Environment Settings ...
+	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 45nm PDK                       *           
+  *                        (gpdk045)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	VERSION: 6.0 (09-September-2019)
+
+done!
+Loaded gpdk045/libInit.il successfully!
+device        g45n1hvt  M      _nmos1v_hvt      nmos1v_hvt  ivpcell     gpdk045  D G S B
+device        g45n1lvt  M      _nmos1v_lvt      nmos1v_lvt  ivpcell     gpdk045  D G S B
+device        g45n1nvt  M  _nmos_12_native      nmos1v_nat  ivpcell     gpdk045  D G S B
+device        g45n2svt  M         _nmos_25          nmos2v  ivpcell     gpdk045  D G S B
+device        g45n2nvt  M  _nmos_25_native      nmos2v_nat  ivpcell     gpdk045  D G S B
+device        g45ncap1  M       _nmoscap1v       nmoscap1v  ivpcell     gpdk045  D G S B
+device        g45ncap2  M       _nmoscap2v       nmoscap2v  ivpcell     gpdk045  D G S B
+device        g45p1svt  M          _pmos1v          pmos1v  ivpcell     gpdk045  D G S B
+device        g45p1hvt  M      _pmos1v_hvt      pmos1v_hvt  ivpcell     gpdk045  D G S B
+device        g45p1lvt  M      _pmos1v_lvt      pmos1v_lvt  ivpcell     gpdk045  D G S B
+device        g45p2svt  M          _pmos2v          pmos2v  ivpcell     gpdk045  D G S B
+device        g45pcap1  M       _pmoscap1v       pmoscap1v  ivpcell     gpdk045  D G S B
+device        g45pcap2  M       _pmoscap2v       pmoscap2v  ivpcell     gpdk045  D G S B
+device          g45rm1  R           _resm1           resm1  ivpcell     gpdk045  PLUS MINUS
+device          g45rm2  R           _resm2           resm2  ivpcell     gpdk045  PLUS MINUS
+device          g45rm3  R           _resm3           resm3  ivpcell     gpdk045  PLUS MINUS
+device          g45rm4  R           _resm4           resm4  ivpcell     gpdk045  PLUS MINUS
+device          g45rm5  R           _resm5           resm5  ivpcell     gpdk045  PLUS MINUS
+device          g45rm6  R           _resm6           resm6  ivpcell     gpdk045  PLUS MINUS
+device          g45rm7  R           _resm7           resm7  ivpcell     gpdk045  PLUS MINUS
+device          g45rm8  R           _resm8           resm8  ivpcell     gpdk045  PLUS MINUS
+device          g45rm9  R           _resm9           resm9  ivpcell     gpdk045  PLUS MINUS
+device         g45rm10  R          _resm10          resm10  ivpcell     gpdk045  PLUS MINUS
+device         g45rm11  R          _resm11          resm11  ivpcell     gpdk045  PLUS MINUS
+device         g45rsnd  R       _ressndiff       ressndiff  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnsnd  R      _resnsndiff      resnsndiff  ivpcell     gpdk045  PLUS MINUS B
+device         g45rsnp  R       _ressnpoly       ressnpoly  ivpcell     gpdk045  PLUS MINUS B
+device         g45rsnp  R    _ressnpoly_nw       ressnpoly  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnsnp  R      _resnsnpoly      resnsnpoly  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnsnp  R   _resnsnpoly_nw      resnsnpoly  ivpcell     gpdk045  PLUS MINUS B
+device         g45rspd  R       _resspdiff       resspdiff  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnspd  R      _resnspdiff      resnspdiff  ivpcell     gpdk045  PLUS MINUS B
+device         g45rspp  R       _ressppoly       ressppoly  ivpcell     gpdk045  PLUS MINUS B
+device         g45rspp  R    _ressppoly_nw       ressppoly  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnspp  R      _resnsppoly      resnsppoly  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnspp  R   _resnsppoly_nw      resnsppoly  ivpcell     gpdk045  PLUS MINUS B
+device         g45rnws  R        _resnwsti        resnwsti  ivpcell     gpdk045  PLUS MINUS B
+device         g45rnwo  R      _resnwoxide      resnwoxide  ivpcell     gpdk045  PLUS MINUS B
+device       g45nd1svt  D            _ndio            ndio  ivpcell     gpdk045  PLUS MINUS
+device       g45nd1lvt  D        _ndio_lvt        ndio_lvt  ivpcell     gpdk045  PLUS MINUS
+device       g45nd1hvt  D        _ndio_hvt        ndio_hvt  ivpcell     gpdk045  PLUS MINUS
+device       g45nd1nvt  D        _ndio_nvt        ndio_nvt  ivpcell     gpdk045  PLUS MINUS
+device       g45nd2svt  D         _ndio_2v         ndio_2v  ivpcell     gpdk045  PLUS MINUS
+device       g45nd2nvt  D     _ndio_2v_nvt     ndio_2v_nvt  ivpcell     gpdk045  PLUS MINUS
+device       g45pd1svt  D            _pdio            pdio  ivpcell     gpdk045  PLUS MINUS
+device       g45pd1lvt  D        _pdio_lvt        pdio_lvt  ivpcell     gpdk045  PLUS MINUS
+device       g45pd1hvt  D        _pdio_hvt        pdio_hvt  ivpcell     gpdk045  PLUS MINUS
+device       g45pd2svt  D         _pdio_2v         pdio_2v  ivpcell     gpdk045  PLUS MINUS
+device        g45vpnp2  Q           _vpnp2           vpnp2  ivpcell     gpdk045  C B E
+device        g45vpnp5  Q           _vpnp5           vpnp5  ivpcell     gpdk045  C B E
+device       g45vpnp10  Q          _vpnp10          vpnp10  ivpcell     gpdk045  C B E
+device        g45vnpn2  Q            _npn2            npn2  ivpcell     gpdk045  C B E
+device        g45vnpn5  Q            _npn5            npn5  ivpcell     gpdk045  C B E
+device       g45vnpn10  Q           _npn10           npn10  ivpcell     gpdk045  C B E
+device         g45cmim  C          _mimcap          mimcap  ivpcell     gpdk045  PLUS MINUS B
+device         g45inda  X           _ind_a           ind_a  ivpcell     gpdk045  PLUS MINUS B
+device         g45inds  X           _ind_s           ind_s  ivpcell     gpdk045  PLUS MINUS B
+
+All device symbols for the extracted view are present.
+
+INFO (LBRCXM-612): Done Executing :runUserCmd
+
+INFO (LBRCXM-642): Constructing the RCX run script
+
+Forking: agdsPrep -V -rundir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb -agf /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult.agf -outdir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult// -sch -df2 -e /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult.gds.map:pipeline_mult.alm,pipeline_mult.ilf -pl pipeline_mult.ports -mcell /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/pipeline_mult.hcl -d pipeline_mult.devtab -l /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult.lvsfile -i pipeline_mult.ixf,pipeline_mult.lph,pipeline_mult.sph:pipeline_mult.gdx -n pipeline_mult.nxf,pipeline_mult.stl:pipeline_mult.gnx -s pipeline_mult_pin_xy.spi:pipeline_mult.xcn,hccidtmfile
+
+agdsPrep took  0.02 user, 0.07 sys, 0.00 elapsed, 16316.0 kbytes
+Forking:  capgen -techdir /class/ece482/gpdk045_v_6_0/qrc/typical -inc /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/pipeline_mult.ilf -lvs /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/pipeline_mult.xcn -lvsvia -p2lvs /class/ece482/gpdk045_v_6_0/qrc/typical/qrcTechFile -reseqn -sw3d -p poly_conn,allGate,Oxide -canonical_res_caps -length_units meters -exclude_gate_res -cap_ground_layer psubstrate /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult
+
+INFO (LBMISC-215205): 
+*** Cadence Quantus Extraction Techgen -trans VERSION 23.1.1 Linux 64 bit - (Thu Feb 15 21:11:17 PST 2024)  ***
+
+
+INFO (CAPGEN-41199): 
+
+
+Techgen -trans results will be written to directory: /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult
+
+INFO (CAPGEN-41737): Lvs connect layers Bondpad CapMetal Nburied ind10 ind11 ind_ct npn_emit pnp_emit are not mapped in layer_setup file
+
+INFO (CAPGEN-41809):  Lvs connect via bp_tap via10_cap via10_nocap ind_via_diva via10_nodev Via9 Via8 Via7 Via6 Via5 Via4 Via3 Via2 Via1 cont_poly cont_pdiff cont_ndiff ptap ntap nb_tap are not mapped in layer_setup file.
+
+INFO (RCXSPIC-28057): RCXspice: unrecognized variable 'LVSNAMES' in file '/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/RCXspiceINIT'
+
+INFO (RCXSPIC-28057): RCXspice: unrecognized variable 'QRCNAMES' in file '/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/RCXspiceINIT'
+
+rcxspice took  1.07 user, 0.33 sys, 2.00 elapsed, 101404.0 kbytes
+The supplied design data will be treated as a HIERARCHICAL design
+
+Successfully created RCX script '/home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/rcx.sh'
+INFO (LBRCXM-581): Checked out '1' license(s) of QTS300 23.10
+
+INFO (LBRCXM-608): Executing command
+   /software/cadence-2024-08/QUANTUS231/tools.lnx86/extraction/bin/64bit/assura_rcx -V  /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/rcx.sh
+
+
+     ***    assura_rcx VERSION 23.1.1 Linux 64 bit - (Thu Feb 15 21:11:17 PST 2024)    ***
+
+
+	***************************************************
+	*			  			  *
+	* Copyright (c) 2025 Cadence Design Systems, Inc. *
+	*		All Rights Reserved		  *
+	*			  			  *
+	*	  THIS IS UNPUBLISHED PROPRIETARY	  *
+	*  INFORMATION OF Cadence Design Systems, Inc. 	  *
+	*	   THE COPYRIGHT NOTICE DOES NOT	  *
+	*	       EVIDENCE PUBLICATION		  *
+	*			  			  *
+	***************************************************
+INFO (ASSREXT-35013): 
+
+* caps2d version: 10
+ENDCAT
+meters
+ENDCAT
+agds2rcx -np 1 -V -H satfile -r /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/pipeline_mult.xcn -split_float_exclude_layers ndiff_0conn,pdiff_0conn,nwell_0conn,psubstrate -crundir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb -unit meters -df2 -xgl -pl pipeline_mult.ports -f pipeline_mult.alm -lnn pipeline_mult.lnn -pnet 5 -pinst 6 -pdev 7 pipeline_mult.agf pipeline_mult_pin_xy.spi 
+WARNING (AGDSEXT-30124): The <design>.props file is not available. The CCL option "input_db calibre/pvs/pegasus -device_properties_file <filename>" can be used to specify the .props file. 
+
+	***************************************************
+	*			  			  *
+	* Copyright (c) 2025 Cadence Design Systems, Inc. *
+	*		All Rights Reserved		  *
+	*			  			  *
+	*	  THIS IS UNPUBLISHED PROPRIETARY	  *
+	*  INFORMATION OF Cadence Design Systems, Inc. 	  *
+	*	   THE COPYRIGHT NOTICE DOES NOT	  *
+	*	       EVIDENCE PUBLICATION		  *
+	*			  			  *
+	***************************************************
+INFO (AGDSEXT-30016): 
+setting dbunit 5e-10 1 5e-10
+
+agds2rcx took 0.09 user, 0.75 sys, 1.00 elapsed, 19872.0 kbytes
+Input stage took  0.10 user, 0.79 sys, 2.00 elapsed, 6912.0 kbytes
+INFO (ASSREXT-35329): Resistance data preparation stage started at Sun Dec  7 19:53:14 2025
+
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -cp poly_conn,allGate,Oxide -n 0.6 -i \
+	0,0.601 -b Oxide,FOX -t \
+	metal1_conn,metal2_conn,metal3_conn,metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-j 0.045 -Maxw 1.0125 -p poly_conn,key 0,0.6 - poly_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc poly_conn -er metal1_conn.den -n \
+	1.2 -i 0,1.201 -b poly_conn,Oxide,FOX -t \
+	metal2_conn,metal3_conn,metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-j 0.06 -Maxw 1.35 -p metal1_conn,key 0,1.2 - metal1_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc poly_conn,metal1_conn -er \
+	metal2_conn.den -n 1.4 -i 0,1.401 -b metal1_conn,poly_conn,Oxide,FOX \
+	-t \
+	metal3_conn,metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-j 0.08 -Maxw 1.8 -p metal2_conn,key 0,1.4 - metal2_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal1_conn,metal2_conn -er \
+	metal3_conn.den -n 1.75 -i 0,1.751 -b \
+	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-j 0.08 -Maxw 1.8 -p metal3_conn,key 0,1.75 - metal3_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal2_conn,metal3_conn -er \
+	metal4_conn.den -n 1.75 -i 0,1.751 -b \
+	metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-j 0.08 -Maxw 1.8 -p metal4_conn,key 0,1.75 - metal4_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal3_conn,metal4_conn -er \
+	metal5_conn.den -n 1.75 -i 0,1.751 -b \
+	metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t \
+	metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-j 0.08 -Maxw 1.8 -p metal5_conn,key 0,1.75 - metal5_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal4_conn,metal5_conn -er \
+	metal6_conn.den -n 1.75 -i 0,1.751 -b \
+	metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn -j \
+	0.08 -Maxw 1.8 -p metal6_conn,key 0,1.75 - metal6_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal5_conn,metal6_conn -er \
+	metal7_conn.den -n 1.75 -i 0,1.751 -b \
+	metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal8_conn,metal9_conn,metal10_conn,metal11_conn -j 0.08 -Maxw \
+	1.8 -p metal7_conn,key 0,1.75 - metal7_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal6_conn,metal7_conn -er \
+	metal8_conn.den -n 1.75 -i 0,1.751 -b \
+	metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal9_conn,metal10_conn,metal11_conn -j 0.08 -Maxw 1.8 -p \
+	metal8_conn,key 0,1.75 - metal8_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal7_conn,metal8_conn -er \
+	metal9_conn.den -n 1.75 -i 0,1.751 -b \
+	metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal10_conn,metal11_conn -j 0.08 -Maxw 1.8 -p metal9_conn,key \
+	0,1.75 - metal9_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal8_conn,metal9_conn -er \
+	metal10_conn.den -n 5 -i 0,5.001 -b \
+	metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal11_conn -j 0.22 -Maxw 4.95 -p metal10_conn,key 0,5 - \
+	metal10_conn.sip
+sip -V -cgnd ${CAP_GROUND} -s -o -sub 2 -mlc metal9_conn,metal10_conn -n 5 -i \
+	0,5.001 -b \
+	metal10_conn,metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-j 0.22 -Maxw 4.95 -p metal11_conn,key 0,5 - metal11_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -b \
+	metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-Maxw 4.95 -p metal10_conn,key,metal11_conn,key 0,5,0 - \
+	metal10_conn_metal11_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal11_conn -b \
+	metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-k metal10_conn:1 -Maxw 4.95 -p metal9_conn,key,metal11_conn,key \
+	0,5,0 - metal9_conn_metal11_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
+	metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal11_conn -Maxw 4.95 -p metal9_conn,key,metal10_conn,key 0,5,0 \
+	- metal9_conn_metal10_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal10_conn -b \
+	metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal11_conn -k metal9_conn:1 -Maxw 4.95 -p \
+	metal8_conn,key,metal10_conn,key 0,5,0 - metal8_conn_metal10_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
+	metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal10_conn,metal11_conn -Maxw 1.8 -p \
+	metal8_conn,key,metal9_conn,key 0,1.75,0 - \
+	metal8_conn_metal9_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal9_conn -b \
+	metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal10_conn,metal11_conn -k metal8_conn:0.15 -Maxw 1.8 -p \
+	metal7_conn,key,metal9_conn,key 0,1.75,0 - \
+	metal7_conn_metal9_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
+	metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal9_conn,metal10_conn,metal11_conn -Maxw 1.8 -p \
+	metal7_conn,key,metal8_conn,key 0,1.75,0 - \
+	metal7_conn_metal8_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal8_conn -b \
+	metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal9_conn,metal10_conn,metal11_conn -k metal7_conn:0.15 -Maxw \
+	1.8 -p metal6_conn,key,metal8_conn,key 0,1.75,0 - \
+	metal6_conn_metal8_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
+	metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal8_conn,metal9_conn,metal10_conn,metal11_conn -Maxw 1.8 -p \
+	metal6_conn,key,metal7_conn,key 0,1.75,0 - \
+	metal6_conn_metal7_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal7_conn -b \
+	metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal8_conn,metal9_conn,metal10_conn,metal11_conn -k \
+	metal6_conn:0.15 -Maxw 1.8 -p metal5_conn,key,metal7_conn,key \
+	0,1.75,0 - metal5_conn_metal7_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
+	metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-Maxw 1.8 -p metal5_conn,key,metal6_conn,key 0,1.75,0 - \
+	metal5_conn_metal6_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal6_conn -b \
+	metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn -k \
+	metal5_conn:0.15 -Maxw 1.8 -p metal4_conn,key,metal6_conn,key \
+	0,1.75,0 - metal4_conn_metal6_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
+	metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-Maxw 1.8 -p metal4_conn,key,metal5_conn,key 0,1.75,0 - \
+	metal4_conn_metal5_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal5_conn -b \
+	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-k metal4_conn:0.15 -Maxw 1.8 -p metal3_conn,key,metal5_conn,key \
+	0,1.75,0 - metal3_conn_metal5_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b \
+	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-Maxw 1.8 -p metal3_conn,key,metal4_conn,key 0,1.75,0 - \
+	metal3_conn_metal4_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal4_conn -b \
+	metal1_conn,poly_conn,Oxide,FOX -t \
+	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-k metal3_conn:0.15 -Maxw 1.8 -p metal2_conn,key,metal4_conn,key \
+	0,1.75,0 - metal2_conn_metal4_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b metal1_conn,poly_conn,Oxide,FOX -t \
+	metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-Maxw 1.8 -p metal2_conn,key,metal3_conn,key 0,1.75,0 - \
+	metal2_conn_metal3_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal3_conn -b \
+	poly_conn,Oxide,FOX -t \
+	metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-k metal2_conn:0.15 -Maxw 1.8 -p metal1_conn,key,metal3_conn,key \
+	0,1.75,0 - metal1_conn_metal3_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -b poly_conn,Oxide,FOX -t \
+	metal3_conn,metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-Maxw 1.8 -p metal1_conn,key,metal2_conn,key 0,1.4,0 - \
+	metal1_conn_metal2_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -L3A -h -R metal2_conn -b Oxide,FOX -t \
+	metal3_conn,metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-k metal1_conn:0.15 -Maxw 1.8 -p poly_conn,key,metal2_conn,key \
+	0,1.4,0 - poly_conn_metal2_conn.sip
+sip -V -s -cgnd ${CAP_GROUND} -sub 2 -h -R metal1_conn,poly_conn -b Oxide,FOX \
+	-t \
+	metal2_conn,metal3_conn,metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-Maxw 1.35 -p poly_conn,key,metal1_conn,key 0,1.2,0 - \
+	poly_conn_metal1_conn.sip
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b \
+	metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-p metal10_conn,metal11_conn - metal10_conn_metal11_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b \
+	metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal11_conn -p metal9_conn,metal10_conn - \
+	metal9_conn_metal10_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b \
+	metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal10_conn,metal11_conn -p metal8_conn,metal9_conn - \
+	metal8_conn_metal9_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b \
+	metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal9_conn,metal10_conn,metal11_conn -p metal7_conn,metal8_conn - \
+	metal7_conn_metal8_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b \
+	metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal8_conn,metal9_conn,metal10_conn,metal11_conn -p \
+	metal6_conn,metal7_conn - metal6_conn_metal7_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b \
+	metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX \
+	-t metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn -p \
+	metal5_conn,metal6_conn - metal5_conn_metal6_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b \
+	metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-p metal4_conn,metal5_conn - metal4_conn_metal5_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b \
+	metal2_conn,metal1_conn,poly_conn,Oxide,FOX -t \
+	metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-p metal3_conn,metal4_conn - metal3_conn_metal4_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b metal1_conn,poly_conn,Oxide,FOX -t \
+	metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-p metal2_conn,metal3_conn - metal2_conn_metal3_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b poly_conn,Oxide,FOX -t \
+	metal3_conn,metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-p metal1_conn,metal2_conn - metal1_conn_metal2_conn.sw3d
+sw3d -V -cgnd ${CAP_GROUND} -sub 2 -b Oxide,FOX -t \
+	metal2_conn,metal3_conn,metal4_conn,metal5_conn,metal6_conn,metal7_conn,metal8_conn,metal9_conn,metal10_conn,metal11_conn \
+	-p poly_conn,metal1_conn - poly_conn_metal1_conn.sw3d
+ENDCAT
+FOX psubstrate nwell_0conn
+Oxide pdiff_0conn ndiff_0conn
+metal11_0conn metal11_0conn
+metal10_0conn metal10_0conn
+metal9_0conn metal9_0conn
+metal8_0conn metal8_0conn
+metal7_0conn metal7_0conn
+metal6_0conn metal6_0conn
+metal5_0conn metal5_0conn
+metal4_0conn metal4_0conn
+metal3_0conn metal3_0conn
+metal2_0conn metal2_0conn
+metal1_0conn metal1_0conn
+poly_0conn poly_0conn
+ndiff_0conn ndiff_0conn
+pdiff_0conn pdiff_0conn
+nwell_0conn nwell_0conn
+psubstrate psubstrate
+via10_0nocap via10_0nocap
+via10_0nodev via10_0nodev
+Via9 Via9
+Via8 Via8
+Via7 Via7
+Via6 Via6
+Via5 Via5
+Via4 Via4
+Via3 Via3
+Via2 Via2
+Via1 Via1
+cont_0poly cont_0poly
+cont_0pdiff cont_0pdiff_metal1_0conn_pdiff_0conn
+cont_0ndiff cont_0ndiff_metal1_0conn_ndiff_0conn
+ENDCAT
+INFO (ASSREXT-35026): stamp INPUT: iname[0]=g_pick_FOX
+
+INFO (ASSREXT-35026): stamp INPUT: iname[1]=FOX
+
+INFO (ASSREXT-35028): stamp OUTPUT: oname[0]=g_pick_FOX
+
+INFO (ASSREXT-35304): 
+Number of tasks to begin with are 109 
+
+INFO (ASSREXT-35329): Resistance data preparation stage started at Sun Dec  7 19:53:14 2025
+
+geom -V via10_0nocap metal10_0conn metal11_0conn - via10_0nocap,111,i,1 
+INFO (ASSREXT-35316): ****** For command L214 on processor #1:
+
+  geom took  0.00 user, 0.01 sys, 0.00 elapsed, 7296.0 kbytes
+ INFO (ASSREXT-35321): *** Command L214 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 108 
+
+geom -V via10_0nodev metal10_0conn metal11_0conn - via10_0nodev,111,i,1 
+INFO (ASSREXT-35316): ****** For command L215 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7424.0 kbytes
+ INFO (ASSREXT-35321): *** Command L215 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 107 
+
+geom -V Via9 metal9_0conn metal10_0conn - Via9,111,i,1 
+INFO (ASSREXT-35316): ****** For command L216 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7428.0 kbytes
+ INFO (ASSREXT-35321): *** Command L216 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 106 
+
+geom -V Via8 metal8_0conn metal9_0conn - Via8,111,i,1 
+INFO (ASSREXT-35316): ****** For command L217 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7552.0 kbytes
+ INFO (ASSREXT-35321): *** Command L217 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 105 
+
+geom -V Via7 metal7_0conn metal8_0conn - Via7,111,i,1 
+INFO (ASSREXT-35316): ****** For command L218 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7424.0 kbytes
+ INFO (ASSREXT-35321): *** Command L218 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 104 
+
+geom -V Via6 metal6_0conn metal7_0conn - Via6,111,i,1 
+INFO (ASSREXT-35316): ****** For command L219 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7424.0 kbytes
+ INFO (ASSREXT-35321): *** Command L219 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 103 
+
+geom -V Via5 metal5_0conn metal6_0conn - Via5,111,i,1 
+INFO (ASSREXT-35316): ****** For command L220 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7552.0 kbytes
+ INFO (ASSREXT-35321): *** Command L220 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 102 
+
+geom -V Via4 metal4_0conn metal5_0conn - Via4,111,i,1 
+INFO (ASSREXT-35316): ****** For command L221 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7460.0 kbytes
+ INFO (ASSREXT-35321): *** Command L221 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 101 
+
+geom -V Via3 metal3_0conn metal4_0conn - Via3,111,i,1 
+INFO (ASSREXT-35316): ****** For command L222 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7552.0 kbytes
+ INFO (ASSREXT-35321): *** Command L222 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 100 
+
+geom -V Via2 metal2_0conn metal3_0conn - Via2,111,i,1 
+INFO (ASSREXT-35316): ****** For command L223 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7680.0 kbytes
+ INFO (ASSREXT-35321): *** Command L223 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 99 
+
+geom -V Via1 metal1_0conn metal2_0conn - Via1,111,i,1 
+INFO (ASSREXT-35316): ****** For command L224 on processor #1:
+
+  geom took  0.00 user, 0.01 sys, 0.00 elapsed, 7744.0 kbytes
+ INFO (ASSREXT-35321): *** Command L224 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 98 
+
+geom -V cont_0poly poly_0conn metal1_0conn - cont_0poly,111,i,1 
+INFO (ASSREXT-35316): ****** For command L225 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 1.00 elapsed, 7808.0 kbytes
+ INFO (ASSREXT-35321): *** Command L225 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 97 
+
+geom -V cont_0pdiff metal1_0conn pdiff_0conn - cont_0pdiff_metal1_0conn_pdiff_0conn,111,i,1 
+INFO (ASSREXT-35316): ****** For command L226 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7584.0 kbytes
+ INFO (ASSREXT-35321): *** Command L226 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 96 
+
+geom -V cont_0ndiff metal1_0conn ndiff_0conn - cont_0ndiff_metal1_0conn_ndiff_0conn,111,i,1 
+INFO (ASSREXT-35316): ****** For command L227 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 7680.0 kbytes
+ INFO (ASSREXT-35321): *** Command L227 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 95 
+
+INFO (ASSREXT-35299): *** L162 'mv' executed directly
+
+INFO (ASSREXT-35307): tasks left are 94
+
+INFO (ASSREXT-35299): *** L165 'mv' executed directly
+
+INFO (ASSREXT-35307): tasks left are 93
+
+INFO (ASSREXT-35299): *** L233 'beginFlattenInputs' executed directly
+
+INFO (ASSREXT-35307): tasks left are 92
+
+flattenLayers -m nwell_0conn psubstrate 
+INFO (ASSREXT-35316): ****** For command L261 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7400.0 kbytes
+ INFO (ASSREXT-35321): *** Command L261 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 91 
+
+flattenLayers -m via10_0nocap Via2 
+INFO (ASSREXT-35316): ****** For command L239 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7424.0 kbytes
+ INFO (ASSREXT-35321): *** Command L239 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 90 
+
+flattenLayers -m via10_0nodev Via1 
+INFO (ASSREXT-35316): ****** For command L240 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7456.0 kbytes
+ INFO (ASSREXT-35321): *** Command L240 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 89 
+
+flattenLayers -m Via9 cont_0poly 
+INFO (ASSREXT-35316): ****** For command L241 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7384.0 kbytes
+ INFO (ASSREXT-35321): *** Command L241 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 88 
+
+flattenLayers -m Via8 cont_0pdiff_metal1_0conn_pdiff_0conn 
+INFO (ASSREXT-35316): ****** For command L242 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7560.0 kbytes
+ INFO (ASSREXT-35321): *** Command L242 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 87 
+
+flattenLayers -m Via7 cont_0ndiff_metal1_0conn_ndiff_0conn 
+INFO (ASSREXT-35316): ****** For command L243 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7520.0 kbytes
+ INFO (ASSREXT-35321): *** Command L243 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 86 
+
+flattenLayers -m Via6 cont_0pdiff 
+INFO (ASSREXT-35316): ****** For command L244 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7564.0 kbytes
+ INFO (ASSREXT-35321): *** Command L244 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 85 
+
+flattenLayers -m Via5 cont_0ndiff 
+INFO (ASSREXT-35316): ****** For command L245 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 1.00 elapsed, 7432.0 kbytes
+ INFO (ASSREXT-35321): *** Command L245 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 84 
+
+flattenLayers -m poly_0conn 
+INFO (ASSREXT-35316): ****** For command L259 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7316.0 kbytes
+ INFO (ASSREXT-35321): *** Command L259 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 83 
+
+INFO (ASSREXT-35299): *** L234 '/bin/mv' executed directly
+
+INFO (ASSREXT-35307): tasks left are 82
+
+flatnet -V -li -h / h_NET NET 
+INFO (ASSREXT-35316): ****** For command L235 on processor #1:
+
+  id: 8, mnet: 12
+   id: 8, mnet: 10
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 20, mnet: 12
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 20, mnet: 5
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 47, mnet: 16
+   id: 8, mnet: 12
+   id: 8, mnet: 10
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 20, mnet: 12
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 20, mnet: 5
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 47, mnet: 16
+   id: 8, mnet: 12
+   id: 8, mnet: 10
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 20, mnet: 12
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 20, mnet: 5
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 47, mnet: 16
+   id: 8, mnet: 12
+   id: 8, mnet: 10
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 20, mnet: 12
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 20, mnet: 5
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 47, mnet: 16
+   id: 8, mnet: 12
+   id: 8, mnet: 10
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 20, mnet: 12
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 20, mnet: 5
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 47, mnet: 16
+   id: 8, mnet: 12
+   id: 8, mnet: 10
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 20, mnet: 12
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 20, mnet: 5
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 47, mnet: 16
+   id: 8, mnet: 12
+   id: 8, mnet: 10
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 20, mnet: 12
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 20, mnet: 5
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 47, mnet: 16
+   id: 8, mnet: 12
+   id: 8, mnet: 10
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 8, mnet: 2
+   id: 20, mnet: 12
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 20, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 20, mnet: 5
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 20, mnet: 2
+   id: 47, mnet: 16
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 23, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 23, mnet: 8
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 47, mnet: 10
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 23, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 23, mnet: 8
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 47, mnet: 10
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 23, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 23, mnet: 8
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 47, mnet: 10
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 17, mnet: 5
+   id: 17, mnet: 6
+   id: 17, mnet: 6
+   id: 17, mnet: 7
+   id: 17, mnet: 7
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 17, mnet: 2
+   id: 23, mnet: 7
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 23, mnet: 8
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 23, mnet: 2
+   id: 47, mnet: 10
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 12, mnet: 6
+   id: 12, mnet: 7
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 12, mnet: 2
+   id: 22, mnet: 5
+   id: 22, mnet: 7
+   id: 22, mnet: 7
+   id: 22, mnet: 6
+   id: 22, mnet: 6
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 22, mnet: 2
+   id: 47, mnet: 8
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 27, mnet: 4
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 5
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 6
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 27, mnet: 2
+   id: 47, mnet: 13
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   iflatnet took 0.00 user, 0.02 sys, 0.00 elapsed, 16840.0 kbytes
+   d: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+   id: 47, mnet: 2
+ INFO (ASSREXT-35321): *** Command L235 'flatnet' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 81 
+
+INFO (ASSREXT-35299): *** L268 'findCapGround' executed directly
+
+INFO (ASSREXT-35307): tasks left are 80
+
+INFO (ASSREXT-35299): *** L271 'echo' executed directly
+
+INFO (ASSREXT-35307): tasks left are 79
+
+netprint -n cgnetfile:gn_summary.log NET 
+INFO (ASSREXT-35316): ****** For command L272 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L272 'netprint' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 78 
+
+INFO (ASSREXT-35299): *** L199 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 77
+
+flattenLayers -m Via4 _0nmos1v_orig 
+INFO (ASSREXT-35316): ****** For command L246 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7424.0 kbytes
+ INFO (ASSREXT-35321): *** Command L246 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 76 
+
+geom _0nmos1v ndiff_0conn - _0nmos1v,10,i,1 
+INFO (ASSREXT-35316): ****** For command L200 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L200 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 75 
+
+flattenTransistorData _0nmos1v meters 
+INFO (ASSREXT-35316): ****** For command L237 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7424.0 kbytes
+   flatnet took 0.00 user, 0.01 sys, 0.00 elapsed, 14976.0 kbytes
+   id: 8, mnet: 5
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 8, mnet: 5
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 8, mnet: 5
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 8, mnet: 5
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 8, mnet: 5
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 8, mnet: 5
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 8, mnet: 5
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 8, mnet: 5
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 17, mnet: 3
+   id: 17, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 12, mnet: 3
+   id: 22, mnet: 3
+   id: 22, mnet: 3
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   id: 47, mnet: 5
+   flattrans took 0.00 user, 0.07 sys, 0.00 elapsed, 6372.0 kbytes
+ INFO (ASSREXT-35321): *** Command L237 'flattenTransistorData' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 74 
+
+INFO (ASSREXT-35299): *** L201 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 73
+
+flattenLayers -m Via3 _0pmos1v_orig 
+INFO (ASSREXT-35316): ****** For command L247 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7424.0 kbytes
+ INFO (ASSREXT-35321): *** Command L247 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 72 
+
+geom _0pmos1v pdiff_0conn - _0pmos1v,10,i,1 
+INFO (ASSREXT-35316): ****** For command L202 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L202 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 71 
+
+flattenTransistorData _0pmos1v meters 
+INFO (ASSREXT-35316): ****** For command L238 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7424.0 kbytes
+   flatnet took 0.00 user, 0.02 sys, 0.00 elapsed, 15076.0 kbytes
+   id: 8, mnet: 5
+   id: 20, mnet: 4
+   id: 20, mnet: 4
+   id: 47, mnet: 9
+   id: 8, mnet: 5
+   id: 20, mnet: 4
+   id: 20, mnet: 4
+   id: 47, mnet: 9
+   id: 8, mnet: 5
+   id: 20, mnet: 4
+   id: 20, mnet: 4
+   id: 47, mnet: 9
+   id: 8, mnet: 5
+   id: 20, mnet: 4
+   id: 20, mnet: 4
+   id: 47, mnet: 9
+   id: 8, mnet: 5
+   id: 20, mnet: 4
+   id: 20, mnet: 4
+   id: 47, mnet: 9
+   id: 8, mnet: 5
+   id: 20, mnet: 4
+   id: 20, mnet: 4
+   id: 47, mnet: 9
+   id: 8, mnet: 5
+   id: 20, mnet: 4
+   id: 20, mnet: 4
+   id: 47, mnet: 9
+   id: 8, mnet: 5
+   id: 20, mnet: 4
+   id: 20, mnet: 4
+   id: 47, mnet: 9
+   id: 23, mnet: 4
+   id: 23, mnet: 4
+   id: 47, mnet: 7
+   id: 23, mnet: 4
+   id: 23, mnet: 4
+   id: 47, mnet: 7
+   id: 23, mnet: 4
+   id: 23, mnet: 4
+   id: 47, mnet: 7
+   id: 23, mnet: 4
+   id: 23, mnet: 4
+   id: 47, mnet: 7
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 4
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   id: 47, mnet: 6
+   flattrans took 0.00 user, 0.07 sys, 0.00 elapsed, 6388.0 kbytes
+ INFO (ASSREXT-35321): *** Command L238 'flattenTransistorData' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 70 
+
+flattenLayers -m ndiff_0conn pdiff_0conn 
+INFO (ASSREXT-35316): ****** For command L260 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7484.0 kbytes
+ INFO (ASSREXT-35321): *** Command L260 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 69 
+
+INFO (ASSREXT-35299): *** L208 'cat' executed directly
+
+INFO (ASSREXT-35307): tasks left are 68
+
+netprint -V -N1 power_list:power_list_nums NET 
+INFO (ASSREXT-35316): ****** For command L236 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L236 'netprint' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 67 
+
+densitymap -V -TC -o metal11_conn.den 21 metal11_0conn 
+INFO (ASSREXT-35316): ****** For command L188 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6324.0 kbytes
+ INFO (ASSREXT-35321): *** Command L188 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 66 
+
+flattenLayers -m metal11_0conn 
+INFO (ASSREXT-35316): ****** For command L248 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7256.0 kbytes
+ INFO (ASSREXT-35321): *** Command L248 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 65 
+
+densitymap -V -TC -O metal10_conn.den metal10_conn_tile_spec metal10_0conn 
+INFO (ASSREXT-35316): ****** For command L189 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6356.0 kbytes
+ INFO (ASSREXT-35321): *** Command L189 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 64 
+
+flattenLayers -m metal10_0conn 
+INFO (ASSREXT-35316): ****** For command L249 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7240.0 kbytes
+ INFO (ASSREXT-35321): *** Command L249 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 63 
+
+densitymap -V -TC -O metal9_conn.den metal9_conn_tile_spec metal9_0conn 
+INFO (ASSREXT-35316): ****** For command L190 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6420.0 kbytes
+ INFO (ASSREXT-35321): *** Command L190 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 62 
+
+flattenLayers -m metal9_0conn 
+INFO (ASSREXT-35316): ****** For command L250 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 1.00 elapsed, 7332.0 kbytes
+ INFO (ASSREXT-35321): *** Command L250 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 61 
+
+densitymap -V -TC -O metal8_conn.den metal8_conn_tile_spec metal8_0conn 
+INFO (ASSREXT-35316): ****** For command L191 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6320.0 kbytes
+ INFO (ASSREXT-35321): *** Command L191 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 60 
+
+flattenLayers -m metal8_0conn 
+INFO (ASSREXT-35316): ****** For command L251 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7352.0 kbytes
+ INFO (ASSREXT-35321): *** Command L251 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 59 
+
+densitymap -V -TC -O metal7_conn.den metal7_conn_tile_spec metal7_0conn 
+INFO (ASSREXT-35316): ****** For command L192 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6296.0 kbytes
+ INFO (ASSREXT-35321): *** Command L192 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 58 
+
+flattenLayers -m metal7_0conn 
+INFO (ASSREXT-35316): ****** For command L252 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7296.0 kbytes
+ INFO (ASSREXT-35321): *** Command L252 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 57 
+
+densitymap -V -TC -O metal6_conn.den metal6_conn_tile_spec metal6_0conn 
+INFO (ASSREXT-35316): ****** For command L193 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6352.0 kbytes
+ INFO (ASSREXT-35321): *** Command L193 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 56 
+
+flattenLayers -m metal6_0conn 
+INFO (ASSREXT-35316): ****** For command L253 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7380.0 kbytes
+ INFO (ASSREXT-35321): *** Command L253 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 55 
+
+densitymap -V -TC -O metal5_conn.den metal5_conn_tile_spec metal5_0conn 
+INFO (ASSREXT-35316): ****** For command L194 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6352.0 kbytes
+ INFO (ASSREXT-35321): *** Command L194 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 54 
+
+flattenLayers -m metal5_0conn 
+INFO (ASSREXT-35316): ****** For command L254 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7304.0 kbytes
+ INFO (ASSREXT-35321): *** Command L254 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 53 
+
+densitymap -V -TC -O metal4_conn.den metal4_conn_tile_spec metal4_0conn 
+INFO (ASSREXT-35316): ****** For command L195 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6348.0 kbytes
+ INFO (ASSREXT-35321): *** Command L195 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 52 
+
+flattenLayers -m metal4_0conn 
+INFO (ASSREXT-35316): ****** For command L255 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7352.0 kbytes
+ INFO (ASSREXT-35321): *** Command L255 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 51 
+
+densitymap -V -TC -O metal3_conn.den metal3_conn_tile_spec metal3_0conn 
+INFO (ASSREXT-35316): ****** For command L196 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6428.0 kbytes
+ INFO (ASSREXT-35321): *** Command L196 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 50 
+
+flattenLayers -m metal3_0conn 
+INFO (ASSREXT-35316): ****** For command L256 on processor #1:
+
+  flattub took  0.00 user, 0.00 sys, 0.00 elapsed, 7320.0 kbytes
+ INFO (ASSREXT-35321): *** Command L256 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 49 
+
+densitymap -V -TC -O metal2_conn.den metal2_conn_tile_spec metal2_0conn 
+INFO (ASSREXT-35316): ****** For command L197 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6452.0 kbytes
+ INFO (ASSREXT-35321): *** Command L197 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 48 
+
+flattenLayers -m metal2_0conn 
+INFO (ASSREXT-35316): ****** For command L257 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7368.0 kbytes
+ INFO (ASSREXT-35321): *** Command L257 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 47 
+
+densitymap -V -TC -O metal1_conn.den metal1_conn_tile_spec metal1_0conn 
+INFO (ASSREXT-35316): ****** For command L198 on processor #1:
+
+  densitymap took 0.00 user, 0.01 sys, 0.00 elapsed, 6420.0 kbytes
+ INFO (ASSREXT-35321): *** Command L198 'densitymap' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 46 
+
+flattenLayers -m metal1_0conn 
+INFO (ASSREXT-35316): ****** For command L258 on processor #1:
+
+  flattub took  0.00 user, 0.01 sys, 0.00 elapsed, 7564.0 kbytes
+ INFO (ASSREXT-35321): *** Command L258 'flattenLayers' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 45 
+
+INFO (ASSREXT-35299): *** L262 'endFlattenInputs' executed directly
+
+INFO (ASSREXT-35307): tasks left are 44
+
+reconnect -cgnd 20 -float floatlvsnetsfile -tf _0nmos1v,_0pmos1v -probe text_metal3_0conn:metal3_0conn:text_metal3_0conn_fvia,text_metal11_0conn:metal11_0conn:text_metal11_0conn_fvia 
+INFO (ASSREXT-35315): ****** For command L273:
+
+INFO (ASSREXT-35320): *** Command L273 'reconnect' finished
+
+INFO (ASSREXT-35323): tasks left are 43 
+
+geom _0nmos1v,_0pmos1v - qrcgate,1,i,1 
+INFO (ASSREXT-35316): ****** For command L277 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L277 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 42 
+
+iprint -count floatlvsnetsfile 
+INFO (ASSREXT-35316): ****** For command L276 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L276 'iprint' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 41 
+
+iprint -count floatlvsnetsfile 
+INFO (ASSREXT-35315): ****** For command L278:
+
+INFO (ASSREXT-35320): *** Command L278 'iprint' finished
+
+INFO (ASSREXT-35323): tasks left are 40 
+
+grow -V .001 ndiff_0conn mask 
+INFO (ASSREXT-35316): ****** For command L308 on processor #1:
+
+  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6248.0 kbytes
+ INFO (ASSREXT-35321): *** Command L308 'grow' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 39 
+
+geom -V pdiff_0conn mask - pdiff_0conn,10,i,1 
+INFO (ASSREXT-35316): ****** For command L309 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6948.0 kbytes
+ INFO (ASSREXT-35321): *** Command L309 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 38 
+
+grow -V 0.001 nwell_0conn g_nwell_0conn 
+INFO (ASSREXT-35316): ****** For command L317 on processor #1:
+
+  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6204.0 kbytes
+ INFO (ASSREXT-35321): *** Command L317 'grow' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 37 
+
+geom -V ndiff_0conn,pdiff_0conn - Oxide,1,i,1 
+INFO (ASSREXT-35316): ****** For command L310 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6800.0 kbytes
+ INFO (ASSREXT-35321): *** Command L310 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 36 
+
+INFO (ASSREXT-35299): *** L291 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 35
+
+INFO (ASSREXT-35299): *** L302 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 34
+
+INFO (ASSREXT-35299): *** L301 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 33
+
+INFO (ASSREXT-35299): *** L300 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 32
+
+INFO (ASSREXT-35299): *** L299 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 31
+
+INFO (ASSREXT-35299): *** L298 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 30
+
+INFO (ASSREXT-35299): *** L297 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 29
+
+INFO (ASSREXT-35299): *** L296 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 28
+
+INFO (ASSREXT-35299): *** L295 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 27
+
+INFO (ASSREXT-35299): *** L294 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 26
+
+INFO (ASSREXT-35299): *** L293 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 25
+
+INFO (ASSREXT-35299): *** L292 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 24
+
+geom _0nmos1v,_0pmos1v - qrcgate,1,i,1 
+INFO (ASSREXT-35316): ****** For command L331 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L331 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 23 
+
+flatlabel -V -tc -F -l flatlabel.info text_metal3_0conn,text_metal11_0conn L1T0,L2T0 
+INFO (ASSREXT-35316): ****** For command L285 on processor #1:
+
+  INFO (FLTLBL-89003): exec labsort -V L1T0
+   
+   INFO (FLTLBL-89003): exec labsort -V L2T0
+   
+ INFO (ASSREXT-35321): *** Command L285 'flatlabel' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 22 
+
+netprint -max NET 
+INFO (ASSREXT-35316): ****** For command L279 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L279 'netprint' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 21 
+
+emerge -V _0nmos1v _0pmos1v allGate 
+INFO (ASSREXT-35316): ****** For command L540 on processor #1:
+
+  emerge took 0.00 user, 0.00 sys, 0.00 elapsed, 5784.0 kbytes
+ INFO (ASSREXT-35321): *** Command L540 'emerge' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 20 
+
+INFO (ASSREXT-35299): *** L316 '/bin/cp' executed directly
+
+INFO (ASSREXT-35307): tasks left are 19
+
+geom -V psubstrate g_nwell_0conn - psubstrate,10,i,1 
+INFO (ASSREXT-35316): ****** For command L318 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6892.0 kbytes
+ INFO (ASSREXT-35321): *** Command L318 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 18 
+
+xytoebbox -V -g 10.002 -e metal11_conn,metal10_conn,metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,nwell_0conn,psubstrate xg_FOX 
+INFO (ASSREXT-35316): ****** For command L320 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L320 'xytoebbox' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 17 
+
+geom -V nwell_0conn,psubstrate - FOX,1,i,1 
+INFO (ASSREXT-35316): ****** For command L319 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6892.0 kbytes
+ INFO (ASSREXT-35321): *** Command L319 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 16 
+
+grow -V 0.001 FOX g_FOX 
+INFO (ASSREXT-35316): ****** For command L321 on processor #1:
+
+  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6260.0 kbytes
+ INFO (ASSREXT-35321): *** Command L321 'grow' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 15 
+
+geom -V xg_FOX g_FOX - tmp_FOX,10 
+INFO (ASSREXT-35316): ****** For command L322 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6864.0 kbytes
+ INFO (ASSREXT-35321): *** Command L322 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 14 
+
+epick -V -reo -D 20 tmp_FOX pick_FOX 
+INFO (ASSREXT-35316): ****** For command L323 on processor #1:
+
+  epick took  0.00 user, 0.00 sys, 0.00 elapsed, 6160.0 kbytes
+ INFO (ASSREXT-35321): *** Command L323 'epick' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 13 
+
+grow -V -m 0.002 pick_FOX g_pick_FOX 
+INFO (ASSREXT-35316): ****** For command L324 on processor #1:
+
+  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6244.0 kbytes
+   geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6836.0 kbytes
+ INFO (ASSREXT-35321): *** Command L324 'grow' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 12 
+
+stamp -i FOX g_pick_FOX 
+INFO (ASSREXT-35316): ****** For command L325 on processor #1:
+
+INFO (ASSREXT-35321): *** Command L325 'stamp' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 11 
+
+grow -V -m -0.002 g_pick_FOX pick_FOX 
+INFO (ASSREXT-35316): ****** For command L326 on processor #1:
+
+  grow took  0.00 user, 0.00 sys, 0.00 elapsed, 6364.0 kbytes
+   sort edges took  0.00 user, 0.00 sys, 0.00 elapsed, 8392.0 kbytes
+   geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6824.0 kbytes
+ INFO (ASSREXT-35321): *** Command L326 'grow' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 10 
+
+emerge -V pick_FOX FOX tmp1_FOX 
+INFO (ASSREXT-35316): ****** For command L327 on processor #1:
+
+  emerge took 0.00 user, 0.01 sys, 0.00 elapsed, 5828.0 kbytes
+ INFO (ASSREXT-35321): *** Command L327 'emerge' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 9 
+
+geom -V tmp1_FOX - FOX,1,i,1 
+INFO (ASSREXT-35316): ****** For command L328 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6892.0 kbytes
+ INFO (ASSREXT-35321): *** Command L328 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 8 
+
+geom -V FOX Oxide - FOX,10,i,1 
+INFO (ASSREXT-35316): ****** For command L330 on processor #1:
+
+  geom took  0.00 user, 0.00 sys, 0.00 elapsed, 6860.0 kbytes
+ INFO (ASSREXT-35321): *** Command L330 'geom' finished on processor #1
+
+INFO (ASSREXT-35323): tasks left are 7 
+
+INFO (ASSREXT-35299): *** L337 'mv' executed directly
+
+INFO (ASSREXT-35307): tasks left are 6
+
+INFO (ASSREXT-35299): *** L329 '/bin/rm' executed directly
+
+INFO (ASSREXT-35307): tasks left are 5
+
+Capacitance data preparation stage took  0.97 user, 3.21 sys, 7.00 elapsed, 8080.0 kbytes
+INFO (ASSREXT-35334): Capacitance data preparation stage completed successfully at Sun Dec  7 19:53:21 2025
+
+INFO (ASSREXT-35335): pax16 started at Sun Dec  7 19:53:21 2025
+
+pax16 -V -lee_off -delete_unused_files rm_files_in_pax16 -gnd 20 -ignore_cf_table -scf sip.cmd -cgnd 20,1.0 -M_perim_off -c /class/ece482/gpdk045_v_6_0/qrc/typical/qrcTechFile -f FOX Oxide poly_conn metal1_conn metal2_conn metal3_conn metal4_conn metal5_conn metal6_conn metal7_conn metal8_conn metal9_conn metal10_conn metal11_conn allGate - /class/ece482/gpdk045_v_6_0/qrc/typical/qrcTechFile - - NET - capfile 
+INFO (ASSREXT-35315): ****** For command L546:
+
+  pax16 took  1.88 user, 1.82 sys, 12.00 elapsed, 214644.0 kbytes
+ INFO (ASSREXT-35320): *** Command L546 'pax16' finished
+
+C stage took 1.89 user, 1.88 sys, 12.00 elapsed, 8080.0 kbytes
+INFO (ASSREXT-35336): pax16 completed successfully at Sun Dec  7 19:53:33 2025
+
+INFO (ASSREXT-35337): Output stage started at Sun Dec  7 19:53:33 2025
+
+INFO (ASSREXT-35323): tasks left are 4 
+
+xreduce -V -mergecap -n NET -tech /class/ece482/gpdk045_v_6_0/qrc/typical -d1 -e metal11_conn,metal10_conn,metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -decoupled -sr -danglingR -minR 0.001 -cap capfile L1T0 L2T0 _0nmos1v.trans _0pmos1v.trans 
+INFO (ASSREXT-35315): ****** For command L563:
+
+  INFO (XREDUCE-199109): minR option removed 0 resistors (0%)
+   
+   INFO (XREDUCE-199108): d1 option renamed 0 nets
+   
+   xreduce took 0.23 user, 0.05 sys, 1.00 elapsed, 37388.0 kbytes
+ INFO (ASSREXT-35320): *** Command L563 'xreduce' finished
+
+INFO (ASSREXT-35323): tasks left are 3 
+
+advgen -V -g0 -li -f -n -o HSPICE -cgnd 20,1.0 -dxref /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/pipeline_mult.gdx -nxref /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/pipeline_mult.gnx -addprefix -sc caps2dversion -mx capfile metal11_conn,metal10_conn,metal9_conn,metal8_conn,metal7_conn,metal6_conn,metal5_conn,metal4_conn,metal3_conn,metal2_conn,metal1_conn,poly_conn,Oxide,FOX -ta lvsmos.mod,_0nmos1v.net _0nmos1v.trans -ta lvsmos.mod,_0pmos1v.net _0pmos1v.trans - NET - /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/extview.tmp 
+INFO (ASSREXT-35315): ****** For command L573:
+
+  INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@1"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@2"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@3"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@4"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@5"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@6"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@7"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@8"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@9"
+   
+   INFO (ADVGN-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@10"
+   
+   advgen took:  1.65 user, 1.34 sys, 4.00 elapsed, 42600.0 kbytes
+ INFO (ASSREXT-35320): *** Command L573 'advgen' finished
+
+INFO (ASSREXT-35323): tasks left are 2 
+
+INFO (ASSREXT-35299): *** L587 'mv' executed directly
+
+INFO (ASSREXT-35307): tasks left are 1
+
+INFO (ASSREXT-35299): *** L621 'cat' executed directly
+
+INFO (ASSREXT-35307): tasks left are 0
+
+Output stage took  1.93 user, 1.49 sys, 5.00 elapsed, 8084.0 kbytes
+INFO (ASSREXT-35338): Output stage completed successfully at Sun Dec  7 19:53:38 2025
+
+assura_rcx took:  0.00 user, 0.00 sys, 0.00 elapsed, 8084.0 kbytes
+INFO (LBRCXM-610): Extraction finished.
+
+INFO (LBRCXU-108): Starting
+
+ runUserCmd /software/cadence-2024-08/IC231/bin/qrcToDfII -extract cap -run_name pipeline_mult -cdlout_run_dir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs -check_cell_view TRUE -device_finger_delimiter @ -extracted_view av_extracted -lvs_source agds -cap_models no -capacitor pcapacitor -res_models no -cap_prop_name c -transfer_net_expression TRUE -extview_tmp /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult/extview.tmp -run_dir /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs/svdb/pipeline_mult -cdslib /home/mgrawe2/ece482.work/gpdk045_new/cds.lib -lib_name ece482_final_project -cell_name pipeline_mult -view_name layout -extview_rul /class/ece482/gpdk045_v_6_0/pvs/extview.rul -server /software/cadence-2024-08/QUANTUS231/tools.lnx86/extraction/bin/64bit/../shapeServer
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.04s.
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@1"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@2"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@3"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@4"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@5"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@6"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@7"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@8"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@9"
+
+INFO (LBCLV-5346): spice2db warning: Duplicate net "VSS" in cell "pipeline_mult" renamed "VSS@10"
+
+device        g45n1svt  M          _nmos1v          nmos1v  ivpcell     gpdk045  D G S B
+Loading gpdk045/libInit.il ...
+	Loading gpdk045/loadCxt.ile ... done!
+	Loading context 'gpdk045' from library 'gpdk045' ... done!
+	Loading context 'pdkUtils' from library 'gpdk045' ... done!
+	Loading gpdk045/gpdk045_customFilter.il ... done!
+	Loading gpdk045/libInitCustomExit.il ... 
+	Loading Environment Settings ...
+	Loading gpdk045/gpdk045_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 45nm PDK                       *           
+  *                        (gpdk045)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	VERSION: 6.0 (09-September-2019)
+
+done!
+Loaded gpdk045/libInit.il successfully!
+device        g45n1hvt  M      _nmos1v_hvt      nmos1v_hvt  ivpcell     gpdk045  D G S B
+device        g45n1lvt  M      _nmos1v_lvt      nmos1v_lvt  ivpcell     gpdk045  D G S B
+device        g45n1nvt  M  _nmos_12_native      nmos1v_nat  ivpcell     gpdk045  D G S B
+device        g45n2svt  M         _nmos_25          nmos2v  ivpcell     gpdk045  D G S B
+device        g45n2nvt  M  _nmos_25_native      nmos2v_nat  ivpcell     gpdk045  D G S B
+device        g45ncap1  M       _nmoscap1v       nmoscap1v  ivpcell     gpdk045  D G S B
+device        g45ncap2  M       _nmoscap2v       nmoscap2v  ivpcell     gpdk045  D G S B
+device        g45p1svt  M          _pmos1v          pmos1v  ivpcell     gpdk045  D G S B
+device        g45p1hvt  M      _pmos1v_hvt      pmos1v_hvt  ivpcell     gpdk045  D G S B
+device        g45p1lvt  M      _pmos1v_lvt      pmos1v_lvt  ivpcell     gpdk045  D G S B
+device        g45p2svt  M          _pmos2v          pmos2v  ivpcell     gpdk045  D G S B
+device        g45pcap1  M       _pmoscap1v       pmoscap1v  ivpcell     gpdk045  D G S B
+device        g45pcap2  M       _pmoscap2v       pmoscap2v  ivpcell     gpdk045  D G S B
+device          g45rm1  R           _resm1           resm1  ivpcell     gpdk045  PLUS MINUS
+device          g45rm2  R           _resm2           resm2  ivpcell     gpdk045  PLUS MINUS
+device          g45rm3  R           _resm3           resm3  ivpcell     gpdk045  PLUS MINUS
+device          g45rm4  R           _resm4           resm4  ivpcell     gpdk045  PLUS MINUS
+device          g45rm5  R           _resm5           resm5  ivpcell     gpdk045  PLUS MINUS
+device          g45rm6  R           _resm6           resm6  ivpcell     gpdk045  PLUS MINUS
+device          g45rm7  R           _resm7           resm7  ivpcell     gpdk045  PLUS MINUS
+device          g45rm8  R           _resm8           resm8  ivpcell     gpdk045  PLUS MINUS
+device          g45rm9  R           _resm9           resm9  ivpcell     gpdk045  PLUS MINUS
+device         g45rm10  R          _resm10          resm10  ivpcell     gpdk045  PLUS MINUS
+device         g45rm11  R          _resm11          resm11  ivpcell     gpdk045  PLUS MINUS
+device         g45rsnd  R       _ressndiff       ressndiff  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnsnd  R      _resnsndiff      resnsndiff  ivpcell     gpdk045  PLUS MINUS B
+device         g45rsnp  R       _ressnpoly       ressnpoly  ivpcell     gpdk045  PLUS MINUS B
+device         g45rsnp  R    _ressnpoly_nw       ressnpoly  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnsnp  R      _resnsnpoly      resnsnpoly  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnsnp  R   _resnsnpoly_nw      resnsnpoly  ivpcell     gpdk045  PLUS MINUS B
+device         g45rspd  R       _resspdiff       resspdiff  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnspd  R      _resnspdiff      resnspdiff  ivpcell     gpdk045  PLUS MINUS B
+device         g45rspp  R       _ressppoly       ressppoly  ivpcell     gpdk045  PLUS MINUS B
+device         g45rspp  R    _ressppoly_nw       ressppoly  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnspp  R      _resnsppoly      resnsppoly  ivpcell     gpdk045  PLUS MINUS B
+device        g45rnspp  R   _resnsppoly_nw      resnsppoly  ivpcell     gpdk045  PLUS MINUS B
+device         g45rnws  R        _resnwsti        resnwsti  ivpcell     gpdk045  PLUS MINUS B
+device         g45rnwo  R      _resnwoxide      resnwoxide  ivpcell     gpdk045  PLUS MINUS B
+device       g45nd1svt  D            _ndio            ndio  ivpcell     gpdk045  PLUS MINUS
+device       g45nd1lvt  D        _ndio_lvt        ndio_lvt  ivpcell     gpdk045  PLUS MINUS
+device       g45nd1hvt  D        _ndio_hvt        ndio_hvt  ivpcell     gpdk045  PLUS MINUS
+device       g45nd1nvt  D        _ndio_nvt        ndio_nvt  ivpcell     gpdk045  PLUS MINUS
+device       g45nd2svt  D         _ndio_2v         ndio_2v  ivpcell     gpdk045  PLUS MINUS
+device       g45nd2nvt  D     _ndio_2v_nvt     ndio_2v_nvt  ivpcell     gpdk045  PLUS MINUS
+device       g45pd1svt  D            _pdio            pdio  ivpcell     gpdk045  PLUS MINUS
+device       g45pd1lvt  D        _pdio_lvt        pdio_lvt  ivpcell     gpdk045  PLUS MINUS
+device       g45pd1hvt  D        _pdio_hvt        pdio_hvt  ivpcell     gpdk045  PLUS MINUS
+device       g45pd2svt  D         _pdio_2v         pdio_2v  ivpcell     gpdk045  PLUS MINUS
+device        g45vpnp2  Q           _vpnp2           vpnp2  ivpcell     gpdk045  C B E
+device        g45vpnp5  Q           _vpnp5           vpnp5  ivpcell     gpdk045  C B E
+device       g45vpnp10  Q          _vpnp10          vpnp10  ivpcell     gpdk045  C B E
+device        g45vnpn2  Q            _npn2            npn2  ivpcell     gpdk045  C B E
+device        g45vnpn5  Q            _npn5            npn5  ivpcell     gpdk045  C B E
+device       g45vnpn10  Q           _npn10           npn10  ivpcell     gpdk045  C B E
+device         g45cmim  C          _mimcap          mimcap  ivpcell     gpdk045  PLUS MINUS B
+device         g45inda  X           _ind_a           ind_a  ivpcell     gpdk045  PLUS MINUS B
+device         g45inds  X           _ind_s           ind_s  ivpcell     gpdk045  PLUS MINUS B
+Loading CDLOUT map files for /home/mgrawe2/ece482.work/gpdk045_new/ece482_final_project/pipeline_mult/pvs_dir/lvs
+
+Creating extracted view for pipeline_mult
+
+Save recognition layer _nmos1v
+Layer _nmos1v has 354 shapes.
+Save recognition layer _nmos1v_hvt
+Layer _nmos1v_hvt has 0 shapes.
+Save recognition layer _nmos1v_lvt
+Layer _nmos1v_lvt has 0 shapes.
+Save recognition layer _nmos_12_native
+Layer _nmos_12_native has 0 shapes.
+Save recognition layer _nmos_25
+Layer _nmos_25 has 0 shapes.
+Save recognition layer _nmos_25_native
+Layer _nmos_25_native has 0 shapes.
+Save recognition layer _nmoscap1v
+Layer _nmoscap1v has 0 shapes.
+Save recognition layer _nmoscap2v
+Layer _nmoscap2v has 0 shapes.
+Save recognition layer _pmos1v
+Layer _pmos1v has 343 shapes.
+Save recognition layer _pmos1v_hvt
+Layer _pmos1v_hvt has 0 shapes.
+Save recognition layer _pmos1v_lvt
+Layer _pmos1v_lvt has 0 shapes.
+Save recognition layer _pmos2v
+Layer _pmos2v has 0 shapes.
+Save recognition layer _pmoscap1v
+Layer _pmoscap1v has 0 shapes.
+Save recognition layer _pmoscap2v
+Layer _pmoscap2v has 0 shapes.
+Save recognition layer _resm1
+Layer _resm1 has 0 shapes.
+Save recognition layer _resm2
+Layer _resm2 has 0 shapes.
+Save recognition layer _resm3
+Layer _resm3 has 0 shapes.
+Save recognition layer _resm4
+Layer _resm4 has 0 shapes.
+Save recognition layer _resm5
+Layer _resm5 has 0 shapes.
+Save recognition layer _resm6
+Layer _resm6 has 0 shapes.
+Save recognition layer _resm7
+Layer _resm7 has 0 shapes.
+Save recognition layer _resm8
+Layer _resm8 has 0 shapes.
+Save recognition layer _resm9
+Layer _resm9 has 0 shapes.
+Save recognition layer _resm10
+Layer _resm10 has 0 shapes.
+Save recognition layer _resm11
+Layer _resm11 has 0 shapes.
+Save recognition layer _ressndiff
+Layer _ressndiff has 0 shapes.
+Save recognition layer _resnsndiff
+Layer _resnsndiff has 0 shapes.
+Save recognition layer _ressnpoly
+Layer _ressnpoly has 0 shapes.
+Save recognition layer _ressnpoly_nw
+Layer _ressnpoly_nw has 0 shapes.
+Save recognition layer _resnsnpoly
+Layer _resnsnpoly has 0 shapes.
+Save recognition layer _resnsnpoly_nw
+Layer _resnsnpoly_nw has 0 shapes.
+Save recognition layer _resspdiff
+Layer _resspdiff has 0 shapes.
+Save recognition layer _resnspdiff
+Layer _resnspdiff has 0 shapes.
+Save recognition layer _ressppoly
+Layer _ressppoly has 0 shapes.
+Save recognition layer _ressppoly_nw
+Layer _ressppoly_nw has 0 shapes.
+Save recognition layer _resnsppoly
+Layer _resnsppoly has 0 shapes.
+Save recognition layer _resnsppoly_nw
+Layer _resnsppoly_nw has 0 shapes.
+Save recognition layer _resnwsti
+Layer _resnwsti has 0 shapes.
+Save recognition layer _resnwoxide
+Layer _resnwoxide has 0 shapes.
+Save recognition layer _ndio
+Layer _ndio has 0 shapes.
+Save recognition layer _ndio_lvt
+Layer _ndio_lvt has 0 shapes.
+Save recognition layer _ndio_hvt
+Layer _ndio_hvt has 0 shapes.
+Save recognition layer _ndio_nvt
+Layer _ndio_nvt has 0 shapes.
+Save recognition layer _ndio_2v
+Layer _ndio_2v has 0 shapes.
+Save recognition layer _ndio_2v_nvt
+Layer _ndio_2v_nvt has 0 shapes.
+Save recognition layer _pdio
+Layer _pdio has 0 shapes.
+Save recognition layer _pdio_lvt
+Layer _pdio_lvt has 0 shapes.
+Save recognition layer _pdio_hvt
+Layer _pdio_hvt has 0 shapes.
+Save recognition layer _pdio_2v
+Layer _pdio_2v has 0 shapes.
+Save recognition layer _vpnp2
+Layer _vpnp2 has 0 shapes.
+Save recognition layer _vpnp5
+Layer _vpnp5 has 0 shapes.
+Save recognition layer _vpnp10
+Layer _vpnp10 has 0 shapes.
+Save recognition layer _npn2
+Layer _npn2 has 0 shapes.
+Save recognition layer _npn5
+Layer _npn5 has 0 shapes.
+Save recognition layer _npn10
+Layer _npn10 has 0 shapes.
+Save recognition layer _mimcap
+Layer _mimcap has 0 shapes.
+Save recognition layer _ind_a
+Layer _ind_a has 0 shapes.
+Save recognition layer _ind_s
+Layer _ind_s has 0 shapes.
+Copying layer Bondpad
+Layer Bondpad has 0 shapes.
+Copying layer ind11
+Layer ind11 has 0 shapes.
+Copying layer CapMetal
+Layer CapMetal has 0 shapes.
+Copying layer via10_cap
+Layer via10_cap has 0 shapes.
+Copying layer metal10_conn
+Layer metal10_conn has 31 shapes.
+Copying layer via10_nocap
+Layer via10_nocap has 75 shapes.
+Copying layer ind10
+Layer ind10 has 0 shapes.
+Copying layer ind_via_diva
+Layer ind_via_diva has 0 shapes.
+Copying layer via10_nodev
+Layer via10_nodev has 75 shapes.
+Copying layer ind_ct
+Layer ind_ct has 0 shapes.
+Copying layer metal9_conn
+Layer metal9_conn has 60 shapes.
+Copying layer Via9
+Layer Via9 has 180 shapes.
+Copying layer metal8_conn
+Layer metal8_conn has 59 shapes.
+Copying layer Via8
+Layer Via8 has 177 shapes.
+Copying layer metal7_conn
+Layer metal7_conn has 59 shapes.
+Copying layer Via7
+Layer Via7 has 177 shapes.
+Copying layer metal6_conn
+Layer metal6_conn has 59 shapes.
+Copying layer Via6
+Layer Via6 has 177 shapes.
+Copying layer metal5_conn
+Layer metal5_conn has 63 shapes.
+Copying layer Via5
+Layer Via5 has 177 shapes.
+Copying layer metal4_conn
+Layer metal4_conn has 86 shapes.
+Copying layer Via4
+Layer Via4 has 185 shapes.
+Copying layer metal3_conn
+Layer metal3_conn has 183 shapes.
+Copying layer Via3
+Layer Via3 has 345 shapes.
+Copying layer metal2_conn
+Layer metal2_conn has 374 shapes.
+Copying layer Via2
+Layer Via2 has 443 shapes.
+Copying layer metal1_conn
+Layer metal1_conn has 786 shapes.
+Copying layer Via1
+Layer Via1 has 932 shapes.
+Copying layer poly_conn
+Layer poly_conn has 284 shapes.
+Copying layer cont_poly
+Layer cont_poly has 645 shapes.
+Copying layer pdiff_conn
+Layer pdiff_conn has 621 shapes.
+Copying layer pdiff_conn
+Layer pdiff_conn has 621 shapes.
+Copying layer cont_pdiff
+Layer cont_pdiff has 3245 shapes.
+Copying layer npn_emit
+Layer npn_emit has 0 shapes.
+Copying layer cont_ndiff
+Layer cont_ndiff has 2201 shapes.
+Copying layer ndiff_conn
+Layer ndiff_conn has 643 shapes.
+Copying layer ndiff_conn
+Layer ndiff_conn has 643 shapes.
+Copying layer pnp_emit
+Layer pnp_emit has 0 shapes.
+Copying layer psubstrate
+Layer psubstrate has 2 shapes.
+Copying layer nwell_conn
+Layer nwell_conn has 39 shapes.
+Copying layer Nburied
+Layer Nburied has 0 shapes.
+Copying layer nb_tap
+Layer nb_tap has 0 shapes.
+
+
+Summary for ece482_final_project/pipeline_mult/av_extracted
+
+instance count totals:
+
+    lib              cell             view                    total
+    analogLib        pcapacitor       symbol                    236
+    gpdk045          nmos1v           ivpcell                   354
+    gpdk045          pmos1v           ivpcell                   343
+
+Extracted view creation has completed.
+INFO (LBRCXM-612): Done Executing :runUserCmd
+
+INFO (LBRCXM-582): Checking in license of QTS300 23.10
+
+INFO (LBRCXM-985): Summary:
+ Number of CPUs requested:		1
+ Techfile(s):
+    /class/ece482/gpdk045_v_6_0/qrc/typical/qrcTechFile; process name: GPDK45_typical
+ License(s) used:	QTS300 (x1)
+ Design data:
+    global nets:                  0
+    LVS nets:                     237
+    signal nets:                  237
+    floating nets:                0
+    ground net name:              VSS
+ Reduction statistics:
+    Dangling Rs removed:          0
+    Merged Parallel Rs:           0
+    Rs shorted by min_res option: 0
+    Merged Parallel Self Caps:    0
+    CCs filtered by minC option:  0
+    Shorted Incomplete Nets:      0
+ Output statistics:
+    R: 0
+    C: 236
+    L: 0
+
+
+INFO (LBRCXM-920): Host name and peak memory report
+ Host Name:                    fastx3-15.ews.illinois.edu
+ Peak memory used:             234 MB (sampled at 15s intervals)
+
+INFO (LBRCXM-982): Floating net statistics in the design:
+
+   Total floating nets =  0
+     Total signal nets =  237
+         Total LVS net = 237
+
+INFO (LBRCXM-702): Run ended: Sun Dec  7 19:53:43 2025
+
+
+INFO (LBRCXM-805): Quantus run took:  7s user, 9s sys, 35s elapsed
+
+
+INFO (LBRCXM-708): *****  Quantus terminated normally  *****
+
+
